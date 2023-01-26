@@ -72,9 +72,7 @@
     <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
             <!--CALENDAR.IO-->
-    <script src='../components/fullcalendar-6.0.2/dist/index.global.js'></script>
-    <script src='../components/fullcalendar-6.0.2/packages/core/locales/es.global.js'></script>
-    <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+
     <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
 
 </head>

@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php
-        include 'components/inicio/header.php'
+        include 'components/header_main.php'
     ?>
 <style>
     @media (min-width: 1024px) { 

@@ -15,7 +15,7 @@ $array = json_decode($json, true);
 
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -106,7 +106,7 @@ if(isset($_POST['registrarUsuario'])){
          $row = $select_user->fetch(PDO::FETCH_ASSOC);
          if($select_user->rowCount() > 0){
             $_SESSION['user_id'] = $row['id'];
-            header('location:iniciar-sesion.php');
+            header('location:index.php');
          }
       }
    }
@@ -131,7 +131,7 @@ if(isset($_POST['registrarUsuario'])){
 </head>
 <body>
 <?php
-        include 'components/header_main.php'
+        include '../components/header_main.php'
 
         
 
@@ -283,7 +283,7 @@ if(isset($_POST['registrarUsuario'])){
 
 <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
     <?php
-include 'components/footer.php'
+include '../components/footer.php'
 
 ?>
     

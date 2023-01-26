@@ -68,7 +68,7 @@
 <!--CONTACT FORM ENDS-->
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 w-full dark:bg-gray-900">
     <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="index.php" class="flex items-center mb-4 sm:mb-0">
+        <a href="https://alpha-clinicas.com/" class="flex items-center mb-4 sm:mb-0">
             <img src="images/imgLogo/logo-solid-bg.png" class="h-8 mr-3" alt="Alpha Clinicas Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Alpha-Clinicas</span>
         </a>
@@ -88,7 +88,7 @@
         </ul> -->
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.php" class="hover:underline">Alpha Clinicas™</a>. Todos los Derechos Reservados
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://alpha-clinicas.com/" class="hover:underline">Alpha Clinicas™</a>. Todos los Derechos Reservados
     </span>
     <span class="block text-xs text-gray-500 sm:text-center dark:text-gray-400">Desarrollado por: <a href="https://github.com/GodoyMS" target="_blank"class=" text-blue-500 hover:underline">Godoy Muñoz S.</a>
 

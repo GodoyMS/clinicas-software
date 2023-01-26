@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -31,7 +31,7 @@ if(isset($_POST['submit_login'])){
 
    if($select_user->rowCount() > 0){
       $_SESSION['user_id'] = $row['id'];
-      header('Location:panel/dashboard.php');
+      header('Location:dashboard.php');
    }else{
       echo '
             <div class="w-full flex justify-center">
@@ -60,11 +60,11 @@ if(isset($_POST['submit_login'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
+    <title>Iniciar Sesion - Clinicas</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
 
 </head>
 <body  >

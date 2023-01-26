@@ -421,9 +421,10 @@
             </li>
           </ul>
           <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs grid grid-rows-2">
-        <span>          Alpha Clinicas - Copyright @2023</span>       
+        <span> <a href="https://alpha-clinicas.com/" class="hover:underline semibold">         Alpha Clinicas </a>- Copyright @2023</span>       
         <a href="https://github.com/GodoyMS" target="_blank" style="font-size: 0.55rem" class="text-gray-200 hover:underline decoration-red-500"> Desarrollado por Godoy Muñoz S.</a>        
  
-        </p>        </div>
+        </p>       
+       </div>
       </div>
       <!-- ./Sidebar -->

@@ -73,7 +73,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
             <!--CALENDAR.IO-->
 
-            <link rel="icon" type="image/x-icon" href="https://alpha-clinicas.com/images/imgLogo/logo-no-back.png">
+            <link rel="icon" type="image/x-icon" href="images/imgLogo/favicon-alpha-clinicas.png">
 
 </head>
 <body class="bg-gray-100">

@@ -55,7 +55,7 @@ if(isset($_POST['submitLoginPacientes'])){
     <title>Iniciar Sesion</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="icon" type="image/x-icon" href="https://alpha-clinicas.com/images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/favicon-alpha-clinicas.png">
 
 </head>
 <body class="bg-gray-50">

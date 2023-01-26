@@ -32,7 +32,7 @@
                 <a href="iniciar-sesion.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Como clínica</a>
               </li>
               <li>
-                <a href="usuarios/index.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Como paciente</a>
+                <a href="https://pacientes.alpha-clinicas.com/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Como paciente</a>
               </li>
              
              

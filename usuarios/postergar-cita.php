@@ -162,7 +162,7 @@
         <!--CALENDAR.IO-->
         <script src='components/fullcalendar-6.0.2/dist/index.global.js'></script>
     <script src='components/fullcalendar-6.0.2/packages/core/locales/es.global.js'></script>
-    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/favicon-alpha-clinicas.png">
 
 </head>
 <body class="bg-gray-100">

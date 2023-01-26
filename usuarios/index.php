@@ -55,7 +55,7 @@ if(isset($_POST['submitLoginPacientes'])){
     <title>Iniciar Sesion</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-        <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
+        <link rel="icon" type="image/x-icon" href="./images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-50">
@@ -226,14 +226,14 @@ if(isset($_POST['submitLoginPacientes'])){
       </div>
       <div class="md:flex md:items-center md:justify-center pt-14 sm:w-auto md:h-full w-4/5 xl:w-2/5 p-4  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
         <div class="max-w-md w-full space-y-8">
-            <a  href="../index.php" class="flex justify-end text-gray-400 gap-2">       
+            <a  href="https://alpha-clinicas.com/" class="flex justify-end text-gray-400 gap-2">       
                 <svg fill="none"  class="h-6 w-6"stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"></path>
                 </svg>
                 <span class=" font-normal">Ir a inicio</span>
             </a>
           <div class="text-center">
-            <a href="index.php"><img  src="../images/imgLogo/logo-solid-bg.png" class="w-40 h-40 mx-auto"></a>
+            <a href="https://alpha-clinicas.com/"><img  src="../images/imgLogo/logo-solid-bg.png" class="w-40 h-40 mx-auto"></a>
             <div class="flex items-center justify-center space-x-2 "> <!---->
             <span class="h-px w-16 bg-gray-200"></span>
             <span class="text-gray-400 font-normal">Alpha Clinicas | Pacientes</span>

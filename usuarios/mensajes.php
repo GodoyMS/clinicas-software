@@ -29,7 +29,7 @@
 
         }else{
         $userPaciente_id = '';
-        header('location:login.php');
+        header('location:index.php');
 
         };
 
@@ -89,7 +89,7 @@ if(isset($_POST['enviarMensaje'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensajes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-100">

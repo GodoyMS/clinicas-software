@@ -154,8 +154,9 @@ if(isset($_POST['submitRegistrarPaciente'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
+    <title>Registrarse Alpha Clinicas</title>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-100">
@@ -205,7 +206,7 @@ if(isset($_POST['submitRegistrarPaciente'])){
                     
                     <button type="submit" value="login now" name="submitRegistrarPaciente" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Registrarse</button>
                     <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        ¿Ya tienes una cuenta activa? <a href="login.php" class="text-blue-700 hover:underline dark:text-blue-500">Entrar ahora  </a>
+                        ¿Ya tienes una cuenta activa? <a href="index.php" class="text-blue-700 hover:underline dark:text-blue-500">Entrar ahora  </a>
                     </div>
                 </form>
 

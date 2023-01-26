@@ -2,8 +2,8 @@
   <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center sm:justify-between">
       <div class="grid grid-rows-2 gap-4">
-        <a href="../index.php" class="flex justify-center text-gray-600 items-center sm:justify-start">
-            <img src="../images/imgLogo/logo-solid-bg.png" class="w-20 h-20"/>
+        <a href="https://alpha-clinicas.com/" class="flex justify-center text-gray-600 items-center sm:justify-start">
+            <img src="images/imgLogo/logo-solid-bg.png" class="w-20 h-20"/>
             <span class=" text-2xl font-semibold">Alpha Clínicas</span>
         </a>
         <span class="text-center text-xs">Desarrollado por <a href="https://github.com/GodoyMS" class="text-blue-600">Godoy Muñoz S.</a> </span>

@@ -30,7 +30,7 @@
 
         }else{
         $userPaciente_id = '';
-        header('location:login.php');
+        header('location:index.php');
 
         };
         
@@ -128,11 +128,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitar cita</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
 
         <!--CALENDAR.IO-->
-        <script src='../components/fullcalendar-6.0.2/dist/index.global.js'></script>
-    <script src='../components/fullcalendar-6.0.2/packages/core/locales/es.global.js'></script>
+        <script src='components/fullcalendar-6.0.2/dist/index.global.js'></script>
+    <script src='components/fullcalendar-6.0.2/packages/core/locales/es.global.js'></script>
     <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
 
 </head>

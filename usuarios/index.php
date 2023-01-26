@@ -55,7 +55,7 @@ if(isset($_POST['submitLoginPacientes'])){
     <title>Iniciar Sesion</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-        <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+        <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-50">
@@ -204,7 +204,7 @@ if(isset($_POST['submitLoginPacientes'])){
 <div class="relative min-h-screen flex ">
     <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
       <div class="sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
-        style="background-image: url(../images/schedule-img.png);">
+        style="background-image: url(images/schedule-img.png);">
         <div class="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-75 inset-0 z-0"></div>
         <div class="w-full  max-w-md z-10">
           <div class="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">Alpha Clinicas</div>

@@ -13,7 +13,7 @@
         
         }else{
         $userPaciente_id = '';
-        header('location:login.php');
+        header('location:index.php');
 
         };
 
@@ -73,7 +73,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
             <!--CALENDAR.IO-->
 
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-100">

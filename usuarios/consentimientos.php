@@ -66,7 +66,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="images/imgLogo/favicon-alpha-clinicas.png">
+    <link rel="icon" type="image/x-icon" href="https://alpha-clinicas.com/images/imgLogo/logo-no-back.png">
 
 </head>
 <body class="bg-gray-100">

@@ -57,9 +57,25 @@ if(isset($_POST['deleteConsentimiento'])){
   unlink('./consentimientos/'.$fetchConsentimiento['doc']);
   $deleteConsentimiento = $conn->prepare("DELETE FROM `consentimientos` WHERE doc = ? AND pacienteId = ?");
   $deleteConsentimiento->execute([$docName,$idPaciente]);
+  header('Location:paciente_id.php?pid='.$idPaciente.'&modal=historia_clinica');
 
     
 }
+
+if(isset($_POST['deletehcDoc'])){
+
+    $idPaciente=$_POST['idPaciente'];
+    $hcdocName=$_POST['hcDocName'];
+  
+    $selectHCDoc = $conn->prepare("SELECT * FROM `hcdocs` WHERE doc = ?");
+    $selectHCDoc->execute([$hcdocName]);
+    $fetchhcdoc = $selectHCDoc->fetch(PDO::FETCH_ASSOC);
+    unlink('./hcdocs/'.$fetchhcdoc['doc']);
+    $deleteHCDoc = $conn->prepare("DELETE FROM `hcdocs` WHERE doc = ? AND pacienteId = ?");
+    $deleteHCDoc->execute([$hcdocName,$idPaciente]);
+  
+      
+  }
 
 if(isset($_POST['deleteOdontograma'])){
 
@@ -509,6 +525,56 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
         }
       ?>
 
+
+       <!--SUBMIT DOC Consentimiento-->
+       <?php
+        if(isset($_POST['uploadDocHC'])){           
+          $pacienteId=$_POST['id'];
+          date_default_timezone_set('America/New_York');
+          $now=date("Y-m-d H:i");     
+          $dayMonth=date('m-d');
+          $randomvar=bin2hex(random_bytes(8));
+
+          $nombreHC=$_POST['nombreHC'];
+          $docHC = $_FILES['docHC']['name'];
+          $docHC='hc-'.$dayMonth.'-'.$pacienteId.'-'.$randomvar.'-'.$docHC;
+          $docHC = filter_var($docHC, FILTER_SANITIZE_STRING);
+          $docHC_size1 = $_FILES['docHC']['size'];
+          $docHC_tmp_name1 = $_FILES['docHC']['tmp_name'];
+          $docHC_folder1 = './hcdocs/'.$docHC;              
+          if($docHC_size1 > 2000000 ){
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Check icon</span>
+            </div>
+            <div class="ml-3 text-sm font-normal">Documento muy grande</div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>`</script>               
+            ';  
+        }else{
+            move_uploaded_file($docHC_tmp_name1, $docHC_folder1);
+            $insert_hc = $conn->prepare("INSERT INTO `hcdocs`(pacienteId,clinicaId,nombrehc,doc,fecha) VALUES(?,?,?,?,?)");
+            $insert_hc->execute([$pacienteId,$user_id,$nombreHC,$docHC,$now]);
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Check icon</span>
+            </div>
+            <div class="ml-3 text-sm font-normal">Consentimiento subido exitosamente</div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>`</script>               
+            ';     
+        }
+        }
+      ?>
+
   
 <?php
       if(isset($_GET['pid'])){
@@ -790,9 +856,161 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                  <!--HISTORIA CLINICA-->
                   <div  class="   hidden p-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
 
+                  <div class="py-8 px-2 grid gap-4 grid-cols-1 md:grid-cols-2">
+                    <div class=" mx-auto">
+                            <div style="padding-bottom:3rem;max-width:400px"class="text-center text-medium  text-gray-500 dark:text-gray-400">Puedes elegir entre <strong class="font-medium text-gray-800 dark:text-white">subir tu historia clínica</strong>
+
+                                        
+                                        o usar nuestro <strong class="font-medium text-gray-800 dark:text-white">generador de historias clínicas</strong> con un formato general. La historia clínica que generes mediante nuestro formato general, se mantendra actualizado y puede ser descargado en pdf con el boton azul en la parte derecha inferior.
+                            </div>
+                            <form action="" method="POST" enctype="multipart/form-data" style="max-width:400px">
+                                        <input hidden name="id" type="text" value="<?=$fetch_paciente['id'];?>">
+                                        <div class="">
+                                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="file_input">Subir historia clínica</label>
+                                            <div class="flex flex-wrap  gap-2">
+
+                                                <input name="docHC"  type="file" required  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" >
+                                                <div class="relative w-full my-2 z-0">
+                                                    <input type="text" id="floating_standard" name="nombreHC" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                                                    <label for="floating_standard" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribir nombre de H.C. (opcional)</label>
+                                                </div>
+                                                <button type="submit" name="uploadDocHC" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                                    <span>Subir</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                                  </svg>
+
+                                                </button>
+                                            
+                                              </div>
+                                        </div> 
+                            </form>
+
+                    </div>
+
+                    <div class="relative pt-4  overflow-x-auto shadow-md dark:shadow-white sm:rounded-lg">
+                    <h2 class="p-2 text-center text-gray-600 dark:text-gray-400">Repositorio de historias clínicas subidas</h2>
+                    <table class="w-full  text-sm text-left text-gray-500 dark:text-gray-400">
+                              <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                                  <tr>
+                                      
+                                      <th scope="col" class="px-6 py-3">
+                                          
+                                      </th>
+                                                                            
+                                      <th scope="col" class="px-6 py-3">
+                                          Nombre
+                                      </th>
+                                      <th scope="col" class="px-6 py-3">
+                                          Fecha
+                                      </th>
+                                      
+                                      <th scope="col" class="px-6 py-3">
+                                          Acción
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                              <?php
+                              $showhcdocs = $conn->prepare("SELECT * FROM `hcdocs` WHERE pacienteId = ? ORDER BY fecha DESC");
+                              $showhcdocs->execute([$fetch_paciente['id']]);
+                              if($showhcdocs->rowCount() > 0){
+                                
+                                while ($fetchHCDocs = $showhcdocs->fetch(PDO::FETCH_ASSOC)) { 
+
+                                  ?>
+
+                                  <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                      
+                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                          <a  target="_blank" href="hcdocs/<?=$fetchHCDocs['doc'];?>">
+                                            <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
+                                             <span>Ver documento</span>
+                                              <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
+                                              </svg> 
+                                            </div>
+                                          </a>
+                                     
+                                          
+                                      </td>
+                                      <td class="px-6 py-4">
+                                        
+                                      <?=$fetchHCDocs['nombreHC'];?>
+                                        
+                                      </td>
+                                      
+                                      <td class="px-6 py-4">
+                                          <?=$fetchHCDocs['fecha'];?>
+                                      </td>
+                                  
+
+                                      <td class="px-6 py-4">
+                                      <button   data-modal-target="<?='delete-modal'.$fetchHCDocs['doc'];?>" data-modal-toggle="<?='delete-modal'.$fetchHCDocs['doc'];?>"  class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>
+
+                                                  
+                                          
+                                         
+                                         
+
+                                             
+                                      </td>
+                                  </tr>
+
+                                  <!--MODAL-->
+                                  <form action="" method="POST">
+                                  <div id="<?='delete-modal'.$fetchHCDocs['doc'];?>" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                                    <input  type="text" name="hcDocName" value="<?=$fetchHCDocs['doc'];?>" hidden >
+                                      <input   type="text" name="idPaciente"  value="<?=$fetchHCDocs["pacienteId"];?>" hidden > 
+                                      <div class="relative w-full h-full max-w-md md:h-auto">
+                                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>">
+                                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                    <span class="sr-only">Close modal</span>
+                                                </button>
+                                                <div class="p-6 text-center">
+                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Seguro que quieres eliminar este consentimiento?</h3>
+                                                    <button  type="submit" name="deletehcDoc"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                                        Sí, eliminar
+                                                    </button>
+                                                    <button data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancelar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                    </form>
+
+                                  <?php
+
+                                  
+
+
+                                  
+                                }
+                                  
+                                }
+                          ?>         
+                                  </tbody>
+                              </table>
+
+
+                    </div>
+
+                  </div>
+
+                         
+
+
                      
 
                     <form  action="" method="POST" >
+                        <h2 class="text-center text-gray-600 dark:text-gray-400 text-base md:text-xl pt-8 pb-4">Formato general de Historia clínica</h2>
+
+
                     <div class="grid gap-6 md:grid-cols-2">
                     <!--1-->
 
@@ -1102,13 +1320,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                           </div>
                           <div data-popper-arrow></div>
                       </div>
-                               <div class="flex items-center flex-wrap pb-8" style="justify-content:space-evenly">
-                                  <p style="padding-bottom:3rem;max-width:300px"class="text-center text-medium   text-gray-500 dark:text-gray-400">Puedes elegir entre <strong class="font-medium text-gray-800 dark:text-white">subir tu imagen</strong>
-                                  <button  style="padding-left:0.5rem"data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg><span class="sr-only">Show information</span></button>
+                                <div class="flex items-center flex-wrap pb-8" style="justify-content:space-evenly">
+                                    <p style="padding-bottom:3rem;max-width:300px"class="text-center text-medium   text-gray-500 dark:text-gray-400">Puedes elegir entre <strong class="font-medium text-gray-800 dark:text-white">subir tu imagen</strong>
+                                    <button  style="padding-left:0.5rem"data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg><span class="sr-only">Show information</span></button>
 
-                                  
-                                   o usar nuestro <strong class="font-medium text-gray-800 dark:text-white">generador de odontogramas</strong>.
-                                  </p>
+                                    
+                                    o usar nuestro <strong class="font-medium text-gray-800 dark:text-white">generador de odontogramas</strong>.
+                                    </p>
                                   <!--SKELETON FOR ODONTOGRAMA-->
                                   <div>
                                   <span class="mx-auto flex justify-center mb-2 text-gray-500 dark:text-gray-600">Formato de odontograma</span>

@@ -526,7 +526,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
       ?>
 
 
-       <!--SUBMIT DOC Consentimiento-->
+       <!--SUBMIT DOC HC-->
        <?php
         if(isset($_POST['uploadDocHC'])){           
           $pacienteId=$_POST['id'];
@@ -571,6 +571,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
             </button>
         </div>`</script>               
             ';     
+            header('Location:paciente_id.php?pid='.$pacienteId.'&modal=historia_clinica');
         }
         }
       ?>

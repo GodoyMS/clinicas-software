@@ -88,7 +88,7 @@
                   
               </ul>
              
-              <a href="registrarse.php" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
+              <a href="clinicas/registrarse.php" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
           </div>
 
           <!-- Pricing Card -->
@@ -145,7 +145,7 @@
                   
               </ul>
              
-              <a href="registrarse.php" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
+              <a href="clinicas/registrarse.php" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
           </div>
           
           <!-- Pricing Card -->
@@ -200,7 +200,7 @@
                   </li> 
                   
               </ul>
-              <a href="#" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
+              <a href="clinicas/registrarse.php" class="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Empezar ahora</a>
           </div>
       </div>
   </div>

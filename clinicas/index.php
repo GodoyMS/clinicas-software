@@ -64,7 +64,7 @@ if(isset($_POST['submit_login'])){
     <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="../images/imgLogo/favicon-alpha-clinicas.png">
 
 </head>
 <body  >

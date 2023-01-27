@@ -52,7 +52,7 @@ if(isset($_SESSION['user_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="../images/imgLogo/favicon-alpha-clinicas.png">
 
 </head>
 <body>

@@ -87,8 +87,8 @@ $url.= $_SERVER['REQUEST_URI'];
 
 
 $currentLink=explode('clinicas',$url);
-$clientURL= $currentLink[0].'usuarios/';
-$clientURLRegistro= $currentLink[0].'usuarios/registrar.php';
+$clientURL='https://alpha-clinicas.com/usuarios';
+$clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
 
 

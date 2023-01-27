@@ -44,7 +44,7 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- Main Styling -->
     <link href="./assets/css/soft-ui-dashboard-tailwind.css?v=1.0.4" rel="stylesheet" />    
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/logo-no-back.png">
+    <link rel="icon" type="image/x-icon" href="../images/imgLogo/favicon.png">
 
   </head>
 

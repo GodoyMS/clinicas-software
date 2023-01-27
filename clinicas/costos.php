@@ -125,7 +125,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <script src="../components/datepicker/datepicker-flowbite.js"></script>
 
-    <link rel="icon" type="image/x-icon" href="../images/imgLogo/favicon-alpha-clinicas.png">
+    <link rel="icon" type="image/x-icon" href="../images/imgLogo/favicon.png">
 
 </head>
 <body>

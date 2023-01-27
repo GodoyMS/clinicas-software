@@ -393,7 +393,7 @@ if(isset($_SESSION['user_id'])){
 <?php
       $server=$_SERVER['SERVER_NAME'];
       $selfLocation=$_SERVER['PHP_SELF'];
-      $x=explode('pdfHC',$selfLocation);
+      $x=explode('pdfHC-generate',$selfLocation);
 
       $selectImgOdontograma = $conn->prepare("SELECT * FROM `odontogramas` WHERE pacienteId= ? AND estado='Actual' ");
 			$selectImgOdontograma->execute([$pid]);

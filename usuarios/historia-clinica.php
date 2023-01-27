@@ -517,7 +517,7 @@ body {
                                     <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
                                         
                                         <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            <a  target="_blank" href="../panel/odontogram/screenshots/<?=$fetchOdontograma['imagen'];?>">
+                                            <a  target="_blank" href="../clinicas/odontogram/screenshots/<?=$fetchOdontograma['imagen'];?>">
                                                 <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
                                                 <span>Ver odontograma</span>
                                                 <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

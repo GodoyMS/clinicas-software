@@ -113,8 +113,8 @@ $url.= $_SERVER['HTTP_HOST'];
 $url.= $_SERVER['REQUEST_URI'];    
 
 
-$currentLink=explode('panel',$url);
-$clientURL= $currentLink[0].'usuarios/login.php';
+$currentLink=explode('clinicas',$url);
+$clientURL= $currentLink[0].'usuarios/';
 $clientURLRegistro= $currentLink[0].'usuarios/registrar.php';
 
 

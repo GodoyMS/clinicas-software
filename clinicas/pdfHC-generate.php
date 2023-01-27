@@ -407,7 +407,7 @@ if(isset($_SESSION['user_id'])){
 
 <div style="text-align:center;width:800px;height:1200px">
 
-      <img style=" max-width:750px; "src="<?php echo 'http://'.$server.$x[0].'odontogram/screenshots/'.$fetchimgOdontograma['imagen'] ;?>">
+      <img style=" max-width:750px; "src="<?php echo 'https://alpha-clinicas.com/clinicas/odontogram/screenshots/'.$fetchimgOdontograma['imagen'] ;?>">
 
       </div>
 

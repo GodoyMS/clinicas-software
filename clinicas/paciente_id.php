@@ -760,10 +760,10 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                   </ul>
               </div>
               <div id="myTabContent">
-                  <div style="max-width:600px;margin:0 auto 0 auto" class="hidden   p-4 mx-4 rounded-lg  bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div style="max-width:600px;" class="hidden   p-4 mx-auto" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
                   
-                      <form action=""  method="post" class="px-2 py-4">
+                      <form action=""  method="post" class="p-8 rounded-lg  bg-gray-50 dark:bg-gray-800">
                           <div class="grid gap-6 mb-6 md:grid-cols-2">
                               <div>
 

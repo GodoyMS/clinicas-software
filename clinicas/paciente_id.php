@@ -10,7 +10,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-   header('location:../index.php');
+   header('Location:../index.php');
 
 };
 
@@ -24,7 +24,7 @@ if(isset($_POST['updateStateOdontograma'])){
   $updateStateImg = $conn->prepare("UPDATE `odontogramas` SET estado = 'Actual' WHERE imagen= ? ");
   $updateStateImg->execute([$imageName]);
 
-  $headerAfterUpda='location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma';
+  $headerAfterUpda='Location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma';
     header($headerAfterUpda);
 
     
@@ -40,7 +40,7 @@ if(isset($_POST['updateStateConsentimiento'])){
   $updateStateDoc = $conn->prepare("UPDATE `consentimientos` SET estado = 'Actual' WHERE doc= ? ");
   $updateStateDoc->execute([$docName]);
 
-  $headerAfterUpda='location:paciente_id.php?pid='.$idPaciente.'&modal=consentimientos';
+  $headerAfterUpda='Location:paciente_id.php?pid='.$idPaciente.'&modal=consentimientos';
     header($headerAfterUpda);
 
     
@@ -73,7 +73,8 @@ if(isset($_POST['deletehcDoc'])){
     unlink('./hcdocs/'.$fetchhcdoc['doc']);
     $deleteHCDoc = $conn->prepare("DELETE FROM `hcdocs` WHERE doc = ? AND pacienteId = ?");
     $deleteHCDoc->execute([$hcdocName,$idPaciente]);
-  
+    header('Location:paciente_id.php?pid='.$idPaciente.'&modal=historia_clinica');
+
       
   }
 
@@ -88,6 +89,7 @@ if(isset($_POST['deleteOdontograma'])){
   unlink('./odontogram/screenshots/'.$fetchOdontogramaImg['imagen']);
   $deleteOdontograma = $conn->prepare("DELETE FROM `odontogramas` WHERE imagen = ? AND pacienteId = ?");
   $deleteOdontograma->execute([$imgName,$idPaciente]);
+  header('Location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma');
 
     
 }
@@ -680,7 +682,8 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                       </li>
                       <li class="mr-2" role="presentation">
-
+                      <!-- <a href="paciente_id.php?pid=<?php// echo $fetch_paciente['id'];?>&modal=historia_clinica"> 
+                      </a> -->
                         <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="<?=$ariaHistoriaClinica ;?>"> 
                           <svg aria-hidden="true" class="w-5 h-5 mr-2 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
                           
@@ -689,6 +692,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                           <span>Historia Clinica</span>
                       </button>
+                            
                       </li>
 
                       <li class="mr-2" role="presentation">

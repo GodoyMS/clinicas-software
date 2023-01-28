@@ -10,7 +10,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-   header('Location:../index.php');
+   header('location:../index.php');
 
 };
 
@@ -24,8 +24,8 @@ if(isset($_POST['updateStateOdontograma'])){
   $updateStateImg = $conn->prepare("UPDATE `odontogramas` SET estado = 'Actual' WHERE imagen= ? ");
   $updateStateImg->execute([$imageName]);
 
-  $headerAfterUpda='Location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma';
-    header($headerAfterUpda);
+  $headerAfterUpdateStateOdontograma='location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma';
+    header($headerAfterUpdateStateOdontograma);
 
     
 }
@@ -40,8 +40,8 @@ if(isset($_POST['updateStateConsentimiento'])){
   $updateStateDoc = $conn->prepare("UPDATE `consentimientos` SET estado = 'Actual' WHERE doc= ? ");
   $updateStateDoc->execute([$docName]);
 
-  $headerAfterUpda='Location:paciente_id.php?pid='.$idPaciente.'&modal=consentimientos';
-    header($headerAfterUpda);
+  $headerAfterUpdateConsentimiento='location:paciente_id.php?pid='.$idPaciente.'&modal=consentimientos';
+    header($headerAfterUpdateConsentimiento);
 
     
 }
@@ -57,8 +57,8 @@ if(isset($_POST['deleteConsentimiento'])){
   unlink('./consentimientos/'.$fetchConsentimiento['doc']);
   $deleteConsentimiento = $conn->prepare("DELETE FROM `consentimientos` WHERE doc = ? AND pacienteId = ?");
   $deleteConsentimiento->execute([$docName,$idPaciente]);
-  header('Location:paciente_id.php?pid='.$idPaciente.'&modal=historia_clinica');
-
+  $headerAfterDeleteConsentimiento='location:paciente_id.php?pid='.$idPaciente.'&modal=consentimientos';
+  header($headerAfterDeleteConsentimiento);
     
 }
 
@@ -73,8 +73,9 @@ if(isset($_POST['deletehcDoc'])){
     unlink('./hcdocs/'.$fetchhcdoc['doc']);
     $deleteHCDoc = $conn->prepare("DELETE FROM `hcdocs` WHERE doc = ? AND pacienteId = ?");
     $deleteHCDoc->execute([$hcdocName,$idPaciente]);
-    header('Location:paciente_id.php?pid='.$idPaciente.'&modal=historia_clinica');
-
+    
+    $headerAfterDeleteHCDoc='location:paciente_id.php?pid='.$idPaciente.'&modal=historia_clinica';
+    header($headerAfterDeleteHCDoc);
       
   }
 
@@ -89,8 +90,9 @@ if(isset($_POST['deleteOdontograma'])){
   unlink('./odontogram/screenshots/'.$fetchOdontogramaImg['imagen']);
   $deleteOdontograma = $conn->prepare("DELETE FROM `odontogramas` WHERE imagen = ? AND pacienteId = ?");
   $deleteOdontograma->execute([$imgName,$idPaciente]);
-  header('Location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma');
 
+  $headerAfterDeleteOdontograma='location:paciente_id.php?pid='.$idPaciente.'&modal=odontograma';
+  header($headerAfterDeleteOdontograma);
     
 }
 

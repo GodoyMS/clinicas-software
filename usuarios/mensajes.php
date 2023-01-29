@@ -57,13 +57,13 @@ if(isset($_POST['enviarMensaje'])){
     $insert_event->execute([$userPaciente_id,$idConsultorio,$nombrePaciente,$emailPaciente,$emailConsultorio,$mensaje,$today,$direccion,$tipoMensaje]);
       
 
-      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg ">
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
           <span class="sr-only">Check icon</span>
       </div>
       <div class="ml-3 text-sm font-normal">Mensaje enviado</div>
-      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 " data-dismiss-target="#toast-success" aria-label="Close">
           <span class="sr-only">Close</span>
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       </button>
@@ -242,16 +242,16 @@ body {
 
 
 
-                    <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Para: <?=$fetch_clinica['nombreConsultorio'];?></label>
+                    <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 ">Para: <?=$fetch_clinica['nombreConsultorio'];?></label>
                     <div class="relative mb-4">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                             </div>
-                            <div type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com"><?=$fetch_clinica['emailConsultorio'];?></div>
+                            <div type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  " placeholder="name@flowbite.com"><?=$fetch_clinica['emailConsultorio'];?></div>
                     </div>
-                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tu mensaje</label>
-                    <textarea id="message" required name="mensaje" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe tu mensaje"></textarea>
-                    <button type="submit" name="enviarMensaje" class=" my-4 mx-auto w-40  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Tu mensaje</label>
+                    <textarea id="message" required name="mensaje" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Escribe tu mensaje"></textarea>
+                    <button type="submit" name="enviarMensaje" class=" my-4 mx-auto w-40  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Enviar</button>
 
                 </div>
 
@@ -271,9 +271,9 @@ body {
                 while($fetch_mensajes=$select_mensajes->fetch(PDO::FETCH_ASSOC)){
                     ?>
 
-                        <div id="toast-notification" style="max-width:40rem"class="shadow-lg my-2 mx-auto w-full  p-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
+                        <div id="toast-notification" style="max-width:40rem"class="shadow-lg my-2 mx-auto w-full  p-4 text-gray-900 bg-white rounded-lg shadow " role="alert">
                                 <div class="flex items-center mb-3">
-                                    <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white"><?=$fetch_mensajes['fecha'];?></span>
+                                    <span class="mb-1 text-sm font-semibold text-gray-900 "><?=$fetch_mensajes['fecha'];?></span>
                                 
                                 </div>
                                 <div class="flex items-center">
@@ -287,9 +287,9 @@ body {
                                         </span>
                                     </div>
                                     <div class="ml-3 text-sm font-normal">
-                                        <div class="text-sm font-semibold text-gray-900 dark:text-white"><?=$fetch_clinica['nombreConsultorio'];?></div>
+                                        <div class="text-sm font-semibold text-gray-900 "><?=$fetch_clinica['nombreConsultorio'];?></div>
                                         <div class="text-sm font-normal"><?=$fetch_mensajes['mensaje'];?></div> 
-                                        <span class="text-xs font-medium text-blue-600 dark:text-blue-500"><?=$fetch_mensajes['emailConsultorio'];?></span>   
+                                        <span class="text-xs font-medium text-blue-600 "><?=$fetch_mensajes['emailConsultorio'];?></span>   
                                     </div>
                                 </div>
                         </div>
@@ -302,7 +302,7 @@ body {
                 }
             }else{
 
-                echo '<div style="max-width:500px"class="p-4 my-8 mx-auto text-sm text-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-gray-300" role="alert">
+                echo '<div style="max-width:500px"class="p-4 my-8 mx-auto text-sm text-gray-700 rounded-lg bg-gray-50 " role="alert">
                 Aun no tienes ningún mensaje recibido
             </div>';
             }

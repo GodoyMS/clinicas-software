@@ -18,13 +18,13 @@
             
             $updateInhabilitadoState= $conn->prepare("UPDATE `eventos` SET estado = 'Confirmado' WHERE idPaciente = ? AND inicio = ? ");
             $updateInhabilitadoState->execute([$userPaciente_id,$citaFechaInicio]);          
-            echo'<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Gracias por tu confirmación</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -39,12 +39,12 @@
             
             $updateInhabilitadoStateCancelar= $conn->prepare("UPDATE `eventos` SET estado = 'Cancelado' WHERE idPaciente = ? AND inicio = ? ");
             $updateInhabilitadoStateCancelar->execute([$userPaciente_id,$citaFechaInicio]);          
-            echo'<div id="alert-border-3" style="max-width:500px" class=" mx-auto flex p-4 mb-4 text-green-700 bg-green-100 border-t-4 border-green-500 dark:text-green-400 dark:bg-gray-800" role="alert">
+            echo'<div id="alert-border-3" style="max-width:500px" class=" mx-auto flex p-4 mb-4 text-green-700 bg-green-100 border-t-4 border-green-500 " role="alert">
             <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <div class="ml-3 text-sm font-medium">
               Cita cancelada. Lamentamos tu decisión. Recuerda que puedes solicitar otra cita en otra fecha y horario disponible
             </div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 "  data-dismiss-target="#alert-border-3" aria-label="Close">
               <span class="sr-only">Dismiss</span>
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -190,8 +190,8 @@ body {
 
 <div class="p-4 relative overflow-x-auto  sm:rounded-lg">
    
-    <table style="max-width:50rem;" class="w-full  rounded-full shadow-lg mx-auto text-sm text-left text-gray-500 dark:text-gray-400">
-                              <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+    <table style="max-width:50rem;" class="w-full  rounded-full shadow-lg mx-auto text-sm text-left text-gray-500 ">
+                              <thead  class="text-xs border-gray-200  border-b text-gray-700 uppercase  bg-gray-50  ">
                                   <tr>
                                       
                                       <th scope="col" class="px-6 py-3">
@@ -218,11 +218,11 @@ body {
 
                                   ?>
 
-                                  <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                  <tr class="bg-white  hover:bg-gray-50 ">
                                       
-                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                           <a  target="_blank" href="../clinicas/consentimientos/<?=$fetchConsentimiento['doc'];?>">
-                                            <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
+                                            <div class="flex hover:text-blue-600 gap-2  items-center">
                                              <span>Ver documento</span>
                                               <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>

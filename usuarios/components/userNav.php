@@ -44,8 +44,8 @@ if($selectPacienteName->rowCount()>0){
 </button>
 
 <!-- Notifications dropdown -->
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 ">
+    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
         
 
     <?php
@@ -75,9 +75,9 @@ if($selectPacienteName->rowCount()>0){
                               <div class="ml-3 text-sm font-normal">
 
 
-                                  <div class="text-sm font-semibold text-gray-900 dark:text-white"><?=$fetch_clinica['nombreConsultorio'];?></div>
+                                  <div class="text-sm font-semibold text-gray-900 e"><?=$fetch_clinica['nombreConsultorio'];?></div>
                                   <div class="text-sm font-normal  truncate  w-60"><?=$fetchMensajes['mensaje'];?></div> 
-                                  <span class="text-xs font-medium text-blue-600 dark:text-blue-500"><?=$fetchMensajes['tipoMensaje'];?></span>   
+                                  <span class="text-xs font-medium text-blue-600 "><?=$fetchMensajes['tipoMensaje'];?></span>   
                               </div>
                           </div> 
                     </a>                 
@@ -96,7 +96,7 @@ if($selectPacienteName->rowCount()>0){
                                                 
                                                 </div>
                                                 <div class="ml-3 text-sm font-normal">
-                                                    <div class="text-sm font-semibold text-gray-900 dark:text-white">Aun no tienes niguna notificación</div>
+                                                    <div class="text-sm font-semibold text-gray-900 ">Aun no tienes niguna notificación</div>
                                                 </div>
                                             </div> 
                                       </a>                 
@@ -143,19 +143,19 @@ if($selectPacienteName->rowCount()>0){
 
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 ">
 
-    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+    <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
       <li>
-        <a href="actualizar-informacion.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Actualizar información</a>
+        <a href="actualizar-informacion.php" class="block px-4 py-2 hover:bg-gray-100 ">Actualizar información</a>
       </li>
       <li>
-        <a href="informacion-consultorio.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Informacion de consultorio</a>
+        <a href="informacion-consultorio.php" class="block px-4 py-2 hover:bg-gray-100 ">Informacion de consultorio</a>
       </li>
       
     </ul>
     <div class="py-1">
-      <a href="components/logoutUsuariosPacientes.php" class="flex gap-2 justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+      <a href="components/logoutUsuariosPacientes.php" class="flex gap-2 justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 600 ">
         <span>Salir</span>
         <svg fill="none"class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"></path>

@@ -18,13 +18,13 @@
             
             $updateInhabilitadoState= $conn->prepare("UPDATE `eventos` SET estado = 'Confirmado' WHERE idPaciente = ? AND inicio = ? ");
             $updateInhabilitadoState->execute([$userPaciente_id,$citaFechaInicio]);          
-            echo'<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Gracias por tu confirmación</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -39,12 +39,12 @@
             
             $updateInhabilitadoStateCancelar= $conn->prepare("UPDATE `eventos` SET estado = 'Cancelado' WHERE idPaciente = ? AND inicio = ? ");
             $updateInhabilitadoStateCancelar->execute([$userPaciente_id,$citaFechaInicio]);          
-            echo'<div id="alert-border-3" style="max-width:500px" class=" mx-auto flex p-4 mb-4 text-green-700 bg-green-100 border-t-4 border-green-500 dark:text-green-400 dark:bg-gray-800" role="alert">
+            echo'<div id="alert-border-3" style="max-width:500px" class=" mx-auto flex p-4 mb-4 text-green-700 bg-green-100 border-t-4 border-green-500 " role="alert">
             <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <div class="ml-3 text-sm font-medium">
               Cita cancelada. Lamentamos tu decisión. Recuerda que puedes solicitar otra cita en otra fecha y horario disponible
             </div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8"  data-dismiss-target="#alert-border-3" aria-label="Close">
               <span class="sr-only">Dismiss</span>
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -212,33 +212,33 @@ body {
                     <div class="grid gap-6 md:grid-cols-2">
                     <!--1-->
 
-                      <div  class="  bg-gray-50 dark:bg-gray-800 p-4 shadow-lg rounded-lg">
+                      <div  class="  bg-gray-50  p-4 shadow-lg rounded-lg">
                       <div><h2 class="text-xl text-center pb-6 font-medium">Datos generales</h2></div>
-                        <input type="hidden"   value="<?=$fetch_paciente['id'];?>"id="pacienteId" name="pacienteId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
-                        <input type="hidden"   value="<?=$fetch_paciente['clinica_id'];?>"id="clinicaId" name="clinicaId"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
-                        <input type="hidden"   value="<?=$fetch_paciente['token'];?>"id="token" name="token"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['id'];?>"id="pacienteId" name="pacienteId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   "  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['clinica_id'];?>"id="clinicaId" name="clinicaId"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   "  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['token'];?>"id="token" name="token"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   "  required>
                         
                        
 
                         
                         <div class="mb-6">
-                            <label for="doctorCargo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Doctor a cargo</label>
-                            <input  type="text" disabled  value="<?=$fetch_hc['doctor'];?>"id="doctorCargo"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Robert Carvajar Espinoza" >
+                            <label for="doctorCargo" class="block mb-2 text-sm font-medium text-gray-900 ">Doctor a cargo</label>
+                            <input  type="text" disabled  value="<?=$fetch_hc['doctor'];?>"id="doctorCargo"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="Robert Carvajar Espinoza" >
                         </div> 
 
 
                         <div class="mb-6">
-                            <label for="nombresPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres y apellidos</label>
-                            <input  type="text" disabled  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombresPaciente"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Robert Carvajar Espinoza" >
+                            <label for="nombresPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Nombres y apellidos</label>
+                            <input  type="text" disabled  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombresPaciente"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="Robert Carvajar Espinoza" >
                         </div> 
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                             <div>
-                                <label for="dni12" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
-                                <input  type="text" disabled name="dni12"  value="<?=$fetch_paciente['dni'];?>" maxlength="8" minlength="8"  id="dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                                <label for="dni12" class="block mb-2 text-sm font-medium text-gray-900 ">DNI</label>
+                                <input  type="text" disabled name="dni12"  value="<?=$fetch_paciente['dni'];?>" maxlength="8" minlength="8"  id="dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                             </div>
                             <div>
-                                <label for="numHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">N° HC</label>
-                                <input type="number"  disabled id="numHC" name="numHC" value="<?=$fetch_hc['numhc'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12" >
+                                <label for="numHC" class="block mb-2 text-sm font-medium text-gray-900 ">N° HC</label>
+                                <input type="number"  disabled id="numHC" name="numHC" value="<?=$fetch_hc['numhc'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="12" >
                                  
                               </div>
                            <?php
@@ -249,39 +249,39 @@ body {
                            ?>
                               
                             <div>
-                                <label for="fechaAtencion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha y hora de atención</label>
-                                <input type="datetime-local" disabled id="fechaAtencion" name="fechaAtencion" value="<?=$fetch_hc['fechahoraatencion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                                <label for="fechaAtencion" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha y hora de atención</label>
+                                <input type="datetime-local" disabled id="fechaAtencion" name="fechaAtencion" value="<?=$fetch_hc['fechahoraatencion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " >
                             </div>  
                             <div>
-                                <label for="fechaHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha apertura de h.c.</label>
-                                <input type="date" disabled id="fechaHC" name="fechaHC" value="<?=$fetch_hc['fechaapertura'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678"  >
+                                <label for="fechaHC" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha apertura de h.c.</label>
+                                <input type="date" disabled id="fechaHC" name="fechaHC" value="<?=$fetch_hc['fechaapertura'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="123-45-678"  >
                             </div>
 
                             <div>
-                                <label for="sexo12" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sexo</label>
-                                <input  name="sexo12" disabled type="text"  value="<?=$fetch_paciente['sexo'];?>" id="sexo12" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Hombre" >
+                                <label for="sexo12" class="block mb-2 text-sm font-medium text-gray-900 ">Sexo</label>
+                                <input  name="sexo12" disabled type="text"  value="<?=$fetch_paciente['sexo'];?>" id="sexo12" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="Hombre" >
                             </div>  
                             <div>
-                                <label for="edadPacienteHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad</label>
-                                <input  type="number" disabled value="<?=$fetch_paciente['edadPaciente'];?>"id="edadPacienteHC" name="edadPacienteHC"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"  >
+                                <label for="edadPacienteHC" class="block mb-2 text-sm font-medium text-gray-900 ">Edad</label>
+                                <input  type="number" disabled value="<?=$fetch_paciente['edadPaciente'];?>"id="edadPacienteHC" name="edadPacienteHC"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="12"  >
                             </div>
                             <div>
-                                <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lugar de Nacimiento</label>
-                                <input  type="text" disabled id="lugarNacimiento" name="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                                <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Lugar de Nacimiento</label>
+                                <input  type="text" disabled id="lugarNacimiento" name="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                             </div>
                             <div>
-                                <label for="fechaNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha Nacimiento</label>
-                                <input  type="date" disabled id="fechaNacimiento" value="<?=$fetch_paciente['fechaNacimiento'];?>" name="fechaNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                                <label for="fechaNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha Nacimiento</label>
+                                <input  type="date" disabled id="fechaNacimiento" value="<?=$fetch_paciente['fechaNacimiento'];?>" name="fechaNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                             </div>
 
                             <div>
-                                <label for="ocupacion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ocupación</label>
-                                <input  type="text" disabled  id="ocupacion" name="ocupacion" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                                <label for="ocupacion" class="block mb-2 text-sm font-medium text-gray-900 ">Ocupación</label>
+                                <input  type="text" disabled  id="ocupacion" name="ocupacion" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                             </div>
                             <input hidden type="text" name="direccion" value="<?=$fetch_paciente['direccion'];?>">
                             <div>
-                                <label for="direccion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-                                <div   type="text " contenteditable="false" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_paciente['direccion'];?></div>
+                                <label for="direccion" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección</label>
+                                <div   type="text " contenteditable="false" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_paciente['direccion'];?></div>
                             </div>
 
                             
@@ -289,136 +289,136 @@ body {
 
                       </div>
                       <!--2-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4 shadow-lg rounded-lg">
+                      <div class="bg-gray-50  p-4 shadow-lg rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Enfermedad Actual</h2></div>
                       <div class="mb-6">
-                            <label for="tiempoEnfermedad" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tiempo de enfermedad</label>
-                            <input type="text"  disabled id="tiempoEnfermedad" value="<?=$fetch_hc['tiempoEnfermedad'];?>" name="tiempoEnfermedad" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="tiempoEnfermedad" class="block mb-2 text-sm font-medium text-gray-900 ">Tiempo de enfermedad</label>
+                            <input type="text"  disabled id="tiempoEnfermedad" value="<?=$fetch_hc['tiempoEnfermedad'];?>" name="tiempoEnfermedad" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="signosSintomas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Signos y síntomas principales</label>
-                            <input type="text" disabled id="signosSintomas"  name="signosSintomas" value="<?=$fetch_hc['signosSintomas'];?>"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="signosSintomas" class="block mb-2 text-sm font-medium text-gray-900 ">Signos y síntomas principales</label>
+                            <input type="text" disabled id="signosSintomas"  name="signosSintomas" value="<?=$fetch_hc['signosSintomas'];?>"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="relatoCronologico" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Relatos cronológico</label>
-                            <input type="text" disabled id="relatoCronologico"  name="relatoCronologico" value="<?=$fetch_hc['relatosCronologicos'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="relatoCronologico" class="block mb-2 text-sm font-medium text-gray-900 ">Relatos cronológico</label>
+                            <input type="text" disabled id="relatoCronologico"  name="relatoCronologico" value="<?=$fetch_hc['relatosCronologicos'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="funcionesBiologicas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Funciones biológicas</label>
-                            <input type="name" disabled  id="funcionesBiologicas"  name="funcionesBiologicas" value="<?=$fetch_hc['funcionesBiologicas'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="funcionesBiologicas" class="block mb-2 text-sm font-medium text-gray-900 ">Funciones biológicas</label>
+                            <input type="name" disabled  id="funcionesBiologicas"  name="funcionesBiologicas" value="<?=$fetch_hc['funcionesBiologicas'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
 
                         
                         <div><h2 class="text-center text-xl py-6 font-medium">Antecedentes</h2></div>
                       <div class="mb-6">
-                            <label for="antecedentesFamiliares" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Antecedentes familiares</label>
-                            <input type="text" disabled  id="antecedentesFamiliares"  name="antecedentesFamiliares" value="<?=$fetch_hc['antFamiliares'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="antecedentesFamiliares" class="block mb-2 text-sm font-medium text-gray-900 ">Antecedentes familiares</label>
+                            <input type="text" disabled  id="antecedentesFamiliares"  name="antecedentesFamiliares" value="<?=$fetch_hc['antFamiliares'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="antecedentesPersonales" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Antecedentes personales</label>
-                            <input type="text" disabled id="antecedentesPersonales"  name="antecedentesPersonales"  value="<?=$fetch_hc['antPersonales'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="antecedentesPersonales" class="block mb-2 text-sm font-medium text-gray-900 ">Antecedentes personales</label>
+                            <input type="text" disabled id="antecedentesPersonales"  name="antecedentesPersonales"  value="<?=$fetch_hc['antPersonales'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                         </div> 
 
 
 
                       </div>
                       <!--3-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4 shadow-lg rounded-lg">
+                      <div class="bg-gray-50  p-4 shadow-lg rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Exploración fisica</h2></div>
                       
                       <h3 class=" py-6 text-center  font-medium">Signos vitales</h3>
                       <div class="grid gap-6 mb-6 md:grid-cols-2">
                           <div>
-                              <label for="pa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Presión arterial</label>
-                              <input type="text" disabled  name="pa" id="pa"value="<?=$fetch_hc['presionArterial'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                              <label for="pa" class="block mb-2 text-sm font-medium text-gray-900 ">Presión arterial</label>
+                              <input type="text" disabled  name="pa" id="pa"value="<?=$fetch_hc['presionArterial'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                           </div>
                           <div>
-                              <label for="pulso" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pulso</label>
-                              <input type="text" disabled id="pulso" name="pulso" value="<?=$fetch_hc['pulso'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                              <label for="pulso" class="block mb-2 text-sm font-medium text-gray-900 ">Pulso</label>
+                              <input type="text" disabled id="pulso" name="pulso" value="<?=$fetch_hc['pulso'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder="" >
                           </div>
                                                    
                           <div>
-                              <label for="temperatura" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Temperatura</label>
-                              <input  type="numer" disabled id="temperatura" name="temperatura" value="<?=$fetch_hc['temperatura'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="temperatura" class="block mb-2 text-sm font-medium text-gray-900 ">Temperatura</label>
+                              <input  type="numer" disabled id="temperatura" name="temperatura" value="<?=$fetch_hc['temperatura'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                           </div>
                           <div>
-                              <label for="frecCardiaca" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Frec. cardiaca</label>
-                              <input    id="frecCardiaca" disabled name="frecCardiaca" value="<?=$fetch_hc['frecCardiaca'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="frecCardiaca" class="block mb-2 text-sm font-medium text-gray-900 ">Frec. cardiaca</label>
+                              <input    id="frecCardiaca" disabled name="frecCardiaca" value="<?=$fetch_hc['frecCardiaca'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                           </div>
                           <div>
-                              <label for="frecRespiratoria" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Frec. respiratoria</label>
-                              <input   id="frecRespiratoria" disabled name="frecRespiratoria" value="<?=$fetch_hc['frecRespiratoria'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="frecRespiratoria" class="block mb-2 text-sm font-medium text-gray-900 ">Frec. respiratoria</label>
+                              <input   id="frecRespiratoria" disabled name="frecRespiratoria" value="<?=$fetch_hc['frecRespiratoria'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  >
                           </div>                            
                     </div>
                       <div class="grid gap-6 mb-6 md:grid-cols-1">
 
                           <div>
-                              <label for="examenClinicoGeneral" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Exámen clinico general</label>
-                              <textarea   type="text" disabled id="examenClinicoGeneral"  name="examenClinicoGeneral" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['examenClinicoGeneral'];?></textarea>
+                              <label for="examenClinicoGeneral" class="block mb-2 text-sm font-medium text-gray-900 ">Exámen clinico general</label>
+                              <textarea   type="text" disabled id="examenClinicoGeneral"  name="examenClinicoGeneral" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['examenClinicoGeneral'];?></textarea>
                           </div>
 
                           <div>
-                              <label for="odontoestomatologico" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Odontoestomatológico</label>
-                              <textarea  type="text" disabled id="odontoestomatologico"  name="odontoestomatologico" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['odontoestomatologico'];?></textarea>
+                              <label for="odontoestomatologico" class="block mb-2 text-sm font-medium text-gray-900 ">Odontoestomatológico</label>
+                              <textarea  type="text" disabled id="odontoestomatologico"  name="odontoestomatologico" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['odontoestomatologico'];?></textarea>
                           </div>
                       </div>
 
                       
-                            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Estado de la higiene bucal</h3>
+                            <h3 class="mb-4 font-semibold text-gray-900 ">Estado de la higiene bucal</h3>
 
                          
-                            <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex   ">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input disabled id="horizontal-list-radio-license" <?php if($fetch_hc['estadoHigieneBucal']=="Muy bueno"){ echo "checked";};?> type="radio" value="Muy bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Muy bueno </label>
+                                        <input disabled id="horizontal-list-radio-license" <?php if($fetch_hc['estadoHigieneBucal']=="Muy bueno"){ echo "checked";};?> type="radio" value="Muy bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2 ">
+                                        <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Muy bueno </label>
                                     </div>
                                 </li>
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input disabled id="horizontal-list-radio-id"  <?php if($fetch_hc['estadoHigieneBucal']=="Bueno"){ echo "checked";};?> type="radio" value="Bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bueno</label>
+                                        <input disabled id="horizontal-list-radio-id"  <?php if($fetch_hc['estadoHigieneBucal']=="Bueno"){ echo "checked";};?> type="radio" value="Bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2 ">
+                                        <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Bueno</label>
                                     </div>
                                 </li>
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input disabled id="horizontal-list-radio-millitary"  <?php if($fetch_hc['estadoHigieneBucal']=="Deficiente"){ echo "checked";};?> type="radio" value="Deficiente" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Deficiente</label>
+                                        <input disabled id="horizontal-list-radio-millitary"  <?php if($fetch_hc['estadoHigieneBucal']=="Deficiente"){ echo "checked";};?> type="radio" value="Deficiente" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2 ">
+                                        <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Deficiente</label>
                                     </div>
                                 </li>
-                                <li class="w-full dark:border-gray-600">
+                                <li class="w-full ">
                                     <div class="flex items-center pl-3">
-                                        <input disabled id="horizontal-list-radio-passport" <?php if($fetch_hc['estadoHigieneBucal']=="Malo"){ echo "checked";};?> type="radio" value="Malo" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label disabled for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Malo</label>
+                                        <input disabled id="horizontal-list-radio-passport" <?php if($fetch_hc['estadoHigieneBucal']=="Malo"){ echo "checked";};?> type="radio" value="Malo" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2 ">
+                                        <label disabled for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Malo</label>
                                     </div>
                                 </li>
                             </ul>
 
 
 
-                            <h3 class="my-4 font-semibold text-gray-900 dark:text-white">Estado bucal general</h3>
+                            <h3 class="my-4 font-semibold text-gray-900 ">Estado bucal general</h3>
                             <div class="grid gap-6 mb-6 md:grid-cols-2 px-8">
                                 <div >
                                     <h4  class="flex items-center mb-2 ">Presencia de sarro</h4>
                                     <div class="flex items-center  mb-4">
-                                      <input disabled <?php if($fetch_hc['presenciaSarro']=="NO"){ echo "checked";};?>  id="presenciaSarroNO" type="radio" value="NO"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label  for="presenciaSarroNO"  class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">NO</label>
+                                      <input disabled <?php if($fetch_hc['presenciaSarro']=="NO"){ echo "checked";};?>  id="presenciaSarroNO" type="radio" value="NO"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2  ">
+                                      <label  for="presenciaSarroNO"  class="ml-2 text-sm font-medium text-gray-900 ">NO</label>
                                   </div>
                                   <div class="flex items-center ">
-                                      <input disabled <?php if($fetch_hc['presenciaSarro']=="SI"){ echo "checked";};?> id="presenciaSarroSI" type="radio" value="SI"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="presenciaSarroSI" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">SI</label>
+                                      <input disabled <?php if($fetch_hc['presenciaSarro']=="SI"){ echo "checked";};?> id="presenciaSarroSI" type="radio" value="SI"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2  ">
+                                      <label for="presenciaSarroSI" class="ml-2 text-sm font-medium text-gray-900 ">SI</label>
                                   </div>
 
 
                                   </div>
                                   <div><h4 class="flex items-center mb-2 ">Enfermedad periodontal</h4>
                                   <div class="flex items-center mb-4">
-                                      <input disabled  <?php if($fetch_hc['enfermedadPeriodontal']=="NO"){ echo "checked";};?> id="enfermedadPeriodontalNO" type="radio" value="NO" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="enfermedadPeriodontalNO" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">NO</label>
+                                      <input disabled  <?php if($fetch_hc['enfermedadPeriodontal']=="NO"){ echo "checked";};?> id="enfermedadPeriodontalNO" type="radio" value="NO" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2  ">
+                                      <label for="enfermedadPeriodontalNO" class="ml-2 text-sm font-medium text-gray-900 ">NO</label>
                                   </div>
                                   <div class="flex items-center">
-                                      <input  disabled <?php if($fetch_hc['enfermedadPeriodontal']=="SI"){ echo "checked";};?> id="enfermedadPeriodontalSI" type="radio" value="SI" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="enfermedadPeriodontalSI" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">SI</label>
+                                      <input  disabled <?php if($fetch_hc['enfermedadPeriodontal']=="SI"){ echo "checked";};?> id="enfermedadPeriodontalSI" type="radio" value="SI" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2  ">
+                                      <label for="enfermedadPeriodontalSI" class="ml-2 text-sm font-medium text-gray-900 ">SI</label>
                                   </div>
                                 </div>
 
@@ -430,18 +430,18 @@ body {
 
                       </div>
                       <!--4-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4 shadow-lg rounded-lg">
+                      <div class="bg-gray-50  p-4 shadow-lg rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Diagnóstico (CIE 10)</h2></div>
                               <div class="grid gap-6 mb-6 md:grid-cols-1">
 
                             <div>
-                                <label for="diagnosticoPresuntivo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Diagnóstico Presuntivo</label>
-                                <textarea  disabled type="text" id="diagnosticoPresuntivo"  name="diagnosticoPresuntivo"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['diagnosticoPresuntivo'];?></textarea>
+                                <label for="diagnosticoPresuntivo" class="block mb-2 text-sm font-medium text-gray-900 ">Diagnóstico Presuntivo</label>
+                                <textarea  disabled type="text" id="diagnosticoPresuntivo"  name="diagnosticoPresuntivo"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['diagnosticoPresuntivo'];?></textarea>
                             </div>
 
                             <div>
-                                <label for="diagnosticoDefinitivo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Diagnóstico Definitivo</label>
-                                <textarea disabled type="text"  id="diagnosticoDefinitivo"  name="diagnosticoDefinitivo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['diagfinal'];?></textarea>
+                                <label for="diagnosticoDefinitivo" class="block mb-2 text-sm font-medium text-gray-900 ">Diagnóstico Definitivo</label>
+                                <textarea disabled type="text"  id="diagnosticoDefinitivo"  name="diagnosticoDefinitivo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['diagfinal'];?></textarea>
                             </div>
                         </div>
 
@@ -452,7 +452,7 @@ body {
                               <div class="grid gap-6 mb-6 md:grid-cols-1">                           
 
                             <div>
-                                <textarea  disabled type="text"  id="tratamiento"  name="tratamiento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['tratamiento'];?></textarea>
+                                <textarea  disabled type="text"  id="tratamiento"  name="tratamiento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['tratamiento'];?></textarea>
                             </div>
                         </div>
 
@@ -460,7 +460,7 @@ body {
                               <div class="grid gap-6 mb-6 md:grid-cols-1">                         
 
                             <div>
-                                <textarea disabled type="text"  id="observaciones"  name="observaciones" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['observaciones'];?></textarea>
+                                <textarea disabled type="text"  id="observaciones"  name="observaciones" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   " placeholder=""  ><?=$fetch_hc['observaciones'];?></textarea>
                             </div>
                         </div>  
                       </div>
@@ -476,7 +476,7 @@ body {
                     </form>
                     <?php
                     }else{
-                        echo'<div style="max-width:500px"class="p-4 mt-4 mx-auto  text-sm text-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-gray-300" role="alert">
+                        echo'<div style="max-width:500px"class="p-4 mt-4 mx-auto  text-sm text-gray-700 rounded-lg bg-gray-50  " role="alert">
                         Tu clinica aun no ha generado tu historia clínica.
                       </div>';
 
@@ -495,8 +495,8 @@ body {
                 $fetchOdontograma=$selectOdontograma->fetch(PDO::FETCH_ASSOC);
 
                 ?>
-                    <table style="max-width:50rem;" class="w-full mt-4 mb-8 rounded-full shadow-lg mx-auto text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                    <table style="max-width:50rem;" class="w-full mt-4 mb-8 rounded-full shadow-lg mx-auto text-sm text-left text-gray-500 ">
+                                <thead  class="text-xs border-gray-200  border-b text-gray-700 uppercase  bg-gray-50  ">
                                     <tr>
                                         
                                         <th scope="col" class="px-6 py-3">
@@ -514,11 +514,11 @@ body {
 
                                 
 
-                                    <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <tr class="bg-white hover:bg-gray-50 ">
                                         
-                                        <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <a  target="_blank" href="../clinicas/odontogram/screenshots/<?=$fetchOdontograma['imagen'];?>">
-                                                <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
+                                                <div class="flex hover:text-blue-600 gap-2 items-center">
                                                 <span>Ver odontograma</span>
                                                 <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
@@ -556,7 +556,7 @@ body {
                 
             
             }else{
-                echo '<div style="max-width:500px"class="p-4 my-4 mx-auto  text-sm text-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-gray-300" role="alert">
+                echo '<div style="max-width:500px"class="p-4 my-4 mx-auto  text-sm text-gray-700 rounded-lg bg-gray-50  " role="alert">
                 Tu clinica aun no ha generado tu odontograma.
               </div>';
 

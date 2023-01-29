@@ -84,7 +84,7 @@
          }      
          */
 
-         echo '<div style="max-width:500px" class="p-4 mb-4 mx-auto text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-800 dark:text-green-400" role="alert">
+         echo '<div style="max-width:500px" class="p-4 mb-4 mx-auto text-sm text-green-700 bg-green-100 rounded-lg " role="alert">
          <span class="font-medium">¡Envío exitoso! </span> Se ha notificado tu solicitud a tu clinica. En breve te daran respuesta, asegurate de actualizar tu información de contacto. Podras ver tu cita agendada en esta misma sección
        </div>';
          
@@ -259,17 +259,17 @@ body {
 </div>
 
 <!-- drawer component -->
-<div id="drawer-right-example" class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800 transition-transform right-0 top-0 translate-x-full" tabindex="-1" aria-labelledby="drawer-right-label">
-    <h5 id="drawer-right-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Informacion</h5>
-   <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-right-example" class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 transition-transform right-0 top-0 translate-x-full" tabindex="-1" aria-labelledby="drawer-right-label">
+    <h5 id="drawer-right-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 "><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Informacion</h5>
+   <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center " >
       <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       <span class="sr-only">Close menu</span>
    </button>
-   <p class="mb-6 text-sm text-gray-500 dark:text-gray-400 text-justify">La agenda virtual se actualiza cada vez que un consultorio o clínica agenda una cita con un paciente. Contiene la información en vivo de la hora exacta del inicio y fin de las citas. Podras ver que las casillas de color ya estan ocupadas </p>
+   <p class="mb-6 text-sm text-gray-500 text-justify">La agenda virtual se actualiza cada vez que un consultorio o clínica agenda una cita con un paciente. Contiene la información en vivo de la hora exacta del inicio y fin de las citas. Podras ver que las casillas de color ya estan ocupadas </p>
    <h6>Seleccionar un horario</h6>
-   <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">En la sección "semana" o "dia", has click en la fila que corresponda a la hora que desees tu cita. En caso desees que tu cita se programe a cualquier hora de un día, hacer click en un dia en la sección "Mes".</p>
+   <p class="mb-6 text-sm text-gray-500 ">En la sección "semana" o "dia", has click en la fila que corresponda a la hora que desees tu cita. En caso desees que tu cita se programe a cualquier hora de un día, hacer click en un dia en la sección "Mes".</p>
    <h6>¿Que sigue?</h6>
-   <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">Cuando tu consultorio o clínica reciba tu solicitud, te informaran por Whatsapp o correo y podras ver tu cita agendada en esta misma sección.</p>
+   <p class="mb-6 text-sm text-gray-500 ">Cuando tu consultorio o clínica reciba tu solicitud, te informaran por Whatsapp o correo y podras ver tu cita agendada en esta misma sección.</p>
 
    
    
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         modal.innerHTML=`  <div style="width:100%;height:100vh;position:absolute;background-color:rgba(0,0,0,0.7)"class="py-12   transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
                 <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
-                    <div class="relative py-8 px-5 md:px-10 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md rounded border border-gray-400">
+                    <div class="relative py-8 px-5 md:px-10 bg-white  shadow-md rounded border border-gray-400">
                         <div class="w-full flex justify-start text-gray-600 mb-3">
                             <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg1.svg" alt="icon"/>
                            
@@ -382,12 +382,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         <form action="" method="post">
                         <input style="visibility:hidden" name="startDate" value='${singleEvent['startStr']}'>
                                                 
-                        <h1 class="text-gray-800 dark:text-white flex justify-center  font-lg font-bold tracking-normal leading-tight mb-4">Ingresar motivo consulta </h1>
+                        <h1 class="text-gray-800 e flex justify-center  font-lg font-bold tracking-normal leading-tight mb-4">Ingresar motivo consulta </h1>
     
 
                         
                         
-                        <input type="text" id="consulta" name="consulta" class="mb-5 mt-2 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"  placeholder=" " />
+                        <input type="text" id="consulta" name="consulta" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"  placeholder=" " />
                         
                         
 

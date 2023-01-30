@@ -124,7 +124,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -142,7 +142,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
 <!-- component -->  
 <div x-data="setup()" :class="{ 'dark': isDark }">
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white  text-black ">
       <?php
         include '../components/dashboard/dashboard-header.php';
       ?>
@@ -168,13 +168,13 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 <!-- Modal toggle -->
 <div class="flex justify-around items-center flex-wrap">
 <a href="agenda.php">
-<button  class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+<button  class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   " type="button">
   Agendar nueva cita 
   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
 </button>
 </a>
 
-<div class="flex justify-center dark:text-gray-300 text-gray-500 rounded-lg bg-gray-100 p-2 dark:bg-gray-800" id="MyClockDisplay" class="clock" onload="showTime()"></div>
+<div class="flex justify-center  text-gray-500 rounded-lg bg-gray-100 p-2 " id="MyClockDisplay" class="clock" onload="showTime()"></div>
 </div>
 
 
@@ -269,7 +269,7 @@ showTime();
 
 
          <!--TODAY BEFORE THEN-->
-         <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-400 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-500 dark:bg-gray-800">
+         <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-400 uppercase border-t  bg-gray-50 sm:grid-cols-9  ">
            
             <span class="flex items-center col-span-3"> HOY </span>
               <span class="col-span-2"></span>
@@ -295,7 +295,7 @@ showTime();
             <div class="w-full overflow-x-auto">
               <table class="w-full  mb-8">
                 <thead>
-                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b  bg-gray-50  ">
                     <th class="px-4 py-3">Paciente</th>
                     <th class="px-4 py-3">Fecha</th>
                     <th class="px-4 py-3">Consulta</th>
@@ -304,7 +304,7 @@ showTime();
                     <th class="px-4 py-3">Accion</th>
                   </tr>
                 </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class="bg-white divide-y  ">
 
                
 
@@ -353,7 +353,7 @@ showTime();
          
          
 
-         <div class="grid px-4 py-3 text-xs font-semibold tracking-wide rounded-lg text-gray-400 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-500 dark:bg-gray-800">
+         <div class="grid px-4 py-3 text-xs font-semibold tracking-wide rounded-lg text-gray-400 uppercase border-t  bg-gray-50 sm:grid-cols-9  ">
            
             <span class="flex items-center col-span-3">CITAS FUTURAS  </span>
               <span class="col-span-2"></span>
@@ -381,7 +381,7 @@ showTime();
             <div class="w-full  overflow-x-auto">
               <table class="w-full  mb-8">
                 <thead>
-                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b  bg-gray-50  ">
                     <th class="px-4 py-3">Paciente</th>
                     <th class="px-4 py-3">Fecha</th>
                     <th class="px-4 py-3">Consulta</th>
@@ -390,7 +390,7 @@ showTime();
                     <th class="px-4 py-3">Accion</th>
                   </tr>
                 </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class="bg-white divide-y  ">
 
                
 
@@ -443,7 +443,7 @@ showTime();
          
 
         
-         <div class="grid px-4 py-3 rounded-lg text-xs font-semibold tracking-wide text-gray-400 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-500 dark:bg-gray-800">
+         <div class="grid px-4 py-3 rounded-lg text-xs font-semibold tracking-wide text-gray-400 uppercase border-t  bg-gray-50 sm:grid-cols-9  ">
            
             <span class="flex items-center col-span-3"> CITAS PASADAS</span>
               <span class="col-span-2"></span>
@@ -475,7 +475,7 @@ showTime();
             <div class="w-full overflow-x-auto">
               <table class="w-full ">
                 <thead>
-                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b  bg-gray-50  ">
                     <th class="px-4 py-3">Paciente</th>
                     <th class="px-4 py-3">Fecha</th>
                     <th class="px-4 py-3">Consulta</th>
@@ -484,7 +484,7 @@ showTime();
                     <th class="px-4 py-3">Accion</th>
                   </tr>
                 </thead>
-                <tbody class="bg-gray-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class="bg-gray-white divide-y  ">
 
                
 
@@ -505,7 +505,7 @@ showTime();
 
 
 
-            <div class="grid px-4 py-3 text-xs rounded-lg  font-semibold tracking-wide text-gray-500 uppercase  dark:border-gray-700 bg-gray-100  dark:text-gray-400 dark:bg-gray-800 border-t shadow-lg  ">
+            <div class="grid px-4 py-3 text-xs rounded-lg  font-semibold tracking-wide text-gray-500 uppercase   bg-gray-100    border-t shadow-lg  ">
             <?php
                 $contarcitas = $conn->prepare("SELECT * FROM `eventos` WHERE user_id= ? ");
                 $contarcitas ->execute([$user_id]);
@@ -533,29 +533,7 @@ showTime();
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
   <!--Dark Mode-->
-  <script>
-    const setup = () => {
-      const getTheme = () => {
-        if (window.localStorage.getItem('dark')) {
-          return JSON.parse(window.localStorage.getItem('dark'))
-        }
-        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      }
 
-      const setTheme = (value) => {
-        window.localStorage.setItem('dark', value)
-      }
-
-      return {
-        loading: true,
-        isDark: getTheme(),
-        toggleTheme() {
-          this.isDark = !this.isDark
-          setTheme(this.isDark)
-        },
-      }
-    }
-  </script>
 
 <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>

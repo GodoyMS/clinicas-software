@@ -87,13 +87,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
       $update_paciente9 = $conn->prepare("UPDATE `pacientes` SET direccion  = ? WHERE id = ? ");
       $update_paciente9->execute([$direccionPaciente,$idPaciente]);
 
-      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
           <span class="sr-only">Check icon</span>
       </div>
       <div class="ml-3 text-sm font-normal">Información actualizada</div>
-      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
           <span class="sr-only">Close</span>
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       </button>
@@ -112,7 +112,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -268,52 +268,52 @@ body {
             <div class="grid gap-6 mb-6 md:grid-cols-2 ">
                 <div>
 
-                    <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres</label>
-                    <input type="name" name="nombrePaciente"  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                    <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Nombres</label>
+                    <input type="name" name="nombrePaciente"  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                 </div>
                 <input hidden  type="text" name="sexo" value="<?=$fetch_paciente['sexo'];?>" > 
                 
                 <div>
-                    <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefono (Whatsapp)</label>
-                    <input type="tel" name="telefonoPaciente" value="<?=$fetch_paciente['telefonoPaciente'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="913411231" required>
+                    <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Telefono (Whatsapp)</label>
+                    <input type="tel" name="telefonoPaciente" value="<?=$fetch_paciente['telefonoPaciente'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="913411231" required>
                 </div>  
                 <div>
-                    <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad</label>
-                    <input type="age" name="edadPaciente" id="edadPaciente"  value="<?=$fetch_paciente['edadPaciente'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"  required>
+                    <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Edad</label>
+                    <input type="age" name="edadPaciente" id="edadPaciente"  value="<?=$fetch_paciente['edadPaciente'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="12"  required>
                 </div>
                 <div>
-                    <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
-                    <input type="city" name="ciudadPaciente" id="ciudadPaciente" value="<?=$fetch_paciente['ciudadPaciente'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Huancavelica" >
+                    <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Ciudad</label>
+                    <input type="city" name="ciudadPaciente" id="ciudadPaciente" value="<?=$fetch_paciente['ciudadPaciente'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Huancavelica" >
                 </div>
                 <div>
-                    <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                    <input type="email" name="emailPaciente" id="emailPaciente"  value="<?=$fetch_paciente['correo'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="godoy@gmail.com"  >
+                    <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+                    <input type="email" name="emailPaciente" id="emailPaciente"  value="<?=$fetch_paciente['correo'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="godoy@gmail.com"  >
                 </div>
                 <div>
-                    <label for="dniPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dni</label>
-                    <input type="text" name="dniPaciente" id="dniPaciente" value="<?=$fetch_paciente['dni'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="71102387" required>
+                    <label for="dniPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Dni</label>
+                    <input type="text" name="dniPaciente" id="dniPaciente" value="<?=$fetch_paciente['dni'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="71102387" required>
                 </div>   
                 <div>
-                    <label for="fechaNacimientopaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha Nacimiento</label>
-                    <input type="date" name="fechaNacimientopaciente" id="fechaNacimientopaciente" value="<?=$fetch_paciente['fechaNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                    <label for="fechaNacimientopaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha Nacimiento</label>
+                    <input type="date" name="fechaNacimientopaciente" id="fechaNacimientopaciente" value="<?=$fetch_paciente['fechaNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                 </div>
                 <div>
-                    <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lugar de Nacimiento</label>
-                    <input type="text" name="lugarNacimiento" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cerro de Pasco - Villa Rica" >
+                    <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Lugar de Nacimiento</label>
+                    <input type="text" name="lugarNacimiento" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Cerro de Pasco - Villa Rica" >
                 </div>
 
                 <div>
-                    <label for="ocupacionPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ocupación</label>
-                    <input type="text" name="ocupacionPaciente" id="ocupacionPaciente" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Abogado" >
+                    <label for="ocupacionPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Ocupación</label>
+                    <input type="text" name="ocupacionPaciente" id="ocupacionPaciente" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Abogado" >
                 </div>
                 <div>
-                    <label for="direccionPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-                    <input type="text" name="direccionPaciente" id="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Av. Las Palmeras 556" >
+                    <label for="direccionPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección</label>
+                    <input type="text" name="direccionPaciente" id="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Av. Las Palmeras 556" >
                 </div>
                 <div>
-                    <label for="tokenPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Token</label>
+                    <label for="tokenPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Token</label>
                     <div class="flex gap-2 items-center">
-                        <input disabled type="password" name="tokenPaciente" id="tokenPaciente" value="<?=$fetch_paciente['token'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="71102387" required>
+                        <input disabled type="password" name="tokenPaciente" id="tokenPaciente" value="<?=$fetch_paciente['token'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="71102387" required>
                         <svg style="cursor:pointer" id="showHide" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -344,7 +344,7 @@ body {
                 </script>
         
         </div>
-            <button type="submit" name="submitActualizarInfoPaciente" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Actualizar</button>
+            <button type="submit" name="submitActualizarInfoPaciente" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center   ">Actualizar</button>
         </form>
 
 </div>

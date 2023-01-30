@@ -814,20 +814,20 @@ function processOptions(options, datepicker) {
 
 
 const pickerTemplate = optimizeTemplateHTML(`<div class="datepicker hidden">
-  <div class="datepicker-picker inline-block rounded-lg bg-white dark:bg-gray-700 shadow-lg p-4">
+  <div class="datepicker-picker inline-block rounded-lg bg-white  shadow-lg p-4">
     <div class="datepicker-header">
-      <div class="datepicker-title bg-white dark:bg-gray-700 dark:text-white px-2 py-3 text-center font-semibold"></div>
+      <div class="datepicker-title bg-white   px-2 py-3 text-center font-semibold"></div>
       <div class="datepicker-controls flex justify-between mb-2">
-        <button type="button" class="bg-white dark:bg-gray-700 rounded-lg text-gray-500 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white text-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-gray-200 prev-btn"></button>
-        <button type="button" class="text-sm rounded-lg text-gray-900 dark:text-white bg-white dark:bg-gray-700 font-semibold py-2.5 px-5 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 view-switch"></button>
-        <button type="button" class="bg-white dark:bg-gray-700 rounded-lg text-gray-500 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white text-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-gray-200 next-btn"></button>
+        <button type="button" class="bg-white  rounded-lg text-gray-500  hover:bg-gray-100  hover:text-gray-900  text-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-gray-200 prev-btn"></button>
+        <button type="button" class="text-sm rounded-lg text-gray-900  bg-white  font-semibold py-2.5 px-5 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-gray-200 view-switch"></button>
+        <button type="button" class="bg-white  rounded-lg text-gray-500  hover:bg-gray-100  hover:text-gray-900  text-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-gray-200 next-btn"></button>
       </div>
     </div>
     <div class="datepicker-main p-1"></div>
     <div class="datepicker-footer">
       <div class="datepicker-controls flex space-x-2 mt-2">
-        <button type="button" class="%buttonClass% today-btn text-white bg-blue-700 dark:bg-blue-600 hover:bg-blue-800 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center w-1/2"></button>
-        <button type="button" class="%buttonClass% clear-btn text-gray-900 dark:text-white bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center w-1/2"></button>
+        <button type="button" class="%buttonClass% today-btn text-white bg-blue-700  hover:bg-blue-800  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center w-1/2"></button>
+        <button type="button" class="%buttonClass% clear-btn text-gray-900  bg-white  border border-gray-300  hover:bg-gray-100  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center w-1/2"></button>
       </div>
     </div>
   </div>
@@ -840,7 +840,7 @@ const pickerTemplate = optimizeTemplateHTML(`<div class="datepicker hidden">
 
 const daysTemplate = optimizeTemplateHTML(`<div class="days">
   <div class="days-of-week grid grid-cols-7 mb-1">${createTagRepeat('span', 7, {class: 'dow block flex-1 leading-9 border-0 rounded-lg cursor-default text-center text-gray-900 font-semibold text-sm'})}</div>
-  <div class="datepicker-grid w-64 grid grid-cols-7">${createTagRepeat('span', 42 , {class: 'block flex-1 leading-9 border-0 rounded-lg cursor-default text-center text-gray-900 font-semibold text-sm h-6 leading-6 text-sm font-medium text-gray-500 dark:text-gray-400'})}</div>
+  <div class="datepicker-grid w-64 grid grid-cols-7">${createTagRepeat('span', 42 , {class: 'block flex-1 leading-9 border-0 rounded-lg cursor-default text-center text-gray-900 font-semibold text-sm h-6 leading-6 text-sm font-medium text-gray-500 '})}</div>
 </div>`);
 
 /* harmony default export */ var templates_daysTemplate = (daysTemplate);
@@ -849,7 +849,7 @@ const daysTemplate = optimizeTemplateHTML(`<div class="days">
 
 
 const calendarWeeksTemplate = optimizeTemplateHTML(`<div class="calendar-weeks">
-  <div class="days-of-week flex"><span class="dow h-6 leading-6 text-sm font-medium text-gray-500 dark:text-gray-400"></span></div>
+  <div class="days-of-week flex"><span class="dow h-6 leading-6 text-sm font-medium text-gray-500 "></span></div>
   <div class="weeks">${createTagRepeat('span', 6, {class: 'week block flex-1 leading-9 border-0 rounded-lg cursor-default text-center text-gray-900 font-semibold text-sm'})}</div>
 </div>`);
 
@@ -1012,7 +1012,7 @@ class DaysView extends View {
       Array.from(this.dow.children).forEach((el, index) => {
         const dow = (this.weekStart + index) % 7;
         el.textContent = this.dayNames[dow];
-        el.className = this.daysOfWeekDisabled.includes(dow) ? 'dow disabled text-center h-6 leading-6 text-sm font-medium text-gray-500 dark:text-gray-400 cursor-not-allowed' : 'dow text-center h-6 leading-6 text-sm font-medium text-gray-500 dark:text-gray-400';
+        el.className = this.daysOfWeekDisabled.includes(dow) ? 'dow disabled text-center h-6 leading-6 text-sm font-medium text-gray-500  cursor-not-allowed' : 'dow text-center h-6 leading-6 text-sm font-medium text-gray-500 ';
       });
     }
   }
@@ -1066,17 +1066,17 @@ class DaysView extends View {
       const date = new Date(current);
       const day = date.getDay();
 
-      el.className = `datepicker-cell hover:bg-gray-100 dark:hover:bg-gray-600 block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900 dark:text-white font-semibold text-sm ${this.cellClass}`;
+      el.className = `datepicker-cell hover:bg-gray-100  block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900  font-semibold text-sm ${this.cellClass}`;
       el.dataset.date = current;
       el.textContent = date.getDate();
 
       if (current < this.first) {
-        classList.add('prev', 'text-gray-500', 'dark:text-white');
+        classList.add('prev', 'text-gray-500', '');
       } else if (current > this.last) {
-        classList.add('next', 'text-gray-500', 'dark:text-white');
+        classList.add('next', 'text-gray-500', '');
       }
       if (this.today === current) {
-        classList.add('today', 'bg-gray-100', 'dark:bg-gray-600');
+        classList.add('today', 'bg-gray-100', '');
       }
       if (current < this.minDate || current > this.maxDate || this.disabled.includes(current)) {
         classList.add('disabled', 'cursor-not-allowed');
@@ -1091,21 +1091,21 @@ class DaysView extends View {
       if (this.range) {
         const [rangeStart, rangeEnd] = this.range;
         if (current > rangeStart && current < rangeEnd) {
-          classList.add('range', 'bg-gray-200', 'dark:bg-gray-600');
+          classList.add('range', 'bg-gray-200', '');
           classList.remove('rounded-lg', 'rounded-l-lg', 'rounded-r-lg')
         }
         if (current === rangeStart) {
-          classList.add('range-start', 'bg-gray-100', 'dark:bg-gray-600', 'rounded-l-lg');
+          classList.add('range-start', 'bg-gray-100', '', 'rounded-l-lg');
           classList.remove('rounded-lg', 'rounded-r-lg');
         }
         if (current === rangeEnd) {
-          classList.add('range-end', 'bg-gray-100', 'dark:bg-gray-600', 'rounded-r-lg');
+          classList.add('range-end', 'bg-gray-100', '', 'rounded-r-lg');
           classList.remove('rounded-lg', 'rounded-l-lg');
         }
       }
       if (this.selected.includes(current)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'text-gray-500', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600', 'dark:bg-gray-600', 'bg-gray-100', 'bg-gray-200');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'text-gray-500', 'hover:bg-gray-100', '', '', '', 'bg-gray-100', 'bg-gray-200');
       }
       if (current === this.focused) {
         classList.add('focused');
@@ -1123,28 +1123,28 @@ class DaysView extends View {
     this.grid
       .querySelectorAll('.range, .range-start, .range-end, .selected, .focused')
       .forEach((el) => {
-        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white', 'focused');
-        el.classList.add('text-gray-900', 'rounded-lg', 'dark:text-white');
+        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', 'text-white', '', '', 'focused');
+        el.classList.add('text-gray-900', 'rounded-lg', '');
       });
     Array.from(this.grid.children).forEach((el) => {
       const current = Number(el.dataset.date);
       const classList = el.classList;
-      classList.remove('bg-gray-200', 'dark:bg-gray-600', 'rounded-l-lg', 'rounded-r-lg')
+      classList.remove('bg-gray-200', '', 'rounded-l-lg', 'rounded-r-lg')
       if (current > rangeStart && current < rangeEnd) {
-        classList.add('range', 'bg-gray-200', 'dark:bg-gray-600');
+        classList.add('range', 'bg-gray-200', '');
         classList.remove('rounded-lg');
       }
       if (current === rangeStart) {
-        classList.add('range-start', 'bg-gray-200', 'dark:bg-gray-600', 'rounded-l-lg');
+        classList.add('range-start', 'bg-gray-200', '', 'rounded-l-lg');
         classList.remove('rounded-lg', 'rounded-r-lg');
       }
       if (current === rangeEnd) {
-        classList.add('range-end', 'bg-gray-200', 'dark:bg-gray-600', 'rounded-r-lg');
+        classList.add('range-end', 'bg-gray-200', '', 'rounded-r-lg');
         classList.remove('rounded-lg', 'rounded-l-lg');
       }
       if (this.selected.includes(current)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600', 'bg-gray-100', 'bg-gray-200', 'dark:bg-gray-600');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'hover:bg-gray-100', '', '', 'bg-gray-100', 'bg-gray-200', '');
       }
       if (current === this.focused) {
         classList.add('focused');
@@ -1281,7 +1281,7 @@ class MonthsView extends View {
       const classList = el.classList;
       const date = dateValue(this.year, index, 1);
 
-      el.className = `datepicker-cell hover:bg-gray-100 dark:hover:bg-gray-600 block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900 dark:text-white font-semibold text-sm ${this.cellClass}`;
+      el.className = `datepicker-cell hover:bg-gray-100  block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900  font-semibold text-sm ${this.cellClass}`;
       if (this.isMinView) {
         el.dataset.date = date;
       }
@@ -1309,8 +1309,8 @@ class MonthsView extends View {
         }
       }
       if (selected.includes(index)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'hover:bg-gray-100', '', '');
       }
       if (index === this.focused) {
         classList.add('focused');
@@ -1329,8 +1329,8 @@ class MonthsView extends View {
     this.grid
       .querySelectorAll('.range, .range-start, .range-end, .selected, .focused')
       .forEach((el) => {
-        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', 'dark:bg-blue-600', 'dark:text-white', 'text-white', 'focused');
-        el.classList.add('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600');
+        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', '', '', 'text-white', 'focused');
+        el.classList.add('text-gray-900', 'hover:bg-gray-100', '', '');
       });
     Array.from(this.grid.children).forEach((el, index) => {
       const classList = el.classList;
@@ -1344,8 +1344,8 @@ class MonthsView extends View {
         classList.add('range-end');
       }
       if (selected.includes(index)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'hover:bg-gray-100', '', '');
       }
       if (index === this.focused) {
         classList.add('focused');
@@ -1453,7 +1453,7 @@ class YearsView extends View {
       const current = this.start + (index * this.step);
       const date = dateValue(current, 0, 1);
 
-      el.className = `datepicker-cell hover:bg-gray-100 dark:hover:bg-gray-600 block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900 dark:text-white font-semibold text-sm ${this.cellClass}`;
+      el.className = `datepicker-cell hover:bg-gray-100  block flex-1 leading-9 border-0 rounded-lg cursor-pointer text-center text-gray-900  font-semibold text-sm ${this.cellClass}`;
       if (this.isMinView) {
         el.dataset.date = date;
       }
@@ -1480,8 +1480,8 @@ class YearsView extends View {
         }
       }
       if (this.selected.includes(current)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'hover:bg-gray-100', '', '');
       }
       if (current === this.focused) {
         classList.add('focused');
@@ -1499,7 +1499,7 @@ class YearsView extends View {
     this.grid
       .querySelectorAll('.range, .range-start, .range-end, .selected, .focused')
       .forEach((el) => {
-        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white', 'focused');
+        el.classList.remove('range', 'range-start', 'range-end', 'selected', 'bg-blue-700', 'text-white', '', '', 'focused');
       });
     Array.from(this.grid.children).forEach((el) => {
       const current = Number(el.textContent);
@@ -1514,8 +1514,8 @@ class YearsView extends View {
         classList.add('range-end');
       }
       if (this.selected.includes(current)) {
-        classList.add('selected', 'bg-blue-700', 'text-white', 'dark:bg-blue-600', 'dark:text-white');
-        classList.remove('text-gray-900', 'hover:bg-gray-100', 'dark:text-white', 'dark:hover:bg-gray-600');
+        classList.add('selected', 'bg-blue-700', 'text-white', '', '');
+        classList.remove('text-gray-900', 'hover:bg-gray-100', '', '');
       }
       if (current === this.focused) {
         classList.add('focused');

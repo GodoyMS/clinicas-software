@@ -85,7 +85,7 @@ if(isset($_GET['delete'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -111,13 +111,13 @@ if(isset($_GET['delete'])){
     <h2 class="block mb-2 text-4xl">AÑADIR POST INSTAGRAM</h2></br>
    
     <div class="mb-6">
-        <label for="instagram" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Instagram Link POST</label>
-        <input required name="instagram" type="instagram" id="instagram" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="https://www.instagram.com/p/Cl89fdLOWNgXy8mgYJUpMERad3PV5dD1B4TEvY0/" >
+        <label for="instagram" class="block mb-2 text-2xl font-medium text-gray-900 ">Instagram Link POST</label>
+        <input required name="instagram" type="instagram" id="instagram" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder="https://www.instagram.com/p/Cl89fdLOWNgXy8mgYJUpMERad3PV5dD1B4TEvY0/" >
     </div>
    
     
 
-<button type="submit" value="añadir_post_instagram" name="añadir_post_instagram" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Publicar</button>
+<button type="submit" value="añadir_post_instagram" name="añadir_post_instagram" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center   ">Publicar</button>
 
 </form>
 
@@ -126,15 +126,15 @@ if(isset($_GET['delete'])){
    
     
     <div class="mb-6">
-        <label for="facebook" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Link source</label>
-        <input placeholder="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRaizonDota%2Fposts%2Fpfbid0ojDs4dptXHi9NGBFsKVMCayAaEMn6NiedyRXXu29EChqo6gdPjECoWpc3KzcsZznl&show_text=true&width=500" required name="facebook"  id="facebook" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        <label for="facebook" class="block mb-2 text-2xl font-medium text-gray-900 ">Link source</label>
+        <input placeholder="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRaizonDota%2Fposts%2Fpfbid0ojDs4dptXHi9NGBFsKVMCayAaEMn6NiedyRXXu29EChqo6gdPjECoWpc3KzcsZznl&show_text=true&width=500" required name="facebook"  id="facebook" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " >
         </input>
 
     </div>  
     
     
 
-<button required type="submit" value="añadir_post_facebook" name="añadir_post_facebook" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Publicar</button>
+<button required type="submit" value="añadir_post_facebook" name="añadir_post_facebook" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center   ">Publicar</button>
 
 
 
@@ -146,17 +146,17 @@ if(isset($_GET['delete'])){
    
      
     <div class="mb-6">
-        <label for="tiktok" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Url Video</label>
-        <input required type="text" name="tiktok"" id="tiktok" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='https://www.tiktok.com/@kimrubi11/video/7174453212043431174' >
+        <label for="tiktok" class="block mb-2 text-2xl font-medium text-gray-900 ">Url Video</label>
+        <input required type="text" name="tiktok"" id="tiktok" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder='https://www.tiktok.com/@kimrubi11/video/7174453212043431174' >
         </input>
-        <label for="id_video_tiktok" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">ID video</label>
-        <input required type="text" name="id_video_tiktok"  id="id_video_tiktok" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='7174453212043431174' >
+        <label for="id_video_tiktok" class="block mb-2 text-2xl font-medium text-gray-900 ">ID video</label>
+        <input required type="text" name="id_video_tiktok"  id="id_video_tiktok" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder='7174453212043431174' >
         </input>
 
     </div> 
     
 
-<button type="submit" value="añadir_post_tiktok" name="añadir_post_tiktok" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Publicar</button>
+<button type="submit" value="añadir_post_tiktok" name="añadir_post_tiktok" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center   ">Publicar</button>
 
 
 

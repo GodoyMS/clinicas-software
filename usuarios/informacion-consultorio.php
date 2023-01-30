@@ -88,13 +88,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
       $update_paciente9 = $conn->prepare("UPDATE `pacientes` SET direccion  = ? WHERE id = ? ");
       $update_paciente9->execute([$direccionPaciente,$idPaciente]);
 
-      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+      echo '<div id="toast-success" class="mx-auto relative flex justify-center mt-4 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
           <span class="sr-only">Check icon</span>
       </div>
       <div class="ml-3 text-sm font-normal">Información actualizada</div>
-      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
           <span class="sr-only">Close</span>
           <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       </button>
@@ -113,7 +113,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -269,43 +269,43 @@ body {
                     <form action="" style="max-width:36rem"  method="post" class=" mx-auto  bg-white shadow-lg rounded-lg px-8 my-4 py-8">
                             <div class="py-4">
 
-                                <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de consultorio</label>
-                                <input disabled type="name" name="nombreConsultorio"  value="<?=$fetch_clinica['nombreConsultorio'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                                <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Nombre de consultorio</label>
+                                <input disabled type="name" name="nombreConsultorio"  value="<?=$fetch_clinica['nombreConsultorio'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                             </div>
 
                                     <div class="py-4">
 
-                                        <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Especialidad</label>
-                                        <input disabled type="text" name="especialidad"  value="<?=$fetch_clinica['especialidad'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                                        <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Especialidad</label>
+                                        <input disabled type="text" name="especialidad"  value="<?=$fetch_clinica['especialidad'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                                     </div>
                                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                                     <div>
 
-                                        <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departamento</label>
-                                        <input disabled type="city" name="departamento"  value="<?=$fetch_clinica['departamento'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                                        <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Departamento</label>
+                                        <input disabled type="city" name="departamento"  value="<?=$fetch_clinica['departamento'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                                     </div>
                                     
                                     <div>
-                                        <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Provincia </label>
-                                        <input disabled type="text" name="provincia"value="<?=$fetch_clinica['provincia'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="913411231" required>
+                                        <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Provincia </label>
+                                        <input disabled type="text" name="provincia"value="<?=$fetch_clinica['provincia'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="913411231" required>
                                     </div>  
                                     <div>
-                                        <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Distrito</label>
-                                        <input disabled type="text" name="distrito" id="edadPaciente"  value="<?=$fetch_clinica['distrito'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"  required>
+                                        <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Distrito</label>
+                                        <input disabled type="text" name="distrito" id="edadPaciente"  value="<?=$fetch_clinica['distrito'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="12"  required>
                                     </div>
                                     <div>
-                                        <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Numero de consultorio</label>
-                                        <input  disabled type="tel" name="numeroConsultorio" id="ciudadPaciente" value="<?=$fetch_clinica['numeroConsultorio'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Huancavelica" >
+                                        <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Numero de consultorio</label>
+                                        <input  disabled type="tel" name="numeroConsultorio" id="ciudadPaciente" value="<?=$fetch_clinica['numeroConsultorio'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Huancavelica" >
                                     </div>
                                     <div>
-                                        <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email de Consultorio</label>
-                                        <input disabled type="email" name="emailConsultorio" id="emailPaciente"  value="<?=$fetch_clinica['emailConsultorio'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="godoy@gmail.com"  >
+                                        <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Email de Consultorio</label>
+                                        <input disabled type="email" name="emailConsultorio" id="emailPaciente"  value="<?=$fetch_clinica['emailConsultorio'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="godoy@gmail.com"  >
                                     </div>    
                             </div>
                             <div class="py-4">
 
-                                <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-                                <input disabled type="address" name="Direccion"  value="<?=$fetch_clinica['Direccion'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                                <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección</label>
+                                <input disabled type="address" name="Direccion"  value="<?=$fetch_clinica['Direccion'];?>" id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                             </div>
                     </form>
 

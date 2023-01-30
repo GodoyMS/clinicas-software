@@ -124,19 +124,19 @@
 
 <!-- Header -->
 <div class="fixed w-full shadow-lg flex items-center justify-between h-14 text-white z-10">
-        <div class="flex items-center justify-between md:justify-around pl-3 w-14 md:w-64 h-14 bg-blue-600 dark:bg-gray-800 border-none">
+        <div class="flex items-center justify-between md:justify-around pl-3 w-14 md:w-64 h-14 bg-blue-600  border-none">
           
         <?php include 'logo.php';   ?>
         </div>
         
         
-        <div class="flex justify-between items-center h-14 bg-blue-600 dark:bg-gray-800 header-right">
+        <div class="flex justify-between items-center h-14 bg-blue-600  header-right">
 
               <!--RESPONSIVE SEARCHBAR-->
                 <div class="container pl-4  flex flex-wrap items-center justify-between mx-auto">
                  
                       <div class="flex">
-                        <button type="button"  data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-800 bg-blue-200  dark:text-gray-800 dark:bg-gray-100   hover:bg-gray-100 dark:hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2.5 mr-1" >
+                        <button type="button"  data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-800 bg-blue-200      hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200  rounded-full text-sm p-2.5 mr-1" >
                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                           <span class="sr-only">Search</span>
                         </button>
@@ -146,7 +146,7 @@
                             <span class="sr-only">Search icon</span>
                           </div>
                           <form action="buscar-paciente.php" method="POST" >
-                          <input type="text" name="search-paciente-box1"  class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar un paciente">
+                          <input type="text" name="search-paciente-box1"  class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500      " placeholder="Buscar un paciente">
 
                           </form>
                         </div>
@@ -158,8 +158,8 @@
 
                           <div class="absolute mt-3 md:hidden">
                             
-                            <input type="text"  name="search-paciente-box2"  class="block w-full p-2  text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar un paciente">
-                            <button type="submit"  class="absolute top-0 right-0 p-2 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <input type="text"  name="search-paciente-box2"  class="block w-full p-2  text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500      " placeholder="Buscar un paciente">
+                            <button type="submit"  class="absolute top-0 right-0 p-2 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300   ">
                                 <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 <span class="sr-only">Search</span>
                             </button>
@@ -205,8 +205,8 @@
 
            <!--NOTIFICATIONS DROPDOWN-->
            
-            <div id="dropdown" tabindex="-1" class="z-50  hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-80 dark:bg-gray-800">
-                <ul   class="py-2 text-sm text-gray-700  dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <div id="dropdown" tabindex="-1" class="z-50  hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-80 ">
+                <ul   class="py-2 text-sm text-gray-700  " aria-labelledby="dropdownDefaultButton">
 
                 <?php
                   if($numberMessages>0){     
@@ -227,9 +227,9 @@
                               </span>
                               </div>
                               <div class="ml-3 text-sm  font-normal">
-                                  <div class="text-sm font-semibold text-gray-900 dark:text-white"><?=$fetchMensajes['nombrePaciente'];?></div>
+                                  <div class="text-sm font-semibold text-gray-900 "><?=$fetchMensajes['nombrePaciente'];?></div>
                                   <div class="text-sm font-normal truncate w-60"><?=$fetchMensajes['mensaje'];?></div> 
-                                  <span class="text-xs font-medium text-blue-600 dark:text-blue-500"><?=$fetchMensajes['tipoMensaje'];?></span>   
+                                  <span class="text-xs font-medium text-blue-600 "><?=$fetchMensajes['tipoMensaje'];?></span>   
                               </div>
                           </div> 
                     </a>                 
@@ -248,12 +248,12 @@
                                
                               </div>
                               <div class="ml-3 text-sm font-normal">
-                                  <div class="text-sm font-semibold text-gray-900 dark:text-white">Aun no tienes niguna notificación</div>
+                                  <div class="text-sm font-semibold text-gray-900 ">Aun no tienes niguna notificación</div>
                               </div>
                           </div> 
                     </a>                 
                   </li>
-                  <li class="p-2 text-blue-500 hover:text-blue-700 dark:hover:text-blue-400">
+                  <li class="p-2 text-blue-500 hover:text-blue-700 ">
                             <a href="mensajes.php">
                                   <div class="flex items-center">
                                                 <div class="relative inline-block shrink-0">
@@ -276,24 +276,9 @@
             </div>
 
             
+          
             <li>
-             
-              <button
-                aria-hidden="true"
-                @click="toggleTheme"
-                class="group p-2 transition-colors duration-200 text-white hover:text-blue-200"
-              >
-              <svg  x-show="isDark" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-              <svg  x-show="!isDark" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-
-              
-
-
-               
-              </button>
-            </li>
-            <li>
-              <div class="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
+              <div class="block w-px h-6 mx-3 bg-gray-400 "></div>
             </li>
             <li>
               <a href="components/user_logout.php" class="flex items-center mr-4 hover:text-blue-100">
@@ -310,7 +295,7 @@
       
     
       <!-- Sidebar -->
-      <div class="fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-blue-500 dark:bg-gray-800 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+      <div class="fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-blue-500  h-full text-white transition-all duration-300 border-none z-10 sidebar">
         <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between  flex-grow">
           <ul class="flex flex-col py-4 space-y-1">
             <li class="px-5 hidden md:block">
@@ -319,28 +304,28 @@
               </div>
             </li>
             <li>
-              <a href="dashboard.php" class="relative flex flex-row items-center h-11 focus:outline-none pacientes inicio hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="dashboard.php" class="relative flex flex-row items-center h-11 focus:outline-none pacientes inicio hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Inicio</span>
               </a>
             </li>
             <li>
-              <a href="pacientes.php" class="relative flex flex-row items-center h-11 focus:outline-none pacientes hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="pacientes.php" class="relative flex flex-row items-center h-11 focus:outline-none pacientes hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Pacientes</span>
               </a>
             </li>
             <li>
-              <a href="agenda.php" class="relative flex flex-row items-center h-11 focus:outline-none agenda hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="agenda.php" class="relative flex flex-row items-center h-11 focus:outline-none agenda hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Agenda</span>
               </a>
             </li>
             <li>
-              <a href="citas.php" class="relative flex flex-row items-center h-11 focus:outline-none agenda hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="citas.php" class="relative flex flex-row items-center h-11 focus:outline-none agenda hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
               </span>
@@ -367,7 +352,7 @@
             
            
             <!-- <li>
-              <a href="boletas-electronicas.php" class="relative flex flex-row items-center h-11 focus:outline-none boletas_electronicas hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="boletas-electronicas.php" class="relative flex flex-row items-center h-11 focus:outline-none boletas_electronicas hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Boletas electrónicas</span>
@@ -376,7 +361,7 @@
 
 
             <li>
-              <a href="costos.php" class="relative flex flex-row items-center h-11 focus:outline-none costos hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="costos.php" class="relative flex flex-row items-center h-11 focus:outline-none costos hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clip-rule="evenodd"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Costos</span>
@@ -386,7 +371,7 @@
 
 
             <li>
-              <a href="mensajes.php" class="relative flex flex-row items-center h-11 focus:outline-none mensajes hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="mensajes.php" class="relative flex flex-row items-center h-11 focus:outline-none mensajes hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Mensajes</span>
@@ -414,14 +399,14 @@
               </div>
             </li>
             <li>
-              <a href="consultorio.php" class="relative flex flex-row items-center h-11 perfil focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="consultorio.php" class="relative flex flex-row items-center h-11 perfil focus:outline-none hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path></svg>                </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Perfil Consultorio</span>
               </a>
             </li>
             <li>
-              <a href="profesionales.php" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="profesionales.php" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
                 </span>
@@ -457,7 +442,7 @@
           <a href="https://github.com/GodoyMS" style="bottom:3rem"class="relative flex flex-row  items-center h-11 focus:outline-none  text-white-600  border-l-4 border-transparent pr-6">
             
            
-                <span style="font-size:0.55rem;margin-left:5rem" class=" flex tracking-wide  text-gray-300 dark:text-gray-300 truncate">Desarrollado por Godoy Muñoz S. </span>
+                <span style="font-size:0.55rem;margin-left:5rem" class=" flex tracking-wide  text-gray-300  truncate">Desarrollado por Godoy Muñoz S. </span>
 
          
 

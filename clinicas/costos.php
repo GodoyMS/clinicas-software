@@ -116,7 +116,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -134,7 +134,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
 <!-- component -->  
 <div x-data="setup()" :class="{ 'dark': isDark }">
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white  text-black ">
       <?php
         include '../components/dashboard/dashboard-header.php';
       ?>
@@ -159,12 +159,12 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
       
 <!-- Modal toggle -->
 <div class="flex justify-around items-center flex-wrap">
-<button   data-modal-target="ingreso-modal"  data-modal-toggle="ingreso-modal" class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+<button   data-modal-target="ingreso-modal"  data-modal-toggle="ingreso-modal" class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   " type="button">
   Nuevo ingreso
   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
 </button>
 
-<button  data-modal-target="egreso-modal"  data-modal-toggle="egreso-modal" class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+<button  data-modal-target="egreso-modal"  data-modal-toggle="egreso-modal" class=" flex gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   " type="button">
   Nuevo egreso
   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
 </button>     
@@ -174,13 +174,13 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 <div id="ingreso-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
     <div class="relative w-full h-full max-w-md md:h-auto">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="ingreso-modal">
+        <div class="relative bg-white rounded-lg shadow ">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  " data-modal-hide="ingreso-modal">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Close modal</span>
             </button>
             <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Nuevo ingreso</h3>
+                <h3 class="mb-4 text-xl font-medium text-gray-900 ">Nuevo ingreso</h3>
                 <form class="space-y-6" action=" " method="POST">
 
                              <?php
@@ -209,9 +209,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                         <input hidden type="text" name="year" value="<?=$year;?>">
                         <input hidden type="text" name="month" value="<?=$month;?>">
                         <input hidden type="text" name="modo" value="ingreso" />
-                        <label for="name" class="text-gray-800 dark:text-white   text-sm font-bold leading-tight tracking-normal">Doctor</label>
+                        <label for="name" class="text-gray-800    text-sm font-bold leading-tight tracking-normal">Doctor</label>
                        
-                        <select name="doctor" id="underline_select"  style="margin-top:0.5rem;margin-bottom:1rem" class=" text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
+                        <select name="doctor" id="underline_select"  style="margin-top:0.5rem;margin-bottom:1rem" class=" text-gray-600     focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
                         <option value="" selected>Escoger un doctor (opcional)</option>
 
                         <?php
@@ -231,9 +231,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                            
                           
                     
-                       <label for="name"  class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Paciente</label>
+                       <label for="name"  class="text-gray-800   text-sm font-bold leading-tight tracking-normal">Paciente</label>
                        
-                        <select name="paciente" id="underline_select" style="margin-top:0.5rem"   class="mb-5 mt-2 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
+                        <select name="paciente" id="underline_select" style="margin-top:0.5rem"   class="mb-5 mt-2 text-gray-600     focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
                         <option value="" selected>Escoger un paciente (opcional)</option>
    
                         <?php
@@ -252,21 +252,21 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                         </select>
 
                         <div>
-                          <label for="concepto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Concepto</label>
-                          <input type="text" name="concepto" id="concepto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                          <label for="concepto" class="block mb-2 text-sm font-medium text-gray-900 ">Concepto</label>
+                          <input type="text" name="concepto" id="concepto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    " required>
                         </div>
                         <input hidden type="text" value="">
                         <div>
-                          <label for="monto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Monto</label>
+                          <label for="monto" class="block mb-2 text-sm font-medium text-gray-900 ">Monto</label>
                           <div style="grid-template-columns: 50px 1fr;" class="grid gap-2">
-                          <span class="h-full flex items-center justify-center bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-500"> S/.</span>
-                          <input type="number" name="monto" id="monto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                          <span class="h-full flex items-center justify-center bg-gray-50  rounded-lg border border-gray-500"> S/.</span>
+                          <input type="number" name="monto" id="monto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    " required>
 
                           </div>
                         </div>
 
                    
-                    <button type="submit" name="submitIngresoEgreso" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Registrar Ingreso</button>
+                    <button type="submit" name="submitIngresoEgreso" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   ">Registrar Ingreso</button>
                     
                 </form>
             </div>
@@ -280,13 +280,13 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 <div id="egreso-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
     <div class="relative w-full h-full max-w-md md:h-auto">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="egreso-modal">
+        <div class="relative bg-white rounded-lg shadow ">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  " data-modal-hide="egreso-modal">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Close modal</span>
             </button>
             <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Nuevo egreso</h3>
+                <h3 class="mb-4 text-xl font-medium text-gray-900 ">Nuevo egreso</h3>
                 <form class="space-y-6" action=" " method="POST">
 
                              <?php
@@ -315,9 +315,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                         <input hidden type="text" name="year" value="<?=$year;?>">
                         <input hidden type="text" name="month" value="<?=$month;?>">
                         <input hidden type="text" name="modo" value="egreso" />
-                        <label for="name" class="text-gray-800 dark:text-white   text-sm font-bold leading-tight tracking-normal">Doctor</label>
+                        <label for="name" class="text-gray-800    text-sm font-bold leading-tight tracking-normal">Doctor</label>
                        
-                        <select name="doctor" id="underline_select"  style="margin-top:0.5rem;margin-bottom:1rem" class=" text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
+                        <select name="doctor" id="underline_select"  style="margin-top:0.5rem;margin-bottom:1rem" class=" text-gray-600     focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
                         <option value="" selected>Escoger un doctor (opcional)</option>
 
                         <?php
@@ -337,9 +337,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                            
                           
                     
-                       <label for="name"  class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Paciente</label>
+                       <label for="name"  class="text-gray-800   text-sm font-bold leading-tight tracking-normal">Paciente</label>
                        
-                        <select name="paciente" id="underline_select" style="margin-top:0.5rem"   class="mb-5 mt-2 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
+                        <select name="paciente" id="underline_select" style="margin-top:0.5rem"   class="mb-5 mt-2 text-gray-600     focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
                         <option value="" selected>Escoger un paciente (opcional)</option>
    
                         <?php
@@ -358,21 +358,21 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                         </select>
 
                         <div>
-                          <label for="concepto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Concepto</label>
-                          <input type="text" name="concepto" id="concepto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                          <label for="concepto" class="block mb-2 text-sm font-medium text-gray-900 ">Concepto</label>
+                          <input type="text" name="concepto" id="concepto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    " required>
                         </div>
                         <input hidden type="text" value="">
                         <div>
-                          <label for="monto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Monto</label>
+                          <label for="monto" class="block mb-2 text-sm font-medium text-gray-900 ">Monto</label>
                           <div style="grid-template-columns: 50px 1fr;" class="grid gap-2">
-                          <span class="h-full flex items-center justify-center bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-500"> S/.</span>
-                          <input type="number" name="monto" id="monto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                          <span class="h-full flex items-center justify-center bg-gray-50  rounded-lg border border-gray-500"> S/.</span>
+                          <input type="number" name="monto" id="monto" required placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    " required>
 
                           </div>
                         </div>
 
                    
-                    <button type="submit" name="submitEgreso" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Registrar Ingreso</button>
+                    <button type="submit" name="submitEgreso" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   ">Registrar Ingreso</button>
                     
                 </form>
             </div>
@@ -414,9 +414,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
                           ?>
 
-                           <div style="" class="mx-4 my-8 dark:shadow-white relative overflow-x-auto shadow-md sm:rounded-lg">
+                           <div style="" class="mx-4 my-8  relative overflow-x-auto shadow-md sm:rounded-lg">
 
-                              <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-400 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-500 dark:bg-gray-800">
+                              <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-400 uppercase border-t  bg-gray-50 sm:grid-cols-9  ">
                                 
                                 <span class="flex items-center col-span-3"> <?=$mesesNames[$y].' - '.$x;?> </span>
                                   <span class="col-span-2"></span>
@@ -425,9 +425,9 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                               </div>
 
 
-                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
-                                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <table class="w-full text-sm text-left text-gray-500 ">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
+                                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b  bg-gray-50  ">
                                         <th scope="col" class="px-6 py-3">
                                             Paciente
                                         </th>
@@ -449,8 +449,8 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                                   <?php
                                   while($fetch_costosMonth = $select_costosMonth->fetch(PDO::FETCH_ASSOC)){
                                   ?>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <tr class="bg-white border-b   hover:bg-gray-50 ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?=$fetch_costosMonth['paciente'];?>
                                         </th>
                                         <td class="px-6 py-4">
@@ -462,7 +462,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                                         <td class="px-6 py-4">
                                             <?php
                                             if($fetch_costosMonth['modo']=='ingreso'){
-                                              echo '<span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100 ">S/. '.$fetch_costosMonth['monto'].'</span>';
+                                              echo '<span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full   ">S/. '.$fetch_costosMonth['monto'].'</span>';
                                             }else{
                                               echo '<span class="px-2 py-1  leading-tight  rounded-full text-red-800 bg-red-200 ">S/. '.$fetch_costosMonth['monto'].'</span>';
 
@@ -474,7 +474,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                                           <form action=" " method="POST">
                                               <input hidden type="text" name="idEgresoingreso" value="<?=$fetch_costosMonth['id'];?>">
 
-                                            <button type="submit" name="deleteIngresoEgreso" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</button>
+                                            <button type="submit" name="deleteIngresoEgreso" class="font-medium text-blue-600  hover:underline">Eliminar</button>
 
                                           </form>
                                         </td>
@@ -487,7 +487,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
                                     
                                 </tbody>
                                 <tfoot>
-                                  <tr class="font-semibold text-gray-900 dark:text-white">
+                                  <tr class="font-semibold text-gray-900 ">
                                       <th scope="row" class="px-6 py-3 text-base">Total</th>
                                       <td class="px-6 py-3"></td>
                                       <td class="px-6 py-3"></td>
@@ -558,29 +558,7 @@ $clientURLRegistro='https://alpha-clinicas.com/usuarios/registrar.php';
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
   <!--Dark Mode-->
-  <script>
-    const setup = () => {
-      const getTheme = () => {
-        if (window.localStorage.getItem('dark')) {
-          return JSON.parse(window.localStorage.getItem('dark'))
-        }
-        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      }
 
-      const setTheme = (value) => {
-        window.localStorage.setItem('dark', value)
-      }
-
-      return {
-        loading: true,
-        isDark: getTheme(),
-        toggleTheme() {
-          this.isDark = !this.isDark
-          setTheme(this.isDark)
-        },
-      }
-    }
-  </script>
 
 <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>

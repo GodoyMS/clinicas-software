@@ -130,7 +130,7 @@ if(isset($_GET['codigo'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -159,16 +159,16 @@ if(isset($_GET['codigo'])){
     <h2 class="block mb-2 text-4xl">AÑADIR PRODUCTO</h2></br>
    
 <div class="mb-6">
-        <label for="nombre_producto" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Nombre de producto</label>
-        <input name="nombre" type="nombre_producto" id="nombre_producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Gorra para mimir" required>
+        <label for="nombre_producto" class="block mb-2 text-2xl font-medium text-gray-900 ">Nombre de producto</label>
+        <input name="nombre" type="nombre_producto" id="nombre_producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder="Gorra para mimir" required>
     </div> 
     <div class="mb-6">
-        <label for="codigo_producto" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Código de producto</label>
-        <input name="codigo" type="text" id="codigo_producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="A423432" required>
+        <label for="codigo_producto" class="block mb-2 text-2xl font-medium text-gray-900 ">Código de producto</label>
+        <input name="codigo" type="text" id="codigo_producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder="A423432" required>
     </div> 
     <div class="mb-6">
-        <label for="tipo_talla" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Tipo de tallas</label>
-        <select id="categorias" name="tipo_talla" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"   required>
+        <label for="tipo_talla" class="block mb-2 text-2xl font-medium text-gray-900 ">Tipo de tallas</label>
+        <select id="categorias" name="tipo_talla" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      "   required>
                <option value="" disabled selected>Seleccionar--</option>
                <option value="talla_tipo2">28,30,32,34,36</option>
                <option value="talla_tipo1">XS,S,M,L,XL,XXL</option>
@@ -180,8 +180,8 @@ if(isset($_GET['codigo'])){
 
     <div class="grid gap-6 mb-6 md:grid-cols-2">
     <div class="mb-6">
-            <label for="categorias" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Categoría</label>
-            <select id="categorias" name="categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"   required>
+            <label for="categorias" class="block mb-2 text-2xl font-medium text-gray-900 ">Categoría</label>
+            <select id="categorias" name="categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      "   required>
                <option value="" disabled selected>Categoria--</option>
                <option value="Hombres | Polos">Hombres - Polos</option>
                <option value="Hombres | Poleras">Hombres- Poleras</option>
@@ -199,8 +199,8 @@ if(isset($_GET['codigo'])){
             </select>
     </div>
     <div class="mb-6">
-        <label for="precio-producto" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Precio(S/.)</label>
-        <input name="precio"  id="precio-producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" 50" required>
+        <label for="precio-producto" class="block mb-2 text-2xl font-medium text-gray-900 ">Precio(S/.)</label>
+        <input name="precio"  id="precio-producto" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder=" 50" required>
     </div>
 
     
@@ -209,13 +209,13 @@ if(isset($_GET['codigo'])){
 
            <div class="grid gap-6 mb-6 md:grid-cols-2">
            <div class="mb-6">
-        <label for="talla" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Talla (opcional)</label>
-        <input name="talla"  id="talla" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" XL,XS,M,S" >
+        <label for="talla" class="block mb-2 text-2xl font-medium text-gray-900 ">Talla (opcional)</label>
+        <input name="talla"  id="talla" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder=" XL,XS,M,S" >
     </div>
 
     <div class="mb-6">
-        <label for="largo" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Largo (opcional)</label>
-        <input name="largo"  id="largo" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" 21.5cm" >
+        <label for="largo" class="block mb-2 text-2xl font-medium text-gray-900 ">Largo (opcional)</label>
+        <input name="largo"  id="largo" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder=" 21.5cm" >
     </div>
    
        
@@ -223,13 +223,13 @@ if(isset($_GET['codigo'])){
 
            <div class="grid gap-6 mb-6 md:grid-cols-2">
            <div class="mb-6">
-        <label for="contorno" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Contorno (opcional)</label>
-        <input name="contorno"  id="contorno" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" Contorno A" >
+        <label for="contorno" class="block mb-2 text-2xl font-medium text-gray-900 ">Contorno (opcional)</label>
+        <input name="contorno"  id="contorno" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder=" Contorno A" >
     </div>
 
     <div class="mb-6">
-        <label for="ancho" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Ancho (opcional)</label>
-        <input name="ancho"  id="ancho" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" 60cm" required>
+        <label for="ancho" class="block mb-2 text-2xl font-medium text-gray-900 ">Ancho (opcional)</label>
+        <input name="ancho"  id="ancho" class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg  focus:ring-blue-500 focus:border-blue-500 block w-full p-4      " placeholder=" 60cm" required>
     </div>
    
        
@@ -242,20 +242,20 @@ if(isset($_GET['codigo'])){
 
 
         <!-- <div>
-            <label for="codigo_producto" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Codigo de producto</label>
-            <input type="text" id="codigo_producto" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="A543-123" >
+            <label for="codigo_producto" class="block mb-2 text-2xl font-medium text-gray-900 ">Codigo de producto</label>
+            <input type="text" id="codigo_producto" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="A543-123" >
         </div> -->
 
         <div>
-            <label for="descripcion" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Descripcion</label>
-            <textarea type="text" name="descripcion" rows="6" cols="40" id="descripcion" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Describir producto" required>
+            <label for="descripcion" class="block mb-2 text-2xl font-medium text-gray-900 ">Descripcion</label>
+            <textarea type="text" name="descripcion" rows="6" cols="40" id="descripcion" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Describir producto" required>
             </textarea>
 
         </div>
 
         <div class="my-4">
-            <label for="detalles" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Detalles</label>
-            <textarea type="text" name="detalles" rows="4" cols="40" id="descripcion" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Detalles de producto" required>
+            <label for="detalles" class="block mb-2 text-2xl font-medium text-gray-900 ">Detalles</label>
+            <textarea type="text" name="detalles" rows="4" cols="40" id="descripcion" class="disabled bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Detalles de producto" required>
             </textarea>
 
         </div>
@@ -266,20 +266,20 @@ if(isset($_GET['codigo'])){
 
         
         <div style="margin-top:2rem;margin-bottom:2rem">
-            <label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white" for="file_input">Subir Imagen Principal</label>
-            <input id="image_input" type="file" name="imagen1" accept="image/jpg, image/jpeg, image/png, image/webp" required class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+            <label class="block mb-2 text-2xl font-medium text-gray-900 " for="file_input">Subir Imagen Principal</label>
+            <input id="image_input" type="file" name="imagen1" accept="image/jpg, image/jpeg, image/png, image/webp" required class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " >
         </div>   
         <div style="margin-top:2rem;margin-bottom:2rem">
-            <label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white" for="file_input">Subir Imagen 2 (opcional)</label>
-            <input id="image_input" type="file" name="imagen2" accept="image/jpg, image/jpeg, image/png, image/webp"  class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+            <label class="block mb-2 text-2xl font-medium text-gray-900 " for="file_input">Subir Imagen 2 (opcional)</label>
+            <input id="image_input" type="file" name="imagen2" accept="image/jpg, image/jpeg, image/png, image/webp"  class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " >
         </div>  
         <div style="margin-top:2rem;margin-bottom:2rem">
-            <label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white" for="file_input">Subir Imagen 3 (opcional)</label>
-            <input id="image_input" type="file" name="imagen3" accept="image/jpg, image/jpeg, image/png, image/webp"  class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+            <label class="block mb-2 text-2xl font-medium text-gray-900 " for="file_input">Subir Imagen 3 (opcional)</label>
+            <input id="image_input" type="file" name="imagen3" accept="image/jpg, image/jpeg, image/png, image/webp"  class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " >
         </div>
         <div style="margin-top:2rem;margin-bottom:2rem">
-            <label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white" for="file_input">Subir Imagen 4 (opcional)</label>
-            <input id="image_input" type="file" name="imagen4"  accept="image/jpg, image/jpeg, image/png, image/webp" class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+            <label class="block mb-2 text-2xl font-medium text-gray-900 " for="file_input">Subir Imagen 4 (opcional)</label>
+            <input id="image_input" type="file" name="imagen4"  accept="image/jpg, image/jpeg, image/png, image/webp" class="block w-full text-2xl text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " >
         </div>     
         
         
@@ -289,7 +289,7 @@ if(isset($_GET['codigo'])){
 
     
 
-    <!-- <label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Descripción</label>
+    <!-- <label class="block mb-2 text-2xl font-medium text-gray-900 ">Descripción</label>
     <div class="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 py-5">
     <div class="w-full max-w-6xl mx-auto rounded-xl bg-white shadow-lg p-5 text-black" x-data="app()" x-init="init($refs.wysiwyg)">
         <div class="border border-gray-200 overflow-hidden rounded-md">
@@ -339,7 +339,7 @@ if(isset($_GET['codigo'])){
     
     
 </div>
-<label class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Detalles</label>
+<label class="block mb-2 text-2xl font-medium text-gray-900 ">Detalles</label>
     <div class="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 py-5">
     <div class="w-full max-w-6xl mx-auto rounded-xl bg-white shadow-lg p-5 text-black" x-data="app()" x-init="init($refs.wysiwyg)">
         <div class="border border-gray-200 overflow-hidden rounded-md">
@@ -390,7 +390,7 @@ if(isset($_GET['codigo'])){
     
 </div> -->
 
-<button type="submit" value="add product" name="add_product" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+<button type="submit" value="add product" name="add_product" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl w-full sm:w-auto px-5 py-2.5 text-center   ">Submit</button>
 
 
 

@@ -11,7 +11,7 @@ if(isset($_SESSION['user_id'])){
 };
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,14 +27,13 @@ if(isset($_SESSION['user_id'])){
     ?>
     <!--HERO SECTIONS-->
     <main>
-    <section class="bg-white px-4 dark:bg-gray-900">
+    <section class="bg-white px-4 ">
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full dark:hidden" src="images/Software-odontologos/software-odontologos-hero.png" alt="dashboard image">
-        <img class="w-full hidden dark:block" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg" alt="dashboard image">
+        <img class="w-full " src="images/Software-odontologos/software-odontologos-hero.png" alt="dashboard image">
         <div class="mt-4 md:mt-0">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conecta con tus pacientes</h2>
-            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Contamos con todas las herramientas que un odontologo necesita, como registro clínico de pacientes, agenda de citas, generador de odontogramas, gestión de costos y mucho mas. Un software tanto para ti como para tus pacientes </p>
-            <a  class="inline-flex items-center text-white bg-blue-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">Conecta con tus pacientes</h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg ">Contamos con todas las herramientas que un odontologo necesita, como registro clínico de pacientes, agenda de citas, generador de odontogramas, gestión de costos y mucho mas. Un software tanto para ti como para tus pacientes </p>
+            <a  class="inline-flex items-center text-white bg-blue-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                 Descubre más
                 <svg fill="none"class="ml-2 -mr-1 w-5 h-5" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3"></path>
@@ -258,12 +257,12 @@ if(isset($_SESSION['user_id'])){
 
 
 
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-white ">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center  ">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white ">Empieza tu prueba gratis hoy</h2>
-            <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Prueba Alpha Clinicas por 15 días. No se requiere tarjeta de crédito</p>
-            <a href="clinicas/registrarse.php" class="text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Prueba gratis por 15 dias</a>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900  ">Empieza tu prueba gratis hoy</h2>
+            <p class="mb-6 font-light text-gray-500  md:text-lg">Prueba Alpha Clinicas por 15 días. No se requiere tarjeta de crédito</p>
+            <a href="clinicas/registrarse.php" class="text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2   focus:outline-none ">Prueba gratis por 15 dias</a>
         </div>
     </div>
 </section>

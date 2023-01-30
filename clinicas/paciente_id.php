@@ -399,7 +399,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -418,7 +418,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 </script>
 <!-- component -->  
 <div x-data="setup()" :class="{ 'dark': isDark }">
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white  text-black ">
       <?php
         include '../components/dashboard/dashboard-header.php';
       ?>
@@ -447,13 +447,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
           $imagen_tmp_name1 = $_FILES['imgOdontograma']['tmp_name'];
           $imagen_folder1 = './odontogram/screenshots/'.$imagen1;              
           if($imagen_size1 > 2000000 ){
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Imagen muy grande </div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -463,13 +463,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
             move_uploaded_file($imagen_tmp_name1, $imagen_folder1);
             $insert_product = $conn->prepare("INSERT INTO `odontogramas`(pacienteId,clinicaId,imagen,fecha) VALUES(?,?,?,?)");
             $insert_product->execute([$pacienteId,$user_id,$imagen1,$now]);
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Imagen subida exitosamente</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -497,13 +497,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
           $docConsentimiento_tmp_name1 = $_FILES['docConsentimiento']['tmp_name'];
           $docConsentimiento_folder1 = './consentimientos/'.$docConsentimiento;              
           if($docConsentimiento_size1 > 2000000 ){
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Documento muy grande</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -513,13 +513,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
             move_uploaded_file($docConsentimiento_tmp_name1, $docConsentimiento_folder1);
             $insert_product = $conn->prepare("INSERT INTO `consentimientos`(pacienteId,clinicaId,nombreTratamiento,doc,fecha) VALUES(?,?,?,?,?)");
             $insert_product->execute([$pacienteId,$user_id,$nombreTratamiento,$docConsentimiento,$now]);
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Consentimiento subido exitosamente</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -547,13 +547,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
           $docHC_tmp_name1 = $_FILES['docHC']['tmp_name'];
           $docHC_folder1 = './hcdocs/'.$docHC;              
           if($docHC_size1 > 2000000 ){
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Documento muy grande</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -563,13 +563,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
             move_uploaded_file($docHC_tmp_name1, $docHC_folder1);
             $insert_hc = $conn->prepare("INSERT INTO `hcdocs`(pacienteId,clinicaId,nombrehc,doc,fecha) VALUES(?,?,?,?,?)");
             $insert_hc->execute([$pacienteId,$user_id,$nombreHC,$docHC,$now]);
-            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            echo'<script>document.getElementById("successUploadedImgModal").innerHTML=` <div id="toast-success" class=" mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg  ">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Check icon</span>
             </div>
             <div class="ml-3 text-sm font-normal">Historia clínica subido exitosamente</div>
-            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-success" aria-label="Close">
                 <span class="sr-only">Close</span>
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -643,7 +643,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
         ?>
          
               <div class="flex justify-center py-2">
-                      <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white" type="button">
+                      <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600  md:mr-0 focus:ring-4 focus:ring-gray-100  " type="button">
                           <span class="sr-only">Open user menu</span>
                           <?php 
                               if($fetch_paciente['sexo']=='Hombre'){
@@ -657,7 +657,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       </button>
               </div>
 
-              <div class="mb-4 flex justify-center border-b-2  border-gray-200 dark:border-gray-500">
+              <div class="mb-4 flex justify-center border-b-2  border-gray-200 ">
 
 
 
@@ -669,7 +669,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       <li class="mr-2" role="presentation">
                       
 
-                            <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"> 
+                            <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300  group" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"> 
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                                         </svg>                          
@@ -686,7 +686,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       <li class="mr-2" role="presentation">
                       <!-- <a href="paciente_id.php?pid=<?php// echo $fetch_paciente['id'];?>&modal=historia_clinica"> 
                       </a> -->
-                        <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="<?=$ariaHistoriaClinica ;?>"> 
+                        <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300  group" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="<?=$ariaHistoriaClinica ;?>"> 
                           <svg aria-hidden="true" class="w-5 h-5 mr-2 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
                           
 
@@ -698,7 +698,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       </li>
 
                       <li class="mr-2" role="presentation">
-                         <button class="inline-flex p-4  border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" id="odontograma-tab" data-tabs-target="#odontograma" type="button" role="tab" aria-controls="odontograma" aria-selected="<?=$ariaOdontograma ;?>"> 
+                         <button class="inline-flex p-4  border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300  group" id="odontograma-tab" data-tabs-target="#odontograma" type="button" role="tab" aria-controls="odontograma" aria-selected="<?=$ariaOdontograma ;?>"> 
                           <svg class="w-5 h-5 mr-2 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                           <path id="Tooth_2_" d="M54.3148651,5.0702143c-3.5253983-3.6377001-8.4227982-5.4512-13.472599-4.9921999  c-0.0372009,0.001-0.0762024,0.0019-0.1133003,0.0049c-1.6397018,0.1611-3.1631012,0.8252-4.6366997,1.4687001  c-1.5165901,0.6621001-2.9492989,1.2871001-4.3290997,1.2871001c-1.3838005,0-2.8124886-0.6259-4.325201-1.289  c-1.4619999-0.6407-2.9736996-1.3028001-4.6035995-1.4668001c-4.9531002-0.501-9.7802,1.2636-13.2469997,4.8301001  c-3.4667997,3.5663996-5.0899,8.4393997-4.4550996,13.3592997c2.6244998,22.700201,4.4779992,36.6513977,5.5082994,41.4648972  c0.3237,1.5166016,1.9116001,3.8935013,3.9375,4.2256012c0.1352005,0.0223999,0.2915001,0.038002,0.4643002,0.038002  c0.8149996,0,1.9883118-0.3476028,2.9648991-1.9960022c1.4033012-2.3702011,2.6221008-5.642601,3.9131012-9.1083984  c2.6425991-7.0937996,5.6385994-15.1348,10.4218998-15.2110023c4.7490005,0.0956993,7.1541977,6.8535004,9.481411,13.3887024  c1.241188,3.4891968,2.4150009,6.785099,3.9677887,9.2782974c1.0332108,1.6611023,2.6805992,2.4815025,4.4179001,2.1826019  c1.5683975-0.2656021,2.8788986-1.4121017,3.1875-2.7881012c1.3194008-5.8711014,3.6992989-25.5126991,5.4638977-40.9589005  C59.5199661,13.7323141,57.863678,8.7323141,54.3148651,5.0702143z M56.8773651,18.537014  c-0.0009995,0.0058002-0.0018997,0.0107002-0.0018997,0.0165997c-1.7597885,15.3984013-4.1299019,34.9697037-5.4296989,40.7557983  c-0.1319008,0.5849991-0.8067017,1.125-1.5703011,1.2538986c-0.5381012,0.0938034-1.5665016,0.0479012-2.3867874-1.267498  c-1.4384117-2.3106003-2.5761108-5.5078011-3.7812119-8.8916016c-2.5546989-7.1758003-5.1953011-14.594799-11.3604012-14.7187996  c-6.1854992,0.0986023-9.4344997,8.8194008-12.3006992,16.5126991c-1.2588005,3.3799019-2.4482994,6.5713005-3.7598,8.7871017  c-0.6640997,1.1231003-1.2060995,1.0321999-1.3852997,1.0038986c-0.9515886-0.1562004-2.0815001-1.6229973-2.3046999-2.669899  c-1.0028887-4.6855011-2.8973999-18.9589996-5.4794002-41.2900009c-0.5576997-4.3233004,0.8652-8.5957003,3.9043002-11.7217007  c2.7005997-2.7793,6.3442106-4.3066998,10.1683989-4.3066998c0.4794998,0,0.9619007,0.0235,1.4453011,0.0723002  c1.3155117,0.1317999,2.6191998,0.7031,4,1.3085999c0.6203995,0.2716999,1.2488995,0.5463998,1.8883991,0.7834997  c0.0491123,0.0377002,0.0876999,0.0852003,0.1448002,0.1140003l9.9726982,5.0399995  c0.1445007,0.0732002,0.2988014,0.1073999,0.4502029,0.1073999c0.3652,0,0.7176971-0.2001991,0.8934975-0.5487995  c0.2490997-0.4932003,0.0517998-1.0946999-0.4413986-1.3438001l-5.8496017-2.9555998  c1.0969124-0.2781,2.1592026-0.7402,3.1992035-1.1938002c1.375-0.6006,2.6738968-1.1670001,3.88871-1.3016999  c0.04879,0.0028999,0.0966873,0.0009999,0.1454887-0.0039001c4.4755974-0.4395,8.827198,1.1601,11.952198,4.3838  C56.0013657,9.6854143,57.4593658,14.0868139,56.8773651,18.537014z"/>
                           </svg>            
@@ -709,7 +709,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                           </button>
                       </li>
                       <li class="mr-2" role="presentation">
-                          <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="consentimientos-tab" data-tabs-target="#consentimientos" type="button" role="tab" aria-controls="consentimientos" aria-selected="<?=$ariaConsentimientos ;?>"> 
+                          <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 " id="consentimientos-tab" data-tabs-target="#consentimientos" type="button" role="tab" aria-controls="consentimientos" aria-selected="<?=$ariaConsentimientos ;?>"> 
                           <svg class="w-5 h-5 mr-2 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Layer_1" viewBox="0 0 512.003 512.003" xml:space="preserve">
                                 <g>
                                   <g>
@@ -739,7 +739,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
                       <!-- <li class="mr-2" role="presentation">
-                          <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="<?=$ariaRecetas ;?>"> 
+                          <button class="inline-flex p-4  rounded-t-lg hover:text-gray-600 hover:border-gray-300 " id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="<?=$ariaRecetas ;?>"> 
                               <svg class="w-5 h-5 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
                               </svg>
@@ -749,7 +749,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       
                       
                       <li role="presentation">
-                          <button class="inline-flex p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false"> 
+                          <button class="inline-flex p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 " id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false"> 
                           <svg class="w-5 h-5 mr-2 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
@@ -767,57 +767,57 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                   <div style="max-width:600px;" class="hidden   p-4 mx-auto" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
                   
-                      <form action=""  method="post" class="p-8 rounded-lg  bg-gray-50 dark:bg-gray-800">
+                      <form action=""  method="post" class="p-8 rounded-lg  bg-gray-50 ">
                           <div class="grid gap-6 mb-6 md:grid-cols-2">
                               <div>
 
-                                  <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres</label>
-                                  <input type="name" name="nombrePaciente"  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Susana Mendoza" required>
+                                  <label for="nombrePaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Nombres</label>
+                                  <input type="name" name="nombrePaciente"  value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombrePaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Susana Mendoza" required>
                               </div>
                               <input hidden  type="text" name="sexo" value="<?=$fetch_paciente['sexo'];?>" > 
                               
                               <div>
-                                  <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefono</label>
-                                  <input type="tel" name="telefonoPaciente"value="<?=$fetch_paciente['telefonoPaciente'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="913411231" required>
+                                  <label for="telefonoPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Telefono</label>
+                                  <input type="tel" name="telefonoPaciente"value="<?=$fetch_paciente['telefonoPaciente'];?>"id="telefonoPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="913411231" required>
                               </div>  
                               <div>
-                                  <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad</label>
-                                  <input type="age" name="edadPaciente" id="edadPaciente"  value="<?=$fetch_paciente['edadPaciente'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"  required>
+                                  <label for="edadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Edad</label>
+                                  <input type="age" name="edadPaciente" id="edadPaciente"  value="<?=$fetch_paciente['edadPaciente'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="12"  required>
                               </div>
                               <div>
-                                  <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
-                                  <input type="city" name="ciudadPaciente" id="ciudadPaciente" value="<?=$fetch_paciente['ciudadPaciente'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Huancavelica" >
+                                  <label for="ciudadPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Ciudad</label>
+                                  <input type="city" name="ciudadPaciente" id="ciudadPaciente" value="<?=$fetch_paciente['ciudadPaciente'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Huancavelica" >
                               </div>
                               <div>
-                                  <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                                  <input type="email" name="emailPaciente" id="emailPaciente"  value="<?=$fetch_paciente['correo'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="godoy@gmail.com"  >
+                                  <label for="emailPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+                                  <input type="email" name="emailPaciente" id="emailPaciente"  value="<?=$fetch_paciente['correo'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="godoy@gmail.com"  >
                               </div>
                               <div>
-                                  <label for="dniPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dni</label>
-                                  <input type="text" name="dniPaciente" id="dniPaciente" value="<?=$fetch_paciente['dni'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="71102387" required>
+                                  <label for="dniPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Dni</label>
+                                  <input type="text" name="dniPaciente" id="dniPaciente" value="<?=$fetch_paciente['dni'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="71102387" required>
                               </div>   
                               <div>
-                                  <label for="fechaNacimientopaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha Nacimiento</label>
-                                  <input type="date" name="fechaNacimientopaciente" id="fechaNacimientopaciente" value="<?=$fetch_paciente['fechaNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                                  <label for="fechaNacimientopaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha Nacimiento</label>
+                                  <input type="date" name="fechaNacimientopaciente" id="fechaNacimientopaciente" value="<?=$fetch_paciente['fechaNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                               </div>
                               <div>
-                                  <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lugar de Nacimiento</label>
-                                  <input type="text" name="lugarNacimiento" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cerro de Pasco - Villa Rica" >
+                                  <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Lugar de Nacimiento</label>
+                                  <input type="text" name="lugarNacimiento" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Cerro de Pasco - Villa Rica" >
                               </div>
 
                               <div>
-                                  <label for="ocupacionPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ocupación</label>
-                                  <input type="text" name="ocupacionPaciente" id="ocupacionPaciente" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Abogado" >
+                                  <label for="ocupacionPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Ocupación</label>
+                                  <input type="text" name="ocupacionPaciente" id="ocupacionPaciente" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Abogado" >
                               </div>
                               <div>
-                                  <label for="direccionPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-                                  <input type="text" name="direccionPaciente"  id="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Av. Las Palmeras 556" >
+                                  <label for="direccionPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección</label>
+                                  <input type="text" name="direccionPaciente"  id="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Av. Las Palmeras 556" >
                               
                                 </div>
                               <div>
-                                  <label for="tokenPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Token</label>
+                                  <label for="tokenPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Token</label>
                                   <div class="flex gap-2 items-center">
-                                        <input disabled type="password" name="tokenPaciente" id="tokenPaciente" value="<?=$fetch_paciente['token'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="71102387" required>
+                                        <input disabled type="password" name="tokenPaciente" id="tokenPaciente" value="<?=$fetch_paciente['token'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="71102387" required>
                                         <svg style="cursor:pointer" id="showHide" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -849,7 +849,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                               </script>
                         
                       </div>
-                          <button type="submit" name="submitActualizarInfoPaciente" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Actualizar</button>
+                          <button type="submit" name="submitActualizarInfoPaciente" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center   ">Actualizar</button>
                       </form>
 
 
@@ -863,23 +863,23 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                   <div class="py-8 px-2 grid gap-4 grid-cols-1 md:grid-cols-2">
                     <div class=" mx-auto">
-                            <div style="padding-bottom:3rem;max-width:400px"class="text-center text-medium  text-gray-500 dark:text-gray-400">Puedes elegir entre <strong class="font-medium text-gray-800 dark:text-white">subir tu historia clínica</strong>
+                            <div style="padding-bottom:3rem;max-width:400px"class="text-center text-medium  text-gray-500 ">Puedes elegir entre <strong class="font-medium text-gray-800 ">subir tu historia clínica</strong>
 
                                         
-                                        o usar nuestro <strong class="font-medium text-gray-800 dark:text-white">generador de historias clínicas</strong> con un formato general. La historia clínica que generes mediante nuestro formato general, se mantendra actualizado y puede ser descargado en pdf con el boton azul en la parte derecha inferior.
+                                        o usar nuestro <strong class="font-medium text-gray-800 ">generador de historias clínicas</strong> con un formato general. La historia clínica que generes mediante nuestro formato general, se mantendra actualizado y puede ser descargado en pdf con el boton azul en la parte derecha inferior.
                             </div>
                             <form action="" method="POST" enctype="multipart/form-data" style="max-width:400px">
                                         <input hidden name="id" type="text" value="<?=$fetch_paciente['id'];?>">
                                         <div class="">
-                                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="file_input">Subir historia clínica</label>
+                                            <label class="block mb-2 text-sm font-medium text-gray-900 "  for="file_input">Subir historia clínica</label>
                                             <div class="flex flex-wrap  gap-2">
 
-                                                <input name="docHC"  type="file" required  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" >
+                                                <input name="docHC"  type="file" required  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " aria-describedby="file_input_help" id="file_input" >
                                                 <div class="relative w-full my-2 z-0">
-                                                    <input type="text" id="floating_standard" name="nombreHC" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                                                    <label for="floating_standard" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribir nombre de H.C. (opcional)</label>
+                                                    <input type="text" id="floating_standard" name="nombreHC" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                                                    <label for="floating_standard" class="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribir nombre de H.C. (opcional)</label>
                                                 </div>
-                                                <button type="submit" name="uploadDocHC" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                                <button type="submit" name="uploadDocHC" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2   focus:outline-none ">
                                                     <span>Subir</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -893,10 +893,10 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                     </div>
 
-                    <div class="relative pt-4  overflow-x-auto shadow-md dark:shadow-white sm:rounded-lg">
-                    <h2 class="p-2 text-center text-gray-600 dark:text-gray-400">Repositorio de historias clínicas subidas</h2>
-                    <table class="w-full  text-sm text-left text-gray-500 dark:text-gray-400">
-                              <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                    <div class="relative pt-4  overflow-x-auto shadow-md  sm:rounded-lg">
+                    <h2 class="p-2 text-center text-gray-600 ">Repositorio de historias clínicas subidas</h2>
+                    <table class="w-full  text-sm text-left text-gray-500 ">
+                              <thead  class="text-xs border-gray-200  border-b text-gray-700 uppercase  bg-gray-50  ">
                                   <tr>
                                       
                                       <th scope="col" class="px-6 py-3">
@@ -926,11 +926,11 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                   ?>
 
-                                  <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                  <tr class="bg-white  hover:bg-gray-50 ">
                                       
-                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                           <a  target="_blank" href="hcdocs/<?=$fetchHCDocs['doc'];?>">
-                                            <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
+                                            <div class="flex hover:text-blue-600 gap-2  items-center">
                                              <span>Ver documento</span>
                                               <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
@@ -952,7 +952,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                   
 
                                       <td class="px-6 py-4">
-                                      <button   data-modal-target="<?='delete-modal'.$fetchHCDocs['doc'];?>" data-modal-toggle="<?='delete-modal'.$fetchHCDocs['doc'];?>"  class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>
+                                      <button   data-modal-target="<?='delete-modal'.$fetchHCDocs['doc'];?>" data-modal-toggle="<?='delete-modal'.$fetchHCDocs['doc'];?>"  class="flex justify-start font-medium text-red-600  hover:underline">Eliminar</button>
 
                                                   
                                           
@@ -969,18 +969,18 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                     <input  type="text" name="hcDocName" value="<?=$fetchHCDocs['doc'];?>" hidden >
                                       <input   type="text" name="idPaciente"  value="<?=$fetchHCDocs["pacienteId"];?>" hidden > 
                                       <div class="relative w-full h-full max-w-md md:h-auto">
-                                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>">
+                                            <div class="relative bg-white rounded-lg shadow ">
+                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  " data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>">
                                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                                     <span class="sr-only">Close modal</span>
                                                 </button>
                                                 <div class="p-6 text-center">
-                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Seguro que quieres eliminar este consentimiento?</h3>
-                                                    <button  type="submit" name="deletehcDoc"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 ">¿Seguro que quieres eliminar este consentimiento?</h3>
+                                                    <button  type="submit" name="deletehcDoc"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                                         Sí, eliminar
                                                     </button>
-                                                    <button data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancelar</button>
+                                                    <button data-modal-hide="<?='delete-modal'.$fetchHCDocs['doc'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      ">No, cancelar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1013,22 +1013,22 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                      
 
                     <form  action="" method="POST" >
-                        <h2 class="text-center text-gray-600 dark:text-gray-400 text-base md:text-xl pt-8 pb-4">Formato general de Historia clínica</h2>
+                        <h2 class="text-center text-gray-600  text-base md:text-xl pt-8 pb-4">Formato general de Historia clínica</h2>
 
 
                     <div class="grid gap-6 md:grid-cols-2">
                     <!--1-->
 
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4  rounded-lg">
+                      <div class="bg-gray-50  p-4  rounded-lg">
                       <div><h2 class="text-xl text-center pb-6 font-medium">Datos generales</h2></div>
-                        <input type="hidden"   value="<?=$fetch_paciente['id'];?>"id="pacienteId" name="pacienteId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
-                        <input type="hidden"   value="<?=$fetch_paciente['clinica_id'];?>"id="clinicaId" name="clinicaId"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
-                        <input type="hidden"   value="<?=$fetch_paciente['token'];?>"id="token" name="token"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['id'];?>"id="pacienteId" name="pacienteId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['clinica_id'];?>"id="clinicaId" name="clinicaId"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "  required>
+                        <input type="hidden"   value="<?=$fetch_paciente['token'];?>"id="token" name="token"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "  required>
                         
-                        <label for="name" class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Doctor a Cargo</label>
+                        <label for="name" class="text-gray-800   text-sm font-bold leading-tight tracking-normal">Doctor a Cargo</label>
                         <label for="underline_select" class="sr-only">Underline select</label>
                        
-                        <select name="doctor" id="underline_select" required class="mb-5 mt-2 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
+                        <select name="doctor" id="underline_select" required class="mb-5 mt-2 text-gray-600     focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border">
                             <option  selected><?=$fetch_hc['doctor'];?></option>
                         <?php
                          $select_doctor= $conn->prepare("SELECT * FROM `doctores` WHERE clinica_id = ? ");
@@ -1047,21 +1047,21 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
                         <div class="mb-6">
-                            <label for="nombresPaciente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres y apellidos</label>
-                            <input  type="hidden"   value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombresPaciente"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Robert Carvajar Espinoza" >
-                            <div  style="min-height:2.5rem"   class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Robert Carvajar Espinoza" ><?=$fetch_paciente['nombrePaciente'];?></div>
+                            <label for="nombresPaciente" class="block mb-2 text-sm font-medium text-gray-900 ">Nombres y apellidos</label>
+                            <input  type="hidden"   value="<?=$fetch_paciente['nombrePaciente'];?>"id="nombresPaciente"  name="nombresPaciente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Robert Carvajar Espinoza" >
+                            <div  style="min-height:2.5rem"   class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Robert Carvajar Espinoza" ><?=$fetch_paciente['nombrePaciente'];?></div>
 
                         </div> 
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                             <div>
-                                <label for="dni12" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
-                                <input  type="hidden" name="dni12"  value="<?=$fetch_paciente['dni'];?>" maxlength="8" minlength="8"  id="dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
-                                <div  style="min-height:2.5rem"  class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ><?=$fetch_paciente['dni'];?></div>
+                                <label for="dni12" class="block mb-2 text-sm font-medium text-gray-900 ">DNI</label>
+                                <input  type="hidden" name="dni12"  value="<?=$fetch_paciente['dni'];?>" maxlength="8" minlength="8"  id="dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
+                                <div  style="min-height:2.5rem"  class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " ><?=$fetch_paciente['dni'];?></div>
 
                             </div>
                             <div>
-                                <label for="numHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">N° HC</label>
-                                <input type="number"  id="numHC" name="numHC" value="<?=$fetch_hc['numhc'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12" >
+                                <label for="numHC" class="block mb-2 text-sm font-medium text-gray-900 ">N° HC</label>
+                                <input type="number"  id="numHC" name="numHC" value="<?=$fetch_hc['numhc'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="12" >
                                  
                               </div>
                            <?php
@@ -1072,52 +1072,52 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                            ?>
                               
                             <div>
-                                <label for="fechaAtencion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha y hora de atención</label>
-                                <input type="datetime-local"  id="fechaAtencion" name="fechaAtencion" value="<?=$fetch_hc['fechahoraatencion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                                <label for="fechaAtencion" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha y hora de atención</label>
+                                <input type="datetime-local"  id="fechaAtencion" name="fechaAtencion" value="<?=$fetch_hc['fechahoraatencion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " >
                             </div>  
                             <div>
-                                <label for="fechaHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha apertura de h.c.</label>
-                                <input type="date" id="fechaHC" name="fechaHC" value="<?=$fetch_hc['fechaapertura'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678"  >
+                                <label for="fechaHC" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha apertura de h.c.</label>
+                                <input type="date" id="fechaHC" name="fechaHC" value="<?=$fetch_hc['fechaapertura'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="123-45-678"  >
                             </div>
 
                             <div>
-                                <label for="sexo12" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sexo</label>
-                                <input  name="sexo12"  type="hidden"  value="<?=$fetch_paciente['sexo'];?>" id="sexo12" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Hombre" >
-                                <div   style="min-height:2.5rem"  class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ><?=$fetch_paciente['sexo'];?></div>
+                                <label for="sexo12" class="block mb-2 text-sm font-medium text-gray-900 ">Sexo</label>
+                                <input  name="sexo12"  type="hidden"  value="<?=$fetch_paciente['sexo'];?>" id="sexo12" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="Hombre" >
+                                <div   style="min-height:2.5rem"  class="bg-gray-50 border h-auto border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " ><?=$fetch_paciente['sexo'];?></div>
 
                             </div>  
                             <div>
-                                <label for="edadPacienteHC" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad</label>
-                                <input  type="hidden"  value="<?=$fetch_paciente['edadPaciente'];?>"id="edadPacienteHC" name="edadPacienteHC"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="12"  >
-                                <div  style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  ><?=$fetch_paciente['edadPaciente'];?></div>
+                                <label for="edadPacienteHC" class="block mb-2 text-sm font-medium text-gray-900 ">Edad</label>
+                                <input  type="hidden"  value="<?=$fetch_paciente['edadPaciente'];?>"id="edadPacienteHC" name="edadPacienteHC"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="12"  >
+                                <div  style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "  ><?=$fetch_paciente['edadPaciente'];?></div>
 
                             </div>
                             <div>
-                                <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lugar de Nacimiento</label>
-                                <input  type="hidden" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" name="lugarNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
-                                <div  style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ><?=$fetch_paciente['lugarNacimiento'];?></div>
+                                <label for="lugarNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Lugar de Nacimiento</label>
+                                <input  type="hidden" id="lugarNacimiento" value="<?=$fetch_paciente['lugarNacimiento'];?>" name="lugarNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  >
+                                <div  style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " ><?=$fetch_paciente['lugarNacimiento'];?></div>
 
                             </div>
                             <div>
-                                <label for="fechaNacimiento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha Nacimiento</label>
+                                <label for="fechaNacimiento" class="block mb-2 text-sm font-medium text-gray-900 ">Fecha Nacimiento</label>
                                
-                                <input  type="hidden" id="fechaNacimiento" value="<?=$fetch_paciente['fechaNacimiento'];?>" name="fechaNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
-                                <div style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ><?=$fetch_paciente['fechaNacimiento'];?></div>
+                                <input  type="hidden" id="fechaNacimiento" value="<?=$fetch_paciente['fechaNacimiento'];?>" name="fechaNacimiento"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  >
+                                <div style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " ><?=$fetch_paciente['fechaNacimiento'];?></div>
 
                             </div>
 
                             <div>
-                                <label for="ocupacion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ocupación</label>
-                                <input     type="hidden" name="ocupacion" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" / >
-                                <div style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_paciente['ocupacion'];?></div>
+                                <label for="ocupacion" class="block mb-2 text-sm font-medium text-gray-900 ">Ocupación</label>
+                                <input     type="hidden" name="ocupacion" value="<?=$fetch_paciente['ocupacion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " / >
+                                <div style="min-height:2.5rem" class="bg-gray-50 border border-gray-300 h-auto text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_paciente['ocupacion'];?></div>
 
                             </div>
                             <input hidden type="text" name="direccion" value="<?=$fetch_paciente['direccion'];?>">
                             <div>
-                                <label for="direccion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-                                <div   type="hidden" style="min-height:2.5rem" name="direccionPaciente"  class="bg-gray-50 h-auto border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  ><?=$fetch_paciente['direccion'];?></div>
+                                <label for="direccion" class="block mb-2 text-sm font-medium text-gray-900 ">Dirección</label>
+                                <div   type="hidden" style="min-height:2.5rem" name="direccionPaciente"  class="bg-gray-50 h-auto border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "  ><?=$fetch_paciente['direccion'];?></div>
 
-                                <input   type="hidden" name="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  />
+                                <input   type="hidden" name="direccionPaciente" value="<?=$fetch_paciente['direccion'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  />
                             </div>
 
                             
@@ -1125,136 +1125,136 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                       </div>
                       <!--2-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4  rounded-lg">
+                      <div class="bg-gray-50  p-4  rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Enfermedad Actual</h2></div>
                       <div class="mb-6">
-                            <label for="tiempoEnfermedad" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tiempo de enfermedad</label>
-                            <input type="text"   id="tiempoEnfermedad" value="<?=$fetch_hc['tiempoEnfermedad'];?>" name="tiempoEnfermedad" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="tiempoEnfermedad" class="block mb-2 text-sm font-medium text-gray-900 ">Tiempo de enfermedad</label>
+                            <input type="text"   id="tiempoEnfermedad" value="<?=$fetch_hc['tiempoEnfermedad'];?>" name="tiempoEnfermedad" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="signosSintomas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Signos y síntomas principales</label>
-                            <input type="text"  id="signosSintomas"  name="signosSintomas" value="<?=$fetch_hc['signosSintomas'];?>"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="signosSintomas" class="block mb-2 text-sm font-medium text-gray-900 ">Signos y síntomas principales</label>
+                            <input type="text"  id="signosSintomas"  name="signosSintomas" value="<?=$fetch_hc['signosSintomas'];?>"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="relatoCronologico" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Relatos cronológico</label>
-                            <input type="text"  id="relatoCronologico"  name="relatoCronologico" value="<?=$fetch_hc['relatosCronologicos'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="relatoCronologico" class="block mb-2 text-sm font-medium text-gray-900 ">Relatos cronológico</label>
+                            <input type="text"  id="relatoCronologico"  name="relatoCronologico" value="<?=$fetch_hc['relatosCronologicos'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="funcionesBiologicas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Funciones biológicas</label>
-                            <input type="name"   id="funcionesBiologicas"  name="funcionesBiologicas" value="<?=$fetch_hc['funcionesBiologicas'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="funcionesBiologicas" class="block mb-2 text-sm font-medium text-gray-900 ">Funciones biológicas</label>
+                            <input type="name"   id="funcionesBiologicas"  name="funcionesBiologicas" value="<?=$fetch_hc['funcionesBiologicas'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
 
                         
                         <div><h2 class="text-center text-xl py-6 font-medium">Antecedentes</h2></div>
                       <div class="mb-6">
-                            <label for="antecedentesFamiliares" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Antecedentes familiares</label>
-                            <input type="text"   id="antecedentesFamiliares"  name="antecedentesFamiliares" value="<?=$fetch_hc['antFamiliares'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="antecedentesFamiliares" class="block mb-2 text-sm font-medium text-gray-900 ">Antecedentes familiares</label>
+                            <input type="text"   id="antecedentesFamiliares"  name="antecedentesFamiliares" value="<?=$fetch_hc['antFamiliares'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
                         <div class="mb-6">
-                            <label for="antecedentesPersonales" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Antecedentes personales</label>
-                            <input type="text"  id="antecedentesPersonales"  name="antecedentesPersonales"  value="<?=$fetch_hc['antPersonales'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                            <label for="antecedentesPersonales" class="block mb-2 text-sm font-medium text-gray-900 ">Antecedentes personales</label>
+                            <input type="text"  id="antecedentesPersonales"  name="antecedentesPersonales"  value="<?=$fetch_hc['antPersonales'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                         </div> 
 
 
 
                       </div>
                       <!--3-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                      <div class="bg-gray-50  p-4 rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Exploración fisica</h2></div>
                       
                       <h3 class=" py-6 text-center  font-medium">Signos vitales</h3>
                       <div class="grid gap-6 mb-6 md:grid-cols-2">
                           <div>
-                              <label for="pa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Presión arterial</label>
-                              <input type="text"  name="pa" id="pa"value="<?=$fetch_hc['presionArterial'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                              <label for="pa" class="block mb-2 text-sm font-medium text-gray-900 ">Presión arterial</label>
+                              <input type="text"  name="pa" id="pa"value="<?=$fetch_hc['presionArterial'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                           </div>
                           <div>
-                              <label for="pulso" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pulso</label>
-                              <input type="text"  id="pulso" name="pulso" value="<?=$fetch_hc['pulso'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" >
+                              <label for="pulso" class="block mb-2 text-sm font-medium text-gray-900 ">Pulso</label>
+                              <input type="text"  id="pulso" name="pulso" value="<?=$fetch_hc['pulso'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder="" >
                           </div>
                                                    
                           <div>
-                              <label for="temperatura" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Temperatura</label>
-                              <input  type="numer"  id="temperatura" name="temperatura" value="<?=$fetch_hc['temperatura'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="temperatura" class="block mb-2 text-sm font-medium text-gray-900 ">Temperatura</label>
+                              <input  type="numer"  id="temperatura" name="temperatura" value="<?=$fetch_hc['temperatura'];?>" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  >
                           </div>
                           <div>
-                              <label for="frecCardiaca" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Frec. cardiaca</label>
-                              <input    id="frecCardiaca"  name="frecCardiaca" value="<?=$fetch_hc['frecCardiaca'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="frecCardiaca" class="block mb-2 text-sm font-medium text-gray-900 ">Frec. cardiaca</label>
+                              <input    id="frecCardiaca"  name="frecCardiaca" value="<?=$fetch_hc['frecCardiaca'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  >
                           </div>
                           <div>
-                              <label for="frecRespiratoria" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Frec. respiratoria</label>
-                              <input   id="frecRespiratoria"  name="frecRespiratoria" value="<?=$fetch_hc['frecRespiratoria'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  >
+                              <label for="frecRespiratoria" class="block mb-2 text-sm font-medium text-gray-900 ">Frec. respiratoria</label>
+                              <input   id="frecRespiratoria"  name="frecRespiratoria" value="<?=$fetch_hc['frecRespiratoria'];?>"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  >
                           </div>                            
                     </div>
                       <div class="grid gap-6 mb-6 md:grid-cols-1">
 
                           <div>
-                              <label for="examenClinicoGeneral" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Exámen clinico general</label>
-                              <textarea   type="text" id="examenClinicoGeneral"  name="examenClinicoGeneral" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['examenClinicoGeneral'];?></textarea>
+                              <label for="examenClinicoGeneral" class="block mb-2 text-sm font-medium text-gray-900 ">Exámen clinico general</label>
+                              <textarea   type="text" id="examenClinicoGeneral"  name="examenClinicoGeneral" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['examenClinicoGeneral'];?></textarea>
                           </div>
 
                           <div>
-                              <label for="odontoestomatologico" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Odontoestomatológico</label>
-                              <textarea  type="text"  id="odontoestomatologico"  name="odontoestomatologico" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['odontoestomatologico'];?></textarea>
+                              <label for="odontoestomatologico" class="block mb-2 text-sm font-medium text-gray-900 ">Odontoestomatológico</label>
+                              <textarea  type="text"  id="odontoestomatologico"  name="odontoestomatologico" value=""class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['odontoestomatologico'];?></textarea>
                           </div>
                       </div>
 
                       
-                            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Estado de la higiene bucal</h3>
+                            <h3 class="mb-4 font-semibold text-gray-900 ">Estado de la higiene bucal</h3>
 
                          
-                            <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex   ">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-license" <?php if($fetch_hc['estadoHigieneBucal']=="Muy bueno"){ echo "checked";};?> type="radio" value="Muy bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Muy bueno </label>
+                                        <input id="horizontal-list-radio-license" <?php if($fetch_hc['estadoHigieneBucal']=="Muy bueno"){ echo "checked";};?> type="radio" value="Muy bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500    focus:ring-2  ">
+                                        <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Muy bueno </label>
                                     </div>
                                 </li>
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-id"  <?php if($fetch_hc['estadoHigieneBucal']=="Bueno"){ echo "checked";};?> type="radio" value="Bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bueno</label>
+                                        <input id="horizontal-list-radio-id"  <?php if($fetch_hc['estadoHigieneBucal']=="Bueno"){ echo "checked";};?> type="radio" value="Bueno" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500    focus:ring-2  ">
+                                        <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Bueno</label>
                                     </div>
                                 </li>
-                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-millitary"  <?php if($fetch_hc['estadoHigieneBucal']=="Deficiente"){ echo "checked";};?> type="radio" value="Deficiente" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Deficiente</label>
+                                        <input id="horizontal-list-radio-millitary"  <?php if($fetch_hc['estadoHigieneBucal']=="Deficiente"){ echo "checked";};?> type="radio" value="Deficiente" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500    focus:ring-2  ">
+                                        <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Deficiente</label>
                                     </div>
                                 </li>
-                                <li class="w-full dark:border-gray-600">
+                                <li class="w-full ">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-passport" <?php if($fetch_hc['estadoHigieneBucal']=="Malo"){ echo "checked";};?> type="radio" value="Malo" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                        <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Malo</label>
+                                        <input id="horizontal-list-radio-passport" <?php if($fetch_hc['estadoHigieneBucal']=="Malo"){ echo "checked";};?> type="radio" value="Malo" name="estadosHigieneBucal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500    focus:ring-2  ">
+                                        <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 ">Malo</label>
                                     </div>
                                 </li>
                             </ul>
 
 
 
-                            <h3 class="my-4 font-semibold text-gray-900 dark:text-white">Estado bucal general</h3>
+                            <h3 class="my-4 font-semibold text-gray-900 ">Estado bucal general</h3>
                             <div class="grid gap-6 mb-6 md:grid-cols-2 px-8">
                                 <div >
                                     <h4  class="flex items-center mb-2 ">Presencia de sarro</h4>
                                     <div class="flex items-center  mb-4">
-                                      <input <?php if($fetch_hc['presenciaSarro']=="NO"){ echo "checked";};?>  id="presenciaSarroNO" type="radio" value="NO"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label  for="presenciaSarroNO"  class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">NO</label>
+                                      <input <?php if($fetch_hc['presenciaSarro']=="NO"){ echo "checked";};?>  id="presenciaSarroNO" type="radio" value="NO"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2  ">
+                                      <label  for="presenciaSarroNO"  class="ml-2 text-sm font-medium text-gray-900 ">NO</label>
                                   </div>
                                   <div class="flex items-center ">
-                                      <input <?php if($fetch_hc['presenciaSarro']=="SI"){ echo "checked";};?> id="presenciaSarroSI" type="radio" value="SI"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="presenciaSarroSI" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">SI</label>
+                                      <input <?php if($fetch_hc['presenciaSarro']=="SI"){ echo "checked";};?> id="presenciaSarroSI" type="radio" value="SI"  name="presenciaSarro" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2  ">
+                                      <label for="presenciaSarroSI" class="ml-2 text-sm font-medium text-gray-900 ">SI</label>
                                   </div>
 
 
                                   </div>
                                   <div><h4 class="flex items-center mb-2 ">Enfermedad periodontal</h4>
                                   <div class="flex items-center mb-4">
-                                      <input  <?php if($fetch_hc['enfermedadPeriodontal']=="NO"){ echo "checked";};?> id="enfermedadPeriodontalNO" type="radio" value="NO" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="enfermedadPeriodontalNO" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">NO</label>
+                                      <input  <?php if($fetch_hc['enfermedadPeriodontal']=="NO"){ echo "checked";};?> id="enfermedadPeriodontalNO" type="radio" value="NO" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2  ">
+                                      <label for="enfermedadPeriodontalNO" class="ml-2 text-sm font-medium text-gray-900 ">NO</label>
                                   </div>
                                   <div class="flex items-center">
-                                      <input <?php if($fetch_hc['enfermedadPeriodontal']=="SI"){ echo "checked";};?> id="enfermedadPeriodontalSI" type="radio" value="SI" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="enfermedadPeriodontalSI" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">SI</label>
+                                      <input <?php if($fetch_hc['enfermedadPeriodontal']=="SI"){ echo "checked";};?> id="enfermedadPeriodontalSI" type="radio" value="SI" name="enfermedadPeriodontal" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2  ">
+                                      <label for="enfermedadPeriodontalSI" class="ml-2 text-sm font-medium text-gray-900 ">SI</label>
                                   </div>
                                 </div>
 
@@ -1266,18 +1266,18 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                       </div>
                       <!--4-->
-                      <div class="bg-gray-50 dark:bg-gray-800 p-4  rounded-lg">
+                      <div class="bg-gray-50  p-4  rounded-lg">
                       <div><h2 class="text-center text-xl py-6 font-medium">Diagnóstico (CIE 10)</h2></div>
                               <div class="grid gap-6 mb-6 md:grid-cols-1">
 
                             <div>
-                                <label for="diagnosticoPresuntivo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Diagnóstico Presuntivo</label>
-                                <textarea   type="text" id="diagnosticoPresuntivo"  name="diagnosticoPresuntivo"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['diagnosticoPresuntivo'];?></textarea>
+                                <label for="diagnosticoPresuntivo" class="block mb-2 text-sm font-medium text-gray-900 ">Diagnóstico Presuntivo</label>
+                                <textarea   type="text" id="diagnosticoPresuntivo"  name="diagnosticoPresuntivo"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['diagnosticoPresuntivo'];?></textarea>
                             </div>
 
                             <div>
-                                <label for="diagnosticoDefinitivo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Diagnóstico Definitivo</label>
-                                <textarea  type="text"  id="diagnosticoDefinitivo"  name="diagnosticoDefinitivo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['diagfinal'];?></textarea>
+                                <label for="diagnosticoDefinitivo" class="block mb-2 text-sm font-medium text-gray-900 ">Diagnóstico Definitivo</label>
+                                <textarea  type="text"  id="diagnosticoDefinitivo"  name="diagnosticoDefinitivo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['diagfinal'];?></textarea>
                             </div>
                         </div>
 
@@ -1288,7 +1288,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                               <div class="grid gap-6 mb-6 md:grid-cols-1">                           
 
                             <div>
-                                <textarea  type="text"  id="tratamiento"  name="tratamiento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['tratamiento'];?></textarea>
+                                <textarea  type="text"  id="tratamiento"  name="tratamiento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['tratamiento'];?></textarea>
                             </div>
                         </div>
 
@@ -1296,7 +1296,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                               <div class="grid gap-6 mb-6 md:grid-cols-1">                         
 
                             <div>
-                                <textarea  type="text"  id="observaciones"  name="observaciones" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""  ><?=$fetch_hc['observaciones'];?></textarea>
+                                <textarea  type="text"  id="observaciones"  name="observaciones" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      " placeholder=""  ><?=$fetch_hc['observaciones'];?></textarea>
                             </div>
                         </div>  
                       </div>
@@ -1309,7 +1309,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                              
                         
-                        <button type="submit" style="margin-top:3rem" name="submitUpdateHC" class="text-white bg-blue-700 text-center mx-auto flex justify-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar cambios</button>
+                        <button type="submit" style="margin-top:3rem" name="submitUpdateHC" class="text-white bg-blue-700 text-center mx-auto flex justify-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center   ">Guardar cambios</button>
                     </form>
 
                   </div>
@@ -1318,46 +1318,46 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                   <div class=" hidden p-4 rounded-lg" style="padding:2rem" id="odontograma" role="tabpanel" aria-labelledby="odontograma-tab">
 
                               <!--POPOVER IMAGES INFORMATION-->
-                  <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                  <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72   ">
                           <div class="p-3 space-y-2">
-                              <h3 class="font-semibold text-gray-900 dark:text-white">Informacion importante</h3>
+                              <h3 class="font-semibold text-gray-900 ">Informacion importante</h3>
                               <p>Se recomienda subir tu imagen en formato A4 y orientación vertical para evitar problemas de compatibilidad al momento de adjuntar a la historia clinica y descargar como pdf </p>
                           </div>
                           <div data-popper-arrow></div>
                       </div>
                                 <div class="flex items-center flex-wrap pb-8" style="justify-content:space-evenly">
-                                    <p style="padding-bottom:3rem;max-width:300px"class="text-center text-medium   text-gray-500 dark:text-gray-400">Puedes elegir entre <strong class="font-medium text-gray-800 dark:text-white">subir tu imagen</strong>
+                                    <p style="padding-bottom:3rem;max-width:300px"class="text-center text-medium   text-gray-500 ">Puedes elegir entre <strong class="font-medium text-gray-800 ">subir tu imagen</strong>
                                     <button  style="padding-left:0.5rem"data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg><span class="sr-only">Show information</span></button>
 
                                     
-                                    o usar nuestro <strong class="font-medium text-gray-800 dark:text-white">generador de odontogramas</strong>.
+                                    o usar nuestro <strong class="font-medium text-gray-800 ">generador de odontogramas</strong>.
                                     </p>
                                   <!--SKELETON FOR ODONTOGRAMA-->
                                   <div>
-                                  <span class="mx-auto flex justify-center mb-2 text-gray-500 dark:text-gray-600">Formato de odontograma</span>
+                                  <span class="mx-auto flex justify-center mb-2 text-gray-500 ">Formato de odontograma</span>
 
-                                  <div role="status" class=" max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700">
+                                  <div role="status" class=" max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ">
 
                                      
                                       <div class=" pb-4 items-center  mt-4 space-x-3">
                                           <div class="flex w-48 flex-wrap justify-end">
-                                              <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-2"></div>
+                                              <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-2"></div>
 
-                                              <div  class=" relative w-32 h-2 flex bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                              <div  class=" relative w-32 h-2 flex bg-gray-200 rounded-full "></div>
 
                                           </div>
                                       </div>
                                   
-                                      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-800">
-                                          <svg class="w-12 h-12 text-gray-200 dark:text-gray-600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
+                                      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded ">
+                                          <svg class="w-12 h-12 text-gray-200 " xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
                                       </div>
-                                      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-4"></div>
-                                      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800 mb-2.5"></div>
-                                      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                      <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-4"></div>
+                                      <div class="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
+                                      <div class="h-2 bg-gray-200 rounded-full "></div>
                                       <div class="flex items-center mt-4 space-x-3">
                                           <div>
-                                              <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-32 mb-2"></div>
-                                              <div class="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                              <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2"></div>
+                                              <div class="w-48 h-2 bg-gray-200 rounded-full "></div>
                                           </div>
                                       </div>
                                       <span class="sr-only">Loading...</span>
@@ -1376,11 +1376,11 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                     <form action="" method="POST" enctype="multipart/form-data" style="max-width:300px">
                                         <input hidden name="id" type="text" value="<?=$fetch_paciente['id'];?>">
                                         <div class="">
-                                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Subir imagen</label>
+                                            <label class="block mb-2 text-sm font-medium text-gray-900 " for="file_input">Subir imagen</label>
                                             <div class="flex flex-wrap  gap-2">
 
-                                                <input name="imgOdontograma" type="file" required accept="image/jpg, image/jpeg, image/png, image/webp"  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" >
-                                                <button type="submit" name="uploadImgOdontograma" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                                <input name="imgOdontograma" type="file" required accept="image/jpg, image/jpeg, image/png, image/webp"  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " aria-describedby="file_input_help" id="file_input" >
+                                                <button type="submit" name="uploadImgOdontograma" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2   focus:outline-none ">
                                                     <span>Subir</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -1409,7 +1409,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
                                     <div>
-                                        <a  href="odontogram/index.php?pid=<?=$fetch_paciente['id'];?>&token=<?=$fetch_paciente['token'];?>" class=" flex items-center gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                        <a  href="odontogram/index.php?pid=<?=$fetch_paciente['id'];?>&token=<?=$fetch_paciente['token'];?>" class=" flex items-center gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   " type="button">
                                           Crear nuevo odontograma 
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
                                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
@@ -1430,7 +1430,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                             if($showOdontogramaTab->rowCount()>0){
                         ?>
 
-                        <div class="relative pt-4  overflow-x-auto shadow-md dark:shadow-white sm:rounded-lg">
+                        <div class="relative pt-4  overflow-x-auto shadow-md  sm:rounded-lg">
                           
                         <style>
                           
@@ -1441,8 +1441,8 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       --tw-shadow: var(--tw-shadow-colored);
 }
                         </style>
-                          <table class="w-full  text-sm text-left text-gray-500 dark:text-gray-400">
-                              <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                          <table class="w-full  text-sm text-left text-gray-500 ">
+                              <thead  class="text-xs border-gray-200  border-b text-gray-700 uppercase  bg-gray-50  ">
                                   <tr>
                                       
                                       <th scope="col" class="px-6 py-3">
@@ -1470,9 +1470,9 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                   ?>
 
-                                  <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                  <tr class="bg-white  hover:bg-gray-50 ">
                                       
-                                      <td scope="row" class="flex gap-2 items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                      <td scope="row" class="flex gap-2 items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                           <a  target="_blank" href="odontogram/screenshots/<?=$fetchOdontograma['imagen'];?>">
                                             <div class="flex items-center">
                                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -1511,15 +1511,15 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                                 <form action="" method="POST">
                                                   <input  type="text" name="imageName" value="'.$fetchOdontograma["imagen"].'" hidden >
                                                   <input   type="text" name="idPaciente"  value="'.$fetchOdontograma["pacienteId"].'" hidden >
-                                                  <button type="submit" name="updateStateOdontograma" class=" flex justify-start font-medium text-blue-600 dark:text-blue-500 hover:underline">Marcar como actual</button>
+                                                  <button type="submit" name="updateStateOdontograma" class=" flex justify-start font-medium text-blue-600  hover:underline">Marcar como actual</button>
 
                                                 </form>
-                                                <button   data-modal-target="'.$fetchOdontograma['imagen'].'" data-modal-toggle="'.$fetchOdontograma['imagen'].'"  class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>
+                                                <button   data-modal-target="'.$fetchOdontograma['imagen'].'" data-modal-toggle="'.$fetchOdontograma['imagen'].'"  class="flex justify-start font-medium text-red-600  hover:underline">Eliminar</button>
                                                 </div>';
                                               } else echo ' <div class="grid lg:grid-cols-2 ">
-                                                          <p  class="flex justify-start font-medium text-blue-300 dark:text-gray-500 ">Marcar como actual</p>
+                                                          <p  class="flex justify-start font-medium text-blue-300  ">Marcar como actual</p>
                                                           
-                                                          <button  data-modal-target="'.$fetchOdontograma['imagen'].'" data-modal-toggle="'.$fetchOdontograma['imagen'].'" class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>                                              </div>
+                                                          <button  data-modal-target="'.$fetchOdontograma['imagen'].'" data-modal-toggle="'.$fetchOdontograma['imagen'].'" class="flex justify-start font-medium text-red-600  hover:underline">Eliminar</button>                                              </div>
                                               ';
                                               ?>
 
@@ -1533,18 +1533,18 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                     <input  type="text" name="imageName" value="<?=$fetchOdontograma["imagen"];?>" hidden >
                                       <input   type="text" name="idPaciente"  value="<?=$fetchOdontograma["pacienteId"];?>" hidden > 
                                       <div class="relative w-full h-full max-w-md md:h-auto">
-                                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="<?=$fetchOdontograma['imagen'];?>">
+                                            <div class="relative bg-white rounded-lg shadow ">
+                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  " data-modal-hide="<?=$fetchOdontograma['imagen'];?>">
                                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                                     <span class="sr-only">Close modal</span>
                                                 </button>
                                                 <div class="p-6 text-center">
-                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Seguro que quieres eliminar este odontograma?</h3>
-                                                    <button  type="submit" name="deleteOdontograma"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 ">¿Seguro que quieres eliminar este odontograma?</h3>
+                                                    <button  type="submit" name="deleteOdontograma"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                                         Sí, eliminar
                                                     </button>
-                                                    <button data-modal-hide="<?=$fetchOdontograma['imagen'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancelar</button>
+                                                    <button data-modal-hide="<?=$fetchOdontograma['imagen'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      ">No, cancelar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1575,7 +1575,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                   </div>
 
                   <!--CONSENTIMIENTOS-->
-                  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-700" id="consentimientos" role="tabpanel" aria-labelledby="consentimientos-tab">
+                  <div class="hidden p-4 rounded-lg bg-gray-50 " id="consentimientos" role="tabpanel" aria-labelledby="consentimientos-tab">
                       
                     
                                                    <!--POPOVER IMAGES INFORMATION-->
@@ -1584,37 +1584,37 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                   <!--SKELETON FOR ODONTOGRAMA-->
                                   <div>
-                                    <span class="mx-auto flex justify-center mb-2 text-gray-500 dark:text-gray-600">Formato de consentimiento</span>
+                                    <span class="mx-auto flex justify-center mb-2 text-gray-500 ">Formato de consentimiento</span>
 
-                                     <div role="status" class=" max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700">
+                                     <div role="status" class=" max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ">
 
                                      
                                           <div class=" pb-4 items-center  mt-4 space-x-3">
                                               <div class="flex w-48 flex-wrap justify-end">
-                                                  <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-2"></div>
+                                                  <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-2"></div>
 
-                                                  <div  class=" relative w-32 h-2 flex bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                                  <div  class=" relative w-32 h-2 flex bg-gray-200 rounded-full "></div>
 
                                               </div>
                                           </div>
               
-                                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-4"></div>
-                                          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800 mb-2.5"></div>
+                                          <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-4"></div>
+                                          <div class="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
 
                                                 
-                                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-4"></div>
-                                          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800 mb-2.5"></div>
+                                          <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-4"></div>
+                                          <div class="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
                                                 
-                                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-4"></div>
-                                          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800 mb-2.5"></div>
+                                          <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-4"></div>
+                                          <div class="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
                                                 
-                                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-48 mb-4"></div>
-                                          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800 mb-2.5"></div>
-                                          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                          <div class="h-2.5 bg-gray-200 rounded-full  w-48 mb-4"></div>
+                                          <div class="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
+                                          <div class="h-2 bg-gray-200 rounded-full "></div>
                                           <div class="flex items-center mt-4 space-x-3">
                                               <div>
-                                                  <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-800 w-32 mb-2"></div>
-                                                  <div class="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-800"></div>
+                                                  <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2"></div>
+                                                  <div class="w-48 h-2 bg-gray-200 rounded-full "></div>
                                               </div>
                                           </div>
                                           <span class="sr-only">Loading...</span>
@@ -1625,15 +1625,15 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                 <form action="" method="POST" enctype="multipart/form-data" style="max-width:300px">
                                         <input hidden name="id" type="text" value="<?=$fetch_paciente['id'];?>">
                                         <div class="">
-                                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="file_input">Subir consentimiento</label>
+                                            <label class="block mb-2 text-sm font-medium text-gray-900 "  for="file_input">Subir consentimiento</label>
                                             <div class="flex flex-wrap  gap-2">
 
-                                                <input name="docConsentimiento"  type="file" required  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" >
+                                                <input name="docConsentimiento"  type="file" required  class="w-full text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none   " aria-describedby="file_input_help" id="file_input" >
                                                 <div class="relative w-full my-2 z-0">
-                                                    <input type="text" id="floating_standard" name="nombreTratamiento" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                                                    <label for="floating_standard" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribir nombre de tratamiento (opcional)</label>
+                                                    <input type="text" id="floating_standard" name="nombreTratamiento" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none    focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                                                    <label for="floating_standard" class="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Escribir nombre de tratamiento (opcional)</label>
                                                 </div>
-                                                <button type="submit" name="uploadDocConsentimiento" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                                <button type="submit" name="uploadDocConsentimiento" class=" flex gap-2  justify-center w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2   focus:outline-none ">
                                                     <span>Subir</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -1649,7 +1649,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                 <!-- TRATAMIENTOS LIST
                                   <div class="">
-                                  <button id="mega-menu-full-dropdown-button-tratamientos" data-collapse-toggle="mega-menu-full-dropdown-tratamientos" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                                  <button id="mega-menu-full-dropdown-button-tratamientos" data-collapse-toggle="mega-menu-full-dropdown-tratamientos" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  md:   md: ">
                                     Seleccionar un tratamiento 
                                     <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                     <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 97.68 97.68" xml:space="preserve">
@@ -1663,70 +1663,70 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                     </svg>
                                   </button>
 
-                                    <div id="mega-menu-full-dropdown-tratamientos" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
-                                      <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
+                                    <div id="mega-menu-full-dropdown-tratamientos" class="mt-1 bg-white border-gray-200 shadow-sm border-y  ">
+                                      <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
                                           <ul aria-labelledby="mega-menu-full-dropdown-button-tratamientos">
                                               <li>
-                                                  <button data-modal-target="apicectomiaModal" data-modal-toggle="apicectomiaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="apicectomiaModal" data-modal-toggle="apicectomiaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Apicectomía</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="caninosRetenidosModal" data-modal-toggle="caninosRetenidosModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="caninosRetenidosModal" data-modal-toggle="caninosRetenidosModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Caninos retenidos</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="cirugíaTerceraMolarModal" data-modal-toggle="cirugíaTerceraMolarModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="cirugíaTerceraMolarModal" data-modal-toggle="cirugíaTerceraMolarModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Cirugía tercera molar</div>
                                                   </button>
                                               </li>
 
                                               <li>
-                                                  <button data-modal-target="cirugiaApicalModal" data-modal-toggle="cirugiaApicalModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="cirugiaApicalModal" data-modal-toggle="cirugiaApicalModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Cirugía apical</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="cirugiaBucalMenorModal" data-modal-toggle="cirugiaBucalMenorModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="cirugiaBucalMenorModal" data-modal-toggle="cirugiaBucalMenorModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Cirugía bucal menor</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="cirugiaOrtognaticaModal" data-modal-toggle="cirugiaOrtognaticaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="cirugiaOrtognaticaModal" data-modal-toggle="cirugiaOrtognaticaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Cirugía ortognática</div>
                                                   </button>
                                               </li>
                                           </ul>
                                           <ul>
                                           <li>
-                                                  <button data-modal-target="endodonciaModal" data-modal-toggle="endodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="endodonciaModal" data-modal-toggle="endodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Endodoncia</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="exodonciaSimpleModal" data-modal-toggle="exodonciaSimpleModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="exodonciaSimpleModal" data-modal-toggle="exodonciaSimpleModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Exodoncia simple</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="implantesModal" data-modal-toggle="implantesModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="implantesModal" data-modal-toggle="implantesModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Implantes</div>
                                                   </button>
                                               </li>
 
                                               <li>
-                                                  <button data-modal-target="normasModal" data-modal-toggle="normasModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="normasModal" data-modal-toggle="normasModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Normas técnicas del odontograma</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="operatoriaModal" data-modal-toggle="operatoriaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="operatoriaModal" data-modal-toggle="operatoriaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Operatoria</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="ortodonciaModal" data-modal-toggle="ortodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="ortodonciaModal" data-modal-toggle="ortodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Ortodoncia</div>
                                                   </button>
                                               </li>
@@ -1735,22 +1735,22 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
                                               <li>
-                                                  <button data-modal-target="periodonciaModal" data-modal-toggle="periodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="periodonciaModal" data-modal-toggle="periodonciaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Periodoncia</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="prótesisFijaModal" data-modal-toggle="prótesisFijaModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="prótesisFijaModal" data-modal-toggle="prótesisFijaModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Prótesis fija</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="tercerMolarModal" data-modal-toggle="tercerMolarModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="tercerMolarModal" data-modal-toggle="tercerMolarModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Tercer molar</div>
                                                   </button>
                                               </li>
                                               <li>
-                                                  <button data-modal-target="tratamientoGeneralModal" data-modal-toggle="tratamientoGeneralModal" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                                                  <button data-modal-target="tratamientoGeneralModal" data-modal-toggle="tratamientoGeneralModal" class="block p-3 rounded-lg hover:bg-gray-50 ">
                                                       <div class="font-semibold">Tratamiento general</div>
                                                   </button>
                                               </li>
@@ -1778,7 +1778,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 <!-- 
                                     <div>
-                                        <a  href="odontogram/index.php?pid=<?=$fetch_paciente['id'];?>&token=<?=$fetch_paciente['token'];?>" class=" flex items-center gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                        <a  href="odontogram/index.php?pid=<?=$fetch_paciente['id'];?>&token=<?=$fetch_paciente['token'];?>" class=" flex items-center gap-2 my-4 mx-auto block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   " type="button">
                                           Seleccionar tratamiento
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
                                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
@@ -1801,7 +1801,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                             
                         ?>
 
-                        <div class="relative pt-4  overflow-x-auto shadow-md dark:shadow-white sm:rounded-lg">
+                        <div class="relative pt-4  overflow-x-auto shadow-md  sm:rounded-lg">
                           
                         <style>
                           
@@ -1812,8 +1812,8 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                       --tw-shadow: var(--tw-shadow-colored);
                                         }
                         </style>
-                          <table class="w-full  text-sm text-left text-gray-500 dark:text-gray-400">
-                              <thead  class="text-xs border-gray-200 dark:border-gray-700 border-b text-gray-700 uppercase  bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+                          <table class="w-full  text-sm text-left text-gray-500 ">
+                              <thead  class="text-xs border-gray-200  border-b text-gray-700 uppercase  bg-gray-50  ">
                                   <tr>
                                       
                                       <th scope="col" class="px-6 py-3">
@@ -1845,11 +1845,11 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
                                   ?>
 
-                                  <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                  <tr class="bg-white  hover:bg-gray-50 ">
                                       
-                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                      <td scope="row" class="flex tems-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                           <a  target="_blank" href="consentimientos/<?=$fetchConsentimiento['doc'];?>">
-                                            <div class="flex hover:text-blue-600 gap-2 dark:hover:text-blue-500 items-center">
+                                            <div class="flex hover:text-blue-600 gap-2  items-center">
                                              <span>Ver documento</span>
                                               <svg fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
@@ -1891,15 +1891,15 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                                 <form action="" method="POST">
                                                   <input  type="text" name="docName" value="'.$fetchConsentimiento["doc"].'" hidden >
                                                   <input   type="text" name="idPaciente"  value="'.$fetchConsentimiento["pacienteId"].'" hidden >
-                                                  <button type="submit" name="updateStateConsentimiento" class=" flex justify-start font-medium text-blue-600 dark:text-blue-500 hover:underline">Marcar como actual</button>
+                                                  <button type="submit" name="updateStateConsentimiento" class=" flex justify-start font-medium text-blue-600  hover:underline">Marcar como actual</button>
 
                                                 </form>
-                                                <button   data-modal-target="'.$fetchConsentimiento['doc'].'" data-modal-toggle="'.$fetchConsentimiento['doc'].'"  class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>
+                                                <button   data-modal-target="'.$fetchConsentimiento['doc'].'" data-modal-toggle="'.$fetchConsentimiento['doc'].'"  class="flex justify-start font-medium text-red-600  hover:underline">Eliminar</button>
                                                 </div>';
                                               } else echo ' <div class="grid lg:grid-cols-2 ">
-                                                          <p  class="flex justify-start font-medium text-blue-300 dark:text-gray-500 ">Marcar como actual</p>
+                                                          <p  class="flex justify-start font-medium text-blue-300  ">Marcar como actual</p>
                                                           
-                                                          <button  data-modal-target="'.$fetchConsentimiento['doc'].'" data-modal-toggle="'.$fetchConsentimiento['doc'].'" class="flex justify-start font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>                                              </div>
+                                                          <button  data-modal-target="'.$fetchConsentimiento['doc'].'" data-modal-toggle="'.$fetchConsentimiento['doc'].'" class="flex justify-start font-medium text-red-600  hover:underline">Eliminar</button>                                              </div>
                                               ';
                                               ?>
 
@@ -1913,18 +1913,18 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
                                     <input  type="text" name="consentimientoName" value="<?=$fetchConsentimiento["doc"];?>" hidden >
                                       <input   type="text" name="idPaciente"  value="<?=$fetchConsentimiento["pacienteId"];?>" hidden > 
                                       <div class="relative w-full h-full max-w-md md:h-auto">
-                                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="<?=$fetchConsentimiento['doc'];?>">
+                                            <div class="relative bg-white rounded-lg shadow ">
+                                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  " data-modal-hide="<?=$fetchConsentimiento['doc'];?>">
                                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                                     <span class="sr-only">Close modal</span>
                                                 </button>
                                                 <div class="p-6 text-center">
-                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Seguro que quieres eliminar este consentimiento?</h3>
-                                                    <button  type="submit" name="deleteConsentimiento"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500 ">¿Seguro que quieres eliminar este consentimiento?</h3>
+                                                    <button  type="submit" name="deleteConsentimiento"class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                                         Sí, eliminar
                                                     </button>
-                                                    <button data-modal-hide="<?=$fetchConsentimiento['doc'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancelar</button>
+                                                    <button data-modal-hide="<?=$fetchConsentimiento['doc'];?>" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      ">No, cancelar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1960,13 +1960,13 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
       else{
 
        
-          echo '<div id="toast-warning" class="flex mx-auto items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
+          echo '<div id="toast-warning" class="flex mx-auto items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow  " role="alert">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg  ">
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
               <span class="sr-only">Warning icon</span>
           </div>
           <div class="ml-3 text-sm font-normal">Este paciente no existe en la base de datos</div>
-          <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-warning" aria-label="Close">
+          <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8    " data-dismiss-target="#toast-warning" aria-label="Close">
               <span class="sr-only">Close</span>
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </button>
@@ -2033,7 +2033,7 @@ if(isset($_POST['submitActualizarInfoPaciente'])){
 
 
       
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
 
 <?php
 if(isset($_GET['pid']))
@@ -2081,27 +2081,27 @@ if(isset($_GET['pid']))
               <div data-dial-init style="z-index:200"class="fixed right-6 bottom-6 group">
                     <div id="speed-dial-menu-hover" class="flex flex-col items-center hidden mb-4 space-y-2">
                        
-                        <!-- <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600  bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-blue-400 dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                        <!-- <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600  bg-white rounded-full border border-gray-200  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
                           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
                         </svg>
                             <span class="sr-only">Share</span>
                         </button>
-                        <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
                             Descargar historia clinica + odontograma + consentimiento
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div> -->
 
 
                         <a target="_blank"href="pdfHC-generate.php/?pid=<?=$fetch_paciente['id'];?>"> 
-                            <button type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-blue-400 dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                            <button type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
                           </svg>
                                 <span class="sr-only">Descargar</span>
                             </button>
                       </a>
-                        <div id="tooltip-print" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-print" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
                           Descargar historia clinica + odontograma 
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -2109,32 +2109,32 @@ if(isset($_GET['pid']))
                         
                         <a target="_blank"href="pdfonlyhc.php/?pid=<?=$fetch_paciente['id'];?>">
                           
-                            <button type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-blue-400 shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                            <button type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200   shadow-sm  hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                               </svg>
                                 <span class="sr-only">Descargar</span>
                             </button>
                           </a>
-                        <div id="tooltip-copy" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-copy" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
                             Descargar solo historia clinica
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
 
                         <a target="_blank"href="pdfonlyOd_generate.php/?pid=<?=$fetch_paciente['id'];?>">
-                                <button type="button" data-tooltip-target="tooltip-download" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-blue-400 dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                                <button type="button" data-tooltip-target="tooltip-download" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
                                             <svg class="w-6 h-6 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                                             <path id="Tooth_2_" d="M54.3148651,5.0702143c-3.5253983-3.6377001-8.4227982-5.4512-13.472599-4.9921999  c-0.0372009,0.001-0.0762024,0.0019-0.1133003,0.0049c-1.6397018,0.1611-3.1631012,0.8252-4.6366997,1.4687001  c-1.5165901,0.6621001-2.9492989,1.2871001-4.3290997,1.2871001c-1.3838005,0-2.8124886-0.6259-4.325201-1.289  c-1.4619999-0.6407-2.9736996-1.3028001-4.6035995-1.4668001c-4.9531002-0.501-9.7802,1.2636-13.2469997,4.8301001  c-3.4667997,3.5663996-5.0899,8.4393997-4.4550996,13.3592997c2.6244998,22.700201,4.4779992,36.6513977,5.5082994,41.4648972  c0.3237,1.5166016,1.9116001,3.8935013,3.9375,4.2256012c0.1352005,0.0223999,0.2915001,0.038002,0.4643002,0.038002  c0.8149996,0,1.9883118-0.3476028,2.9648991-1.9960022c1.4033012-2.3702011,2.6221008-5.642601,3.9131012-9.1083984  c2.6425991-7.0937996,5.6385994-15.1348,10.4218998-15.2110023c4.7490005,0.0956993,7.1541977,6.8535004,9.481411,13.3887024  c1.241188,3.4891968,2.4150009,6.785099,3.9677887,9.2782974c1.0332108,1.6611023,2.6805992,2.4815025,4.4179001,2.1826019  c1.5683975-0.2656021,2.8788986-1.4121017,3.1875-2.7881012c1.3194008-5.8711014,3.6992989-25.5126991,5.4638977-40.9589005  C59.5199661,13.7323141,57.863678,8.7323141,54.3148651,5.0702143z M56.8773651,18.537014  c-0.0009995,0.0058002-0.0018997,0.0107002-0.0018997,0.0165997c-1.7597885,15.3984013-4.1299019,34.9697037-5.4296989,40.7557983  c-0.1319008,0.5849991-0.8067017,1.125-1.5703011,1.2538986c-0.5381012,0.0938034-1.5665016,0.0479012-2.3867874-1.267498  c-1.4384117-2.3106003-2.5761108-5.5078011-3.7812119-8.8916016c-2.5546989-7.1758003-5.1953011-14.594799-11.3604012-14.7187996  c-6.1854992,0.0986023-9.4344997,8.8194008-12.3006992,16.5126991c-1.2588005,3.3799019-2.4482994,6.5713005-3.7598,8.7871017  c-0.6640997,1.1231003-1.2060995,1.0321999-1.3852997,1.0038986c-0.9515886-0.1562004-2.0815001-1.6229973-2.3046999-2.669899  c-1.0028887-4.6855011-2.8973999-18.9589996-5.4794002-41.2900009c-0.5576997-4.3233004,0.8652-8.5957003,3.9043002-11.7217007  c2.7005997-2.7793,6.3442106-4.3066998,10.1683989-4.3066998c0.4794998,0,0.9619007,0.0235,1.4453011,0.0723002  c1.3155117,0.1317999,2.6191998,0.7031,4,1.3085999c0.6203995,0.2716999,1.2488995,0.5463998,1.8883991,0.7834997  c0.0491123,0.0377002,0.0876999,0.0852003,0.1448002,0.1140003l9.9726982,5.0399995  c0.1445007,0.0732002,0.2988014,0.1073999,0.4502029,0.1073999c0.3652,0,0.7176971-0.2001991,0.8934975-0.5487995  c0.2490997-0.4932003,0.0517998-1.0946999-0.4413986-1.3438001l-5.8496017-2.9555998  c1.0969124-0.2781,2.1592026-0.7402,3.1992035-1.1938002c1.375-0.6006,2.6738968-1.1670001,3.88871-1.3016999  c0.04879,0.0028999,0.0966873,0.0009999,0.1454887-0.0039001c4.4755974-0.4395,8.827198,1.1601,11.952198,4.3838  C56.0013657,9.6854143,57.4593658,14.0868139,56.8773651,18.537014z"/>
                                             </svg>                  
                                             <span class="sr-only">Descargar</span>
                                 </button>
                         </a>
-                        <div id="tooltip-download" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-download" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
                           Descargar solo odontograma
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
 
-                        <!-- <button type="button" data-tooltip-target="tooltip-consentimiento" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-blue-400 shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                        <!-- <button type="button" data-tooltip-target="tooltip-consentimiento" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-blue-600 bg-white rounded-full border border-gray-200   shadow-sm  hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
                               <svg class="w-6 h-6 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Layer_1" viewBox="0 0 512.003 512.003" xml:space="preserve">
                                           <g>
                                             <g>
@@ -2154,7 +2154,7 @@ if(isset($_GET['pid']))
                                           </svg>
                             <span class="sr-only">Copy</span>
                         </button>
-                        <div id="tooltip-consentimiento" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-consentimiento" role="tooltip" class="absolute z-10 invisible inline-block w-60 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
                             Descargar solo consentimiento
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div> -->
@@ -2170,7 +2170,7 @@ if(isset($_GET['pid']))
 
 
 
-                    <button type="button" data-dial-toggle="speed-dial-menu-hover" data-dial-trigger="hover" aria-controls="speed-dial-menu-hover" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                    <button type="button" data-dial-toggle="speed-dial-menu-hover" data-dial-trigger="hover" aria-controls="speed-dial-menu-hover" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800   focus:ring-4 focus:ring-blue-300 focus:outline-none ">
                         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                         <span class="sr-only">Open actions menu</span>
                     </button>
@@ -2185,29 +2185,7 @@ if(isset($_GET['pid']))
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
   <!--Dark Mode-->
-  <script>
-    const setup = () => {
-      const getTheme = () => {
-        if (window.localStorage.getItem('dark')) {
-          return JSON.parse(window.localStorage.getItem('dark'))
-        }
-        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      }
 
-      const setTheme = (value) => {
-        window.localStorage.setItem('dark', value)
-      }
-
-      return {
-        loading: true,
-        isDark: getTheme(),
-        toggleTheme() {
-          this.isDark = !this.isDark
-          setTheme(this.isDark)
-        },
-      }
-    }
-  </script>
 
 <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>

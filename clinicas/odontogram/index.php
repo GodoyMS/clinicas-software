@@ -59,20 +59,20 @@ button{padding:5px 10px}
 	
 ?>
 	
-<nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+<nav class="bg-white px-2 sm:px-4 py-2.5  fixed w-full z-20 top-0 left-0 border-b border-gray-200 ">
   <div class="container  flex flex-wrap items-center justify-center mx-auto">
   
   <div class="flex md:order-2">
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200   " aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex  flex-col gap-4 p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul class="flex  flex-col gap-4 p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white  md: ">
       
       <li>
-      	<button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation" type="button" class=" flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      	<button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation" type="button" class=" flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0   ">
 			<span>Tratamientos generales</span>
 
 
@@ -88,7 +88,7 @@ button{padding:5px 10px}
 		</button>
       </li>
 	  <li>
-      	<button data-dropdown-toggle="dropDownOrtodoncia"   type="button" class="h-full flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      	<button data-dropdown-toggle="dropDownOrtodoncia"   type="button" class="h-full flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0   ">
 			<span>Ortodoncia</span>
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class="text-white w-6 h-6" version="1.1" id="Layer_1" viewBox="0 0 222.261 222.261" xml:space="preserve">
 				<g>
@@ -102,13 +102,13 @@ button{padding:5px 10px}
 				</svg>			
 		</button>
 		 <!-- Dropdown menu -->
-		 <div id="dropDownOrtodoncia" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+		 <div id="dropDownOrtodoncia" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44  ">
+                <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
                   <li>
-                    <button data-drawer-target="drawer-top-ortodoncia" data-drawer-show="drawer-top-ortodoncia" data-drawer-placement="top" aria-controls="drawer-top-ortodoncia"  class=" w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ortodocia fija</button>
+                    <button data-drawer-target="drawer-top-ortodoncia" data-drawer-show="drawer-top-ortodoncia" data-drawer-placement="top" aria-controls="drawer-top-ortodoncia"  class=" w-full block px-4 py-2 hover:bg-gray-100  ">Ortodocia fija</button>
                   </li>
                   <li>
-                    <button  data-drawer-target="drawer-top-ortodonciaremovible" data-drawer-show="drawer-top-ortodonciaremovible" data-drawer-placement="top" aria-controls="drawer-top-ortodonciaremovible"  class="w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ortodoncia removible</button>
+                    <button  data-drawer-target="drawer-top-ortodonciaremovible" data-drawer-show="drawer-top-ortodonciaremovible" data-drawer-placement="top" aria-controls="drawer-top-ortodonciaremovible"  class="w-full block px-4 py-2 hover:bg-gray-100  ">Ortodoncia removible</button>
                   </li>
 
 
@@ -122,7 +122,7 @@ button{padding:5px 10px}
 
       </li>
 	  <li>
-      	<button data-dropdown-toggle="dropDownProtesis"  type="button" class="h-full flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      	<button data-dropdown-toggle="dropDownProtesis"  type="button" class="h-full flex gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0   ">
 			<span>Protesis</span>
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class="text-white w-6 h-6" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 400.141 400.141" xml:space="preserve">
 			<g>
@@ -131,13 +131,13 @@ button{padding:5px 10px}
 			</svg>			
 		</button>
 		  <!-- Dropdown menu -->
-		  <div id="dropDownProtesis" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+		  <div id="dropDownProtesis" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44  ">
+                <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
                   <li>
-                    <button data-drawer-target="drawer-top-protesis" data-drawer-show="drawer-top-protesis" data-drawer-placement="top" aria-controls="drawer-top-protesis" class="w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Protesis fija</button>
+                    <button data-drawer-target="drawer-top-protesis" data-drawer-show="drawer-top-protesis" data-drawer-placement="top" aria-controls="drawer-top-protesis" class="w-full block px-4 py-2 hover:bg-gray-100  ">Protesis fija</button>
                   </li>
                   <li>
-                    <button  data-drawer-target="drawer-top-protesisremovible" data-drawer-show="drawer-top-protesisremovible" data-drawer-placement="top" aria-controls="drawer-top-protesisremovible" class=" w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Protesis removible</button>
+                    <button  data-drawer-target="drawer-top-protesisremovible" data-drawer-show="drawer-top-protesisremovible" data-drawer-placement="top" aria-controls="drawer-top-protesisremovible" class=" w-full block px-4 py-2 hover:bg-gray-100  ">Protesis removible</button>
                   </li>
                   
                 </ul>
@@ -162,9 +162,9 @@ button{padding:5px 10px}
 
 
 <!-- drawer ortodoncia fija -->
-<div id="drawer-top-ortodoncia" class="fixed z-40 w-full p-4 bg-white dark:bg-gray-800 transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
-    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia fija</h5>
-    <button type="button" data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-top-ortodoncia" class="fixed z-40 w-full p-4 bg-white  transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
+    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 "><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia fija</h5>
+    <button type="button" data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center  " >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
@@ -175,7 +175,7 @@ button{padding:5px 10px}
 	<ol class="items-center flex justify-center mb-4 w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
 		<li class="flex items-center text-blue-600 bg-blue-100 hover:bg-blue-200 p-2 rounded-lg  space-x-2.5">
 			<button onclick="odt.setcommand(23)" data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 				1
 			</span>
 			<span>
@@ -187,7 +187,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-blue-600  bg-blue-100 p-2 hover:bg-blue-200 rounded-lg space-x-2.5">
 				<button onclick="odt.setcommand(24)"data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-					<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+					<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 					2
 				</span>
 				<span>
@@ -198,7 +198,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-blue-600  bg-blue-100 p-2 hover:bg-blue-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(25)"data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 				3
 			</span>
 			<span>
@@ -213,7 +213,7 @@ button{padding:5px 10px}
 	<ol class="items-center flex justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
 		<li class="flex items-center text-red-600  bg-red-100 p-2 hover:bg-red-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(26)"data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 				1
 			</span>
 			<span>
@@ -225,7 +225,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-red-600  bg-red-100 p-2 hover:bg-red-200   rounded-lg space-x-2.5">
 				<button onclick="odt.setcommand(27)" data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-					<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+					<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 					2
 				</span>
 				<span>
@@ -236,7 +236,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-red-600  bg-red-100 p-2 hover:bg-red-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(28)" data-drawer-hide="drawer-top-ortodoncia" aria-controls="drawer-top-ortodoncia" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 				3
 			</span>
 			<span>
@@ -253,9 +253,9 @@ button{padding:5px 10px}
 
 
 <!-- drawer ortodoncia removible -->
-<div id="drawer-top-ortodonciaremovible" class="fixed z-40 w-full p-4 bg-white dark:bg-gray-800 transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
-    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia removible</h5>
-    <button type="button" data-drawer-hide="drawer-top-ortodonciaremovible" aria-controls="drawer-top-ortodonciaremovible" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-top-ortodonciaremovible" class="fixed z-40 w-full p-4 bg-white  transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
+    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 "><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia removible</h5>
+    <button type="button" data-drawer-hide="drawer-top-ortodonciaremovible" aria-controls="drawer-top-ortodonciaremovible" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center  " >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
@@ -296,9 +296,9 @@ button{padding:5px 10px}
 
 
 <!-- drawer protesis fija -->
-<div id="drawer-top-protesis" class="fixed z-40 w-full p-4 bg-white dark:bg-gray-800 transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
-    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Protesis fija</h5>
-    <button type="button" data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-top-protesis" class="fixed z-40 w-full p-4 bg-white  transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
+    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 "><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Protesis fija</h5>
+    <button type="button" data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center  " >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
@@ -309,7 +309,7 @@ button{padding:5px 10px}
 	<ol class="items-center flex justify-center mb-4 w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
 		<li class="flex items-center text-blue-600 bg-blue-100 hover:bg-blue-200 p-2 rounded-lg  space-x-2.5">
 			<button onclick="odt.setcommand(31)" data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 				1
 			</span>
 			<span>
@@ -321,7 +321,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-blue-600  bg-blue-100 p-2 hover:bg-blue-200 rounded-lg space-x-2.5">
 				<button onclick="odt.setcommand(32)"data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-					<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+					<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 					2
 				</span>
 				<span>
@@ -332,7 +332,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-blue-600  bg-blue-100 p-2 hover:bg-blue-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(33)"data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 ">
 				3
 			</span>
 			<span>
@@ -347,7 +347,7 @@ button{padding:5px 10px}
 	<ol class="items-center flex justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
 		<li class="flex items-center text-red-600  bg-red-100 p-2 hover:bg-red-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(34)"data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 				1
 			</span>
 			<span>
@@ -359,7 +359,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-red-600  bg-red-100 p-2 hover:bg-red-200   rounded-lg space-x-2.5">
 				<button onclick="odt.setcommand(35)" data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-					<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+					<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 					2
 				</span>
 				<span>
@@ -370,7 +370,7 @@ button{padding:5px 10px}
 		</li>
 		<li class="flex items-center  text-red-600  bg-red-100 p-2 hover:bg-red-200  rounded-lg space-x-2.5">
 			<button onclick="odt.setcommand(36)" data-drawer-hide="drawer-top-protesis" aria-controls="drawer-top-protesis" class="flex gap-2 items-center">
-				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 dark:border-blue-500">
+				<span class="flex items-center justify-center w-8 h-8 border border-red-600 rounded-full shrink-0 ">
 				3
 			</span>
 			<span>
@@ -387,9 +387,9 @@ button{padding:5px 10px}
 
 
 <!-- drawer protesis removible -->
-<div id="drawer-top-protesisremovible" class="fixed z-40 w-full p-4 bg-white dark:bg-gray-800 transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
-    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia removible</h5>
-    <button type="button" data-drawer-hide="drawer-top-protesisremovible" aria-controls="drawer-top-protesisremovible" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-top-protesisremovible" class="fixed z-40 w-full p-4 bg-white  transition-transform top-0 left-0 right-0 -translate-y-full" tabindex="-1" aria-labelledby="drawer-top-label">
+    <h5 id="drawer-top-label" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 "><svg class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Ortodoncia removible</h5>
+    <button type="button" data-drawer-hide="drawer-top-protesisremovible" aria-controls="drawer-top-protesisremovible" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center  " >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
@@ -434,62 +434,62 @@ button{padding:5px 10px}
 
 <!--DRAWER SHOW TRATAMIENTOS-->
 <!-- drawer component -->
-<div id="drawer-navigation" class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800 transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-navigation-label">
-    <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Tratamientos generales</h5>
-    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+<div id="drawer-navigation" class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80  transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase ">Tratamientos generales</h5>
+    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center  " >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
   <div class="py-4 overflow-y-auto">
       <ul class="space-y-2">
          <li>
-            <button onclick="odt.setcommand(18)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(18)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Lesion de caries</span>
             </button>
          </li>
 
 		 <li>
-            <button onclick="odt.setcommand(3)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(3)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria ausente</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(4)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(4)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria en erupción</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(5)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(5)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Edéntulo total</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(6)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(6)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria supernumeraria</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(7)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(7)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria extruida</span>
             </button>
          </li>	
 		 <li>
-            <button onclick="odt.setcommand(8)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(8)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria intruida</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(9)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(9)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Giroversion</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(10)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(10)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Pieza dentaria en clavija</span>
             </button>
          </li>
 		 <li>
-            <button onclick="odt.setcommand(11)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onclick="odt.setcommand(11)"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                <span class="ml-3">Geminacion</span>
             </button>
          </li>
@@ -499,23 +499,23 @@ button{padding:5px 10px}
 		 
 
          <li>
-            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <span class="flex-1 ml-3 text-left whitespace-nowrap">Coronas</span>
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <ul id="dropdown-example" class="overflow-hidden hidden py-2 space-y-2">
                   <li>
-					<button onclick="odt.setcommand(12)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(12)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Corona temporal</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(13)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(13)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Corona buen estado</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(14)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(14)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Corona mal estado</span>
 						</button>                  
 				</li>
@@ -525,18 +525,18 @@ button{padding:5px 10px}
 
 
 		 <li>
-            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-espigo" data-collapse-toggle="dropdown-espigo">
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  " aria-controls="dropdown-espigo" data-collapse-toggle="dropdown-espigo">
                   <span class="flex-1 ml-3 text-left whitespace-nowrap">Espigo</span>
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <ul id="dropdown-espigo" class="overflow-hidden hidden py-2 space-y-2">
                   <li>
-					<button onclick="odt.setcommand(15)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(15)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Espigo buen estado</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(16)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(16)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Espigo mal estado</span>
 						</button>                  
 				</li>
@@ -546,18 +546,18 @@ button{padding:5px 10px}
          </li>
 
 		 <li>
-            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-diastemia" data-collapse-toggle="dropdown-diastemia">
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  " aria-controls="dropdown-diastemia" data-collapse-toggle="dropdown-diastemia">
                   <span class="flex-1 ml-3 text-left whitespace-nowrap">Diastemia</span>
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <ul id="dropdown-diastemia" class="overflow-hidden  hidden py-2 space-y-2">
                   <li>
-					<button onclick="odt.setcommand(19)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(19)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Diastemia parte inicial</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(20)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(20)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Diastemeia parte final</span>
 						</button>                  
 				</li>
@@ -567,18 +567,18 @@ button{padding:5px 10px}
          </li>
 
 		 <li>
-            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-fusion" data-collapse-toggle="dropdown-fusion">
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  " aria-controls="dropdown-fusion" data-collapse-toggle="dropdown-fusion">
                   <span class="flex-1 ml-3 text-left whitespace-nowrap">Fusion</span>
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <ul id="dropdown-fusion" class="overflow-hidden hidden py-2 space-y-2">
                   <li>
-						<button onclick="odt.setcommand(21)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+						<button onclick="odt.setcommand(21)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Fusion parte inicial</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(22)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(22)"style="margin-left:1.5rem"   data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Fusion parte final</span>
 						</button>                  
 				</li>
@@ -588,18 +588,18 @@ button{padding:5px 10px}
          </li>
 
 		 <li>
-            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-transposicion" data-collapse-toggle="dropdown-transposicion">
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  " aria-controls="dropdown-transposicion" data-collapse-toggle="dropdown-transposicion">
                   <span class="flex-1 ml-3 text-left whitespace-nowrap">Transposición</span>
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <ul id="dropdown-transposicion" class="hidden overflow-hidden  py-2 space-y-2">
                   <li>
-					<button onclick="odt.setcommand(41)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(41)" style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Transposición parte inicial</span>
 						</button>                  
 				</li>
 				<li>
-					<button onclick="odt.setcommand(42)"style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<button onclick="odt.setcommand(42)"style="margin-left:1.5rem"  data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class=" w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
 						<span class="ml-3">Transposición parte final</span>
 						</button>                  
 				</li>
@@ -631,7 +631,7 @@ button{padding:5px 10px}
 
 
 	  <!---->
-	  <button onclick="odt.setcommand(18)" data-tooltip-target="tooltip-pintar-rojo" type="button" class="relative w-[52px] h-[52px] text-red-500 bg-white rounded-full border border-gray-200 hover:text-red-800 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+	  <button onclick="odt.setcommand(18)" data-tooltip-target="tooltip-pintar-rojo" type="button" class="relative w-[52px] h-[52px] text-red-500 bg-white rounded-full border border-gray-200 hover:text-red-800  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 		
 	  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class="w-6 h-6" version="1.1" id="Layer_1" viewBox="0 0 511.999 511.999" xml:space="preserve">
 		<g>
@@ -648,14 +648,14 @@ button{padding:5px 10px}
 	 
         </button>
 
-		<div id="tooltip-pintar-rojo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div id="tooltip-pintar-rojo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Pintar diente de rojo
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
 
 
 			  <!---->
-		<button onclick="odt.setcommand(17)" data-tooltip-target="tooltip-pintar-azul" type="button" class="relative w-[52px] h-[52px] text-blue-500 bg-white rounded-full border border-gray-200 hover:text-blue-700 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+		<button onclick="odt.setcommand(17)" data-tooltip-target="tooltip-pintar-azul" type="button" class="relative w-[52px] h-[52px] text-blue-500 bg-white rounded-full border border-gray-200 hover:text-blue-700  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class="w-6 h-6" version="1.1" id="Layer_1" viewBox="0 0 511.999 511.999" xml:space="preserve">
 		<g>
 			<g>
@@ -668,7 +668,7 @@ button{padding:5px 10px}
 		</svg>
         </button>
 
-		<div id="tooltip-pintar-azul" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div id="tooltip-pintar-azul" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Pintar diente de azul
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
@@ -681,14 +681,14 @@ button{padding:5px 10px}
 
 
         <!---->
-		<button onclick="odt.new()" data-tooltip-target="tooltip-nuevo" type="button" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+		<button onclick="odt.new()" data-tooltip-target="tooltip-nuevo" type="button" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900  shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 		<path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zM12.75 12a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V18a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V12z" clip-rule="evenodd" />
 		<path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />
 		</svg>
         </button>
 
-		<div id="tooltip-nuevo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div id="tooltip-nuevo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Nuevo odontograma
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
@@ -696,25 +696,25 @@ button{padding:5px 10px}
 
 
 		<!---->
-        <button onclick="odt.clear()" type="button" data-tooltip-target="tooltip-borrarTodo" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+        <button onclick="odt.clear()" type="button" data-tooltip-target="tooltip-borrarTodo" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200  hover:text-gray-900 shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 			<path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
 			</svg>
 
         </button>
-		<div id="tooltip-borrarTodo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div id="tooltip-borrarTodo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Borrar todo
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
 
 		<!---->
-        <button onclick="odt.undo()" type="button" data-tooltip-target="tooltip-borrarUltimo" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+        <button onclick="odt.undo()" type="button" data-tooltip-target="tooltip-borrarUltimo" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200  hover:text-gray-900 shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 		<path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 010 1.06L4.81 8.25H15a6.75 6.75 0 010 13.5h-3a.75.75 0 010-1.5h3a5.25 5.25 0 100-10.5H4.81l4.72 4.72a.75.75 0 11-1.06 1.06l-6-6a.75.75 0 010-1.06l6-6a.75.75 0 011.06 0z" clip-rule="evenodd" />
 		</svg>
         </button>
 
-		<div  id="tooltip-borrarUltimo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div  id="tooltip-borrarUltimo" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Borrar ultimo paso (doble click)
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
@@ -722,25 +722,25 @@ button{padding:5px 10px}
 
 		
 		<!---->
-        <button type="button" data-tooltip-target="tooltip-descargar"  id="download" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+        <button type="button" data-tooltip-target="tooltip-descargar"  id="download" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200  hover:text-gray-900 shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 		<path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
 		</svg>
         </button>
-		<div id="tooltip-descargar" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+		<div id="tooltip-descargar" role="tooltip" class=" z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Descargar odontograma
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
 
 		<!---->
-		<button type="submit" name="saveImg" id="guardarImg"  data-tooltip-target="tooltip-guardar" style="width:70px;height:70px"class="relative  text-blue-500 bg-white rounded-full border border-gray-200 dark:border-gray-600 hover:text-blue-700 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+		<button type="submit" name="saveImg" id="guardarImg"  data-tooltip-target="tooltip-guardar" style="width:70px;height:70px"class="relative  text-blue-500 bg-white rounded-full border border-gray-200  hover:text-blue-700 shadow-sm   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
 	
 
 		<svg aria-hidden="true" class="w-10 h-10 mx-auto mt-px" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"></path><path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"></path></svg>
         </button>
 				
         
-			<div id="tooltip-guardar" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+			<div id="tooltip-guardar" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip ">
 			Guardar odontograma
 			<div class="tooltip-arrow" data-popper-arrow></div>
 		</div>
@@ -764,13 +764,13 @@ button{padding:5px 10px}
 
 	<div id="photo" style="padding-right:4.5rem;padding-top:2rem; padding-bottom:3rem">
 		<div style="padding-left:7rem;padding-top:3rem " class="flex justify-center mb-4">
-				<div>	<input style="font-size:1.5rem;background:none;height:50px;width:700px;" type="text" id="success" class="bg-blue-50 border border-gray-500 text-black dark:text-blue-400 placeholder-blue-700 dark:placeholder-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-blue-500" placeholder="Escribir un título...">
+				<div>	<input style="font-size:1.5rem;background:none;height:50px;width:700px;" type="text" id="success" class="bg-blue-50 border border-gray-500 text-black  placeholder-blue-700  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="Escribir un título...">
 				</div>
 				
 		</div>
 		<div style="padding-left:7rem;margin-bottom:4rem " class="flex justify-end mb-8">
 				
-				<div class="inline-flex items-center gap-2">	<label style="margin-bottom:5px" for="date">Fecha: </label><input style="background:none;height:50px;border:transparent" id="date" type="date" class="bg-blue-50 border border-blue-500 text-black dark:text-blue-400 placeholder-blue-700 dark:placeholder-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-blue-500" placeholder="">
+				<div class="inline-flex items-center gap-2">	<label style="margin-bottom:5px" for="date">Fecha: </label><input style="background:none;height:50px;border:transparent" id="date" type="date" class="bg-blue-50 border border-blue-500 text-black  placeholder-blue-700  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="">
 				</div>
 		</div>
 	
@@ -839,11 +839,11 @@ button{padding:5px 10px}
 	</div>	
 	<div id="comentarios"style="margin-left:6rem;margin-right:2rem;margin-top:6rem; padding-bottom:1rem" class="mt-8 p-2 bg-gray-50 grid grid-rows-2">
 		<label style="font-size:1.3rem;"class="font-semibold"  for="comentarios">Comentarios:</label>
-		<div  contenteditable="true" style="padding:-10px 0;background:none;height:180px;width:1000px;border:transparent;overflow:auto" type="text" id="comentarios" class="bg-blue-50 border border-blue-500 text-black dark:text-blue-400 placeholder-green-blue dark:placeholder-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-blue-500" ></div>
+		<div  contenteditable="true" style="padding:-10px 0;background:none;height:180px;width:1000px;border:transparent;overflow:auto" type="text" id="comentarios" class="bg-blue-50 border border-blue-500 text-black  placeholder-green-blue  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " ></div>
 	</div>
 	<div id="comentarios"style="margin-left:6rem;margin-right:2rem; padding-bottom:1rem" class="mt-8 p-2 bg-gray-50 grid grid-rows-2">
 		<label style="font-size:1.3rem;"class="font-semibold" for="Especificaciones">Especificaciones:</label>
-		<div  contenteditable="true" style="padding:-10px 0;background:none;height:180px;width:1000px;border:transparent;overflow:auto" type="text" id="Especificaciones" class="bg-blue-50 border border-blue-500 text-black dark:text-blue-400 placeholder-green-blue dark:placeholder-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-blue-500" ></div>
+		<div  contenteditable="true" style="padding:-10px 0;background:none;height:180px;width:1000px;border:transparent;overflow:auto" type="text" id="Especificaciones" class="bg-blue-50 border border-blue-500 text-black  placeholder-green-blue  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " ></div>
 	</div>
 
 </div>
@@ -1008,7 +1008,7 @@ $(function(){
 		document.getElementById('modalSaveImgConfirmation').innerHTML=`
 
 		<div id="alert-additional-content-3" style="z-index:50;position:fixed;width:1000px" class="mx-auto flex justify-center" role="alert">
-<div style="margin-top:4rem;max-width:500px;margin:4rem auto 0 auto;"  class="p-4 mb-4 text-green-700 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" >
+<div style="margin-top:4rem;max-width:500px;margin:4rem auto 0 auto;"  class="p-4 mb-4 text-green-700 border border-green-300 rounded-lg bg-green-50   " >
   <div class="flex items-center">
     <svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
@@ -1018,11 +1018,11 @@ $(function(){
 		Cada vez que guardes un odontograma, se genera una nueva imagen. Los podras visualizar en la seccion de pacientes
   </div>
   <div class="flex">
-    <a  href="../paciente_id.php?pid=<?=$pid;?>&modal=odontograma" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+    <a  href="../paciente_id.php?pid=<?=$pid;?>&modal=odontograma" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center   ">
       <svg aria-hidden="true" class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
       Ir a odontogramas
     </a>
-    <button type="button" onclick="hideModal()" class="text-green-700 bg-transparent border border-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-green-500 dark:border-green-500 dark:text-green-400 dark:hover:text-white dark:focus:ring-green-800" data-dismiss-target="#alert-additional-content-3" aria-label="Close">
+    <button type="button" onclick="hideModal()" class="text-green-700 bg-transparent border border-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center     " data-dismiss-target="#alert-additional-content-3" aria-label="Close">
       Seguir editando
     </button>
   </div>
@@ -1077,11 +1077,11 @@ function hideModal(){
 <!--END SCRIPT PRINT IMAGE-->
 <?php
  }else{
-	echo '<div style="max-width:600px" class="p-4 mx-auto  mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400" role="alert">
+	echo '<div style="max-width:600px" class="p-4 mx-auto  mb-4 text-sm text-red-700 bg-red-100 rounded-lg  " role="alert">
 	<span class="font-medium">Informacion!</span> No estas permitido editar el odontograma de este paciente
   </div>
   
-  <a href="../pacientes.php"type="button" style="margin:0 auto 0 auto;max-width:300px; display:flex;justify-content:center"class=" text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Volver a pacientes</a>
+  <a href="../pacientes.php"type="button" style="margin:0 auto 0 auto;max-width:300px; display:flex;justify-content:center"class=" text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2   ">Volver a pacientes</a>
   '
   
 
